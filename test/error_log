@@ -1,0 +1,126 @@
+[22-Aug-2019 11:47:44 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'laciudad'@'localhost' (using password: YES)' in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php:17
+Stack trace:
+#0 /home/laciudad/public_html/xrargentina/test/classes/Conexion.php(17): PDO->__construct('mysql:host=loca...', 'laciudad', '3nu8GiWaeM', Array)
+#1 /home/laciudad/public_html/xrargentina/test/classes/Rebelion.php(10): Conexion::conectar()
+#2 /home/laciudad/public_html/xrargentina/test/enviar.php(5): Rebelion->agregarInscripto()
+#3 {main}
+  thrown in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php on line 17
+[22-Aug-2019 11:48:29 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'laciudad'@'localhost' (using password: YES)' in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php:17
+Stack trace:
+#0 /home/laciudad/public_html/xrargentina/test/classes/Conexion.php(17): PDO->__construct('mysql:host=loca...', 'laciudad', '3nu8GiWaeM', Array)
+#1 /home/laciudad/public_html/xrargentina/test/classes/Rebelion.php(10): Conexion::conectar()
+#2 /home/laciudad/public_html/xrargentina/test/enviar.php(5): Rebelion->agregarInscripto()
+#3 {main}
+  thrown in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php on line 17
+[22-Aug-2019 13:23:08 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'laciudad'@'localhost' (using password: YES)' in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php:17
+Stack trace:
+#0 /home/laciudad/public_html/xrargentina/test/classes/Conexion.php(17): PDO->__construct('mysql:host=loca...', 'laciudad', '3nu8GiWaeM', Array)
+#1 /home/laciudad/public_html/xrargentina/test/classes/Rebelion.php(10): Conexion::conectar()
+#2 /home/laciudad/public_html/xrargentina/test/enviar.php(5): Rebelion->agregarInscripto()
+#3 {main}
+  thrown in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php on line 17
+[22-Aug-2019 13:24:48 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'laciudad@localhost'@'localhost' (using password: YES)' in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php:17
+Stack trace:
+#0 /home/laciudad/public_html/xrargentina/test/classes/Conexion.php(17): PDO->__construct('mysql:host=loca...', 'laciudad@localh...', '3nu8GiWaeM', Array)
+#1 /home/laciudad/public_html/xrargentina/test/classes/Rebelion.php(10): Conexion::conectar()
+#2 /home/laciudad/public_html/xrargentina/test/enviar.php(5): Rebelion->agregarInscripto()
+#3 {main}
+  thrown in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php on line 17
+[22-Aug-2019 13:27:17 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'laciudad@localhost'@'chi-node12.websitehostserver.net' (using password: YES)' in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php:17
+Stack trace:
+#0 /home/laciudad/public_html/xrargentina/test/classes/Conexion.php(17): PDO->__construct('mysql:host=69.1...', 'laciudad@localh...', '3nu8GiWaeM', Array)
+#1 /home/laciudad/public_html/xrargentina/test/classes/Rebelion.php(10): Conexion::conectar()
+#2 /home/laciudad/public_html/xrargentina/test/enviar.php(5): Rebelion->agregarInscripto()
+#3 {main}
+  thrown in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php on line 17
+[22-Aug-2019 13:28:46 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'laciudad@localhost'@'chi-node12.websitehostserver.net' (using password: YES)' in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php:17
+Stack trace:
+#0 /home/laciudad/public_html/xrargentina/test/classes/Conexion.php(17): PDO->__construct('mysql:host=69.1...', 'laciudad@localh...', '3nu8GiWaeM', Array)
+#1 /home/laciudad/public_html/xrargentina/test/classes/Rebelion.php(10): Conexion::conectar()
+#2 /home/laciudad/public_html/xrargentina/test/enviar.php(5): Rebelion->agregarInscripto()
+#3 {main}
+  thrown in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php on line 17
+[22-Aug-2019 13:29:05 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'laciudad@localhost'@'chi-node12.websitehostserver.net' (using password: YES)' in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php:17
+Stack trace:
+#0 /home/laciudad/public_html/xrargentina/test/classes/Conexion.php(17): PDO->__construct('mysql:host=69.1...', 'laciudad@localh...', '3nu8GiWaeM', Array)
+#1 /home/laciudad/public_html/xrargentina/test/classes/Rebelion.php(10): Conexion::conectar()
+#2 /home/laciudad/public_html/xrargentina/test/enviar.php(5): Rebelion->agregarInscripto()
+#3 {main}
+  thrown in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php on line 17
+[22-Aug-2019 13:31:36 America/Argentina/Buenos_Aires] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'laciudad@localhost'@'chi-node12.websitehostserver.net' (using password: YES) in /home/laciudad/public_html/xrargentina/test/enviar.php on line 11
+[22-Aug-2019 13:31:36 America/Argentina/Buenos_Aires] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/laciudad/public_html/xrargentina/test/enviar.php on line 15
+[22-Aug-2019 13:31:56 America/Argentina/Buenos_Aires] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'laciudad@localhost'@'chi-node12.websitehostserver.net' (using password: YES) in /home/laciudad/public_html/xrargentina/test/enviar.php on line 11
+[22-Aug-2019 13:31:56 America/Argentina/Buenos_Aires] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/laciudad/public_html/xrargentina/test/enviar.php on line 15
+[22-Aug-2019 13:32:24 America/Argentina/Buenos_Aires] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'laciudad@localhost'@'chi-node12.websitehostserver.net' (using password: YES) in /home/laciudad/public_html/xrargentina/test/enviar.php on line 11
+[22-Aug-2019 13:32:24 America/Argentina/Buenos_Aires] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/laciudad/public_html/xrargentina/test/enviar.php on line 15
+[22-Aug-2019 13:32:48 America/Argentina/Buenos_Aires] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'laciudad'@'localhost' (using password: YES) in /home/laciudad/public_html/xrargentina/test/enviar.php on line 11
+[22-Aug-2019 13:32:48 America/Argentina/Buenos_Aires] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/laciudad/public_html/xrargentina/test/enviar.php on line 15
+[22-Aug-2019 13:33:14 America/Argentina/Buenos_Aires] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'laciudad'@'localhost' (using password: YES) in /home/laciudad/public_html/xrargentina/test/enviar.php on line 11
+[22-Aug-2019 13:35:08 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Conexion' not found in /home/laciudad/public_html/xrargentina/test/classes/Rebelion.php on line 10
+[22-Aug-2019 13:35:28 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Conexion' not found in /home/laciudad/public_html/xrargentina/test/classes/Rebelion.php on line 10
+[22-Aug-2019 13:35:49 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Conexion' not found in /home/laciudad/public_html/xrargentina/test/classes/Rebelion.php on line 10
+[22-Aug-2019 13:35:55 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Conexion' not found in /home/laciudad/public_html/xrargentina/test/classes/Rebelion.php on line 10
+[22-Aug-2019 13:36:27 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Conexion' not found in /home/laciudad/public_html/xrargentina/test/classes/Rebelion.php on line 10
+[22-Aug-2019 13:45:24 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'localhost:3306' (-2)' in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php:17
+Stack trace:
+#0 /home/laciudad/public_html/xrargentina/test/classes/Conexion.php(17): PDO->__construct('mysql:host=loca...', 'laciudad@localh...', '3nu8GiWaeM', Array)
+#1 /home/laciudad/public_html/xrargentina/test/classes/Rebelion.php(10): Conexion::conectar()
+#2 /home/laciudad/public_html/xrargentina/test/enviar.php(5): Rebelion->agregarInscripto()
+#3 {main}
+  thrown in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php on line 17
+[22-Aug-2019 14:21:00 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'localhost:3306' (-2)' in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php:17
+Stack trace:
+#0 /home/laciudad/public_html/xrargentina/test/classes/Conexion.php(17): PDO->__construct('mysql:host=loca...', 'laciudad_xrarge...', 'Rebeldesarg1', Array)
+#1 /home/laciudad/public_html/xrargentina/test/classes/Rebelion.php(10): Conexion::conectar()
+#2 /home/laciudad/public_html/xrargentina/test/enviar.php(5): Rebelion->agregarInscripto()
+#3 {main}
+  thrown in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php on line 17
+[22-Aug-2019 14:21:17 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'localhost:3306' (-2)' in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php:17
+Stack trace:
+#0 /home/laciudad/public_html/xrargentina/test/classes/Conexion.php(17): PDO->__construct('mysql:host=loca...', 'laciudad_xrarge...', 'Rebeldesarg1', Array)
+#1 /home/laciudad/public_html/xrargentina/test/classes/Rebelion.php(10): Conexion::conectar()
+#2 /home/laciudad/public_html/xrargentina/test/enviar.php(5): Rebelion->agregarInscripto()
+#3 {main}
+  thrown in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php on line 17
+[22-Aug-2019 14:24:41 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'laciudad_xrargentina '@'chi-node12.websitehostserver.net' (using password: YES)' in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php:17
+Stack trace:
+#0 /home/laciudad/public_html/xrargentina/test/classes/Conexion.php(17): PDO->__construct('mysql:host=69.1...', 'laciudad_xrarge...', 'Rebeldesarg1', Array)
+#1 /home/laciudad/public_html/xrargentina/test/classes/Rebelion.php(10): Conexion::conectar()
+#2 /home/laciudad/public_html/xrargentina/test/enviar.php(5): Rebelion->agregarInscripto()
+#3 {main}
+  thrown in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php on line 17
+[22-Aug-2019 14:26:45 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to MySQL server on '181.5.250.198' (110)' in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php:17
+Stack trace:
+#0 /home/laciudad/public_html/xrargentina/test/classes/Conexion.php(17): PDO->__construct('mysql:host=181....', 'laciudad_xrarge...', 'Rebeldesarg1', Array)
+#1 /home/laciudad/public_html/xrargentina/test/classes/Rebelion.php(10): Conexion::conectar()
+#2 /home/laciudad/public_html/xrargentina/test/enviar.php(5): Rebelion->agregarInscripto()
+#3 {main}
+  thrown in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php on line 17
+[22-Aug-2019 14:27:53 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to MySQL server on '181.5.250.198' (115)' in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php:17
+Stack trace:
+#0 /home/laciudad/public_html/xrargentina/test/classes/Conexion.php(17): PDO->__construct('mysql:host=181....', 'laciudad_xrarge...', 'Rebeldesarg1', Array)
+#1 /home/laciudad/public_html/xrargentina/test/classes/Rebelion.php(10): Conexion::conectar()
+#2 /home/laciudad/public_html/xrargentina/test/enviar.php(5): Rebelion->agregarInscripto()
+#3 {main}
+  thrown in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php on line 17
+[22-Aug-2019 14:28:22 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to MySQL server on '181.5.250.198' (115)' in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php:17
+Stack trace:
+#0 /home/laciudad/public_html/xrargentina/test/classes/Conexion.php(17): PDO->__construct('mysql:host=181....', 'laciudad_xrarge...', 'Rebeldesarg1', Array)
+#1 /home/laciudad/public_html/xrargentina/test/classes/Rebelion.php(10): Conexion::conectar()
+#2 /home/laciudad/public_html/xrargentina/test/enviar.php(5): Rebelion->agregarInscripto()
+#3 {main}
+  thrown in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php on line 17
+[22-Aug-2019 14:30:01 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'laciudad_xrargentina '@'chi-node12.websitehostserver.net' (using password: YES)' in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php:17
+Stack trace:
+#0 /home/laciudad/public_html/xrargentina/test/classes/Conexion.php(17): PDO->__construct('mysql:host=69.1...', 'laciudad_xrarge...', 'Rebeldesarg1', Array)
+#1 /home/laciudad/public_html/xrargentina/test/classes/Rebelion.php(10): Conexion::conectar()
+#2 /home/laciudad/public_html/xrargentina/test/enviar.php(5): Rebelion->agregarInscripto()
+#3 {main}
+  thrown in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php on line 17
+[22-Aug-2019 14:37:22 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'laciudad_xrargentina '@'chi-node12.websitehostserver.net' (using password: YES)' in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php:17
+Stack trace:
+#0 /home/laciudad/public_html/xrargentina/test/classes/Conexion.php(17): PDO->__construct('mysql:host=69.1...', 'laciudad_xrarge...', 'Rebeldesarg1', Array)
+#1 /home/laciudad/public_html/xrargentina/test/classes/Rebelion.php(10): Conexion::conectar()
+#2 /home/laciudad/public_html/xrargentina/test/enviar.php(5): Rebelion->agregarInscripto()
+#3 {main}
+  thrown in /home/laciudad/public_html/xrargentina/test/classes/Conexion.php on line 17

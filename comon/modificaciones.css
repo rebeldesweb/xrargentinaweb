@@ -1,0 +1,15 @@
+.bannerSumate{
+  height: 55vh;width: 100%; background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url("../img/bannerSumate.jpg");background-position: center;background-size: cover;
+  display: flex;
+   justify-content: center;
+   align-items: end;
+}
+
+.bannerSumate h1{text-align: center;text-transform: uppercase; color: rgb(252, 252, 252); font-size: 70px;}
+
+
+.leyendaSumate{width: 100%; display: flex; justify-content: center;background-color: #f2f2f2}
+.cajaTexto{width: 53%; font-size: 27px; background-color: #f2f2f2; margin-top: 50px; margin-bottom: 50px;}
+.cajaTexto p{text-align: center;}
+
+.resaltarSubmenu{text-decoration: underline;}

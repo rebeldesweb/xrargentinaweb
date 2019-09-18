@@ -1,0 +1,37 @@
+[13-Aug-2019 18:52:58 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: first-name in /home/laciudad/public_html/xrargentina/data.php on line 5
+[13-Aug-2019 18:52:58 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: last-name in /home/laciudad/public_html/xrargentina/data.php on line 6
+[13-Aug-2019 18:52:58 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: phone in /home/laciudad/public_html/xrargentina/data.php on line 7
+[13-Aug-2019 18:52:58 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: postcode in /home/laciudad/public_html/xrargentina/data.php on line 8
+[13-Aug-2019 18:52:58 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: email in /home/laciudad/public_html/xrargentina/data.php on line 9
+[13-Aug-2019 19:29:12 America/Argentina/Buenos_Aires] PHP Warning:  require(PHPMailer/Exception.php): failed to open stream: No such file or directory in /home/laciudad/public_html/xrargentina/enviar2.php on line 10
+[13-Aug-2019 19:29:12 America/Argentina/Buenos_Aires] PHP Warning:  require(PHPMailer/Exception.php): failed to open stream: No such file or directory in /home/laciudad/public_html/xrargentina/enviar2.php on line 10
+[13-Aug-2019 19:29:12 America/Argentina/Buenos_Aires] PHP Fatal error:  require(): Failed opening required 'PHPMailer/Exception.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/laciudad/public_html/xrargentina/enviar2.php on line 10
+[13-Aug-2019 19:30:19 America/Argentina/Buenos_Aires] PHP Warning:  require(PHPMailer/Exception.php): failed to open stream: No such file or directory in /home/laciudad/public_html/xrargentina/enviar2.php on line 10
+[13-Aug-2019 19:30:19 America/Argentina/Buenos_Aires] PHP Warning:  require(PHPMailer/Exception.php): failed to open stream: No such file or directory in /home/laciudad/public_html/xrargentina/enviar2.php on line 10
+[13-Aug-2019 19:30:19 America/Argentina/Buenos_Aires] PHP Fatal error:  require(): Failed opening required 'PHPMailer/Exception.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/laciudad/public_html/xrargentina/enviar2.php on line 10
+[14-Aug-2019 09:50:55 America/Argentina/Buenos_Aires] PHP Notice:  Undefined variable: phpMailer in /home/laciudad/public_html/xrargentina/enviar.php on line 80
+[14-Aug-2019 09:50:55 America/Argentina/Buenos_Aires] PHP Notice:  Trying to get property of non-object in /home/laciudad/public_html/xrargentina/enviar.php on line 80
+[14-Aug-2019 10:19:11 America/Argentina/Buenos_Aires] PHP Parse error:  syntax error, unexpected '$apellido' (T_VARIABLE) in /home/laciudad/public_html/xrargentina/enviar2.php on line 69
+[14-Aug-2019 10:19:43 America/Argentina/Buenos_Aires] PHP Parse error:  syntax error, unexpected '$apellido' (T_VARIABLE) in /home/laciudad/public_html/xrargentina/enviar2.php on line 69
+[22-Aug-2019 19:06:11 America/Argentina/Buenos_Aires] PHP Warning:  require(config/config.php): failed to open stream: No such file or directory in /home/laciudad/public_html/xrargentina/admin.php on line 2
+[22-Aug-2019 19:06:11 America/Argentina/Buenos_Aires] PHP Warning:  require(config/config.php): failed to open stream: No such file or directory in /home/laciudad/public_html/xrargentina/admin.php on line 2
+[22-Aug-2019 19:06:11 America/Argentina/Buenos_Aires] PHP Fatal error:  require(): Failed opening required 'config/config.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/laciudad/public_html/xrargentina/admin.php on line 2
+[22-Aug-2019 19:06:31 America/Argentina/Buenos_Aires] PHP Warning:  require(config/config.php): failed to open stream: No such file or directory in /home/laciudad/public_html/xrargentina/login.php on line 2
+[22-Aug-2019 19:06:31 America/Argentina/Buenos_Aires] PHP Warning:  require(config/config.php): failed to open stream: No such file or directory in /home/laciudad/public_html/xrargentina/login.php on line 2
+[22-Aug-2019 19:06:31 America/Argentina/Buenos_Aires] PHP Fatal error:  require(): Failed opening required 'config/config.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/laciudad/public_html/xrargentina/login.php on line 2
+[22-Aug-2019 19:07:25 America/Argentina/Buenos_Aires] PHP Warning:  PDOStatement::execute(): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laciudad_xrargentina.usuarios' doesn't exist in /home/laciudad/public_html/xrargentina/classes/Usuario.php on line 19
+[22-Aug-2019 19:08:42 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to undefined method Rebelion::listarInscripto() in /home/laciudad/public_html/xrargentina/admin.php on line 4
+[22-Aug-2019 19:12:25 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to undefined method Rebelion::listarInscripto() in /home/laciudad/public_html/xrargentina/admin.php on line 4
+[22-Aug-2019 19:12:48 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to undefined method Rebelion::listarInscripto() in /home/laciudad/public_html/xrargentina/admin.php on line 4
+[22-Aug-2019 19:13:40 America/Argentina/Buenos_Aires] PHP Notice:  Undefined variable: _SESSION in /home/laciudad/public_html/xrargentina/admin.php on line 19
+[22-Aug-2019 19:13:40 America/Argentina/Buenos_Aires] PHP Notice:  Undefined variable: reg in /home/laciudad/public_html/xrargentina/admin.php on line 43
+[22-Aug-2019 19:13:40 America/Argentina/Buenos_Aires] PHP Warning:  Invalid argument supplied for foreach() in /home/laciudad/public_html/xrargentina/admin.php on line 43
+[22-Aug-2019 19:14:07 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to undefined method Rebelion::listarInscripto() in /home/laciudad/public_html/xrargentina/admin.php on line 4
+[24-Aug-2019 18:41:11 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin.php on line 23
+[25-Aug-2019 23:27:24 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin.php on line 25
+[09-Sep-2019 12:05:55 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: first-name in /home/laciudad/public_html/xrargentina/classes/Rebelion.php on line 11
+[09-Sep-2019 12:05:55 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: last-name in /home/laciudad/public_html/xrargentina/classes/Rebelion.php on line 12
+[09-Sep-2019 12:05:55 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: phone in /home/laciudad/public_html/xrargentina/classes/Rebelion.php on line 13
+[09-Sep-2019 12:05:55 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: postcode in /home/laciudad/public_html/xrargentina/classes/Rebelion.php on line 14
+[09-Sep-2019 12:05:55 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: email in /home/laciudad/public_html/xrargentina/classes/Rebelion.php on line 15
+[09-Sep-2019 12:05:55 America/Argentina/Buenos_Aires] PHP Warning:  PDOStatement::execute(): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'nombre' cannot be null in /home/laciudad/public_html/xrargentina/classes/Rebelion.php on line 24
