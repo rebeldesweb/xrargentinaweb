@@ -1,7 +1,6 @@
 <?php
     
-    $conexion = mysqli_connect('69.175.67.50', 'laciudad_xrargentina', 'Rebeldesarg1', 'laciudad_xrargentina');
-    mysqli_set_charset($conexion,'utf8');
+    
     
     $sql = "SELECT * FROM eventos ORDER BY id DESC";
 
