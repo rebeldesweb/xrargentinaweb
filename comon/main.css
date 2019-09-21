@@ -7,8 +7,9 @@
 } */
 @font-face {
     font-family: 'FucXed';
-    src: url('FUCXEDCAPSLatin-Regular.woff2') format('woff2'),
-         url('FUCXEDCAPSLatin-Regular.woff') format('woff');
+    /* Upload fonts on your own server and replace urls with your own. */
+    src: url('../FUCXEDCAPSLatin-Regular.woff') format('woff'),
+url('../FUCXEDCAPSLatin-Regular.otf') format('otf');
     font-weight: normal;
     font-style: normal;
 }
