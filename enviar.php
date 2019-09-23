@@ -5,14 +5,13 @@
   $bool = $objRebelion->agregarInscripto();
   if ($bool) {
     
-    // Multiple recipients
-    $to = $_POST['email']; // note the comma
-
+    $para  = $_POST['email'];; // atención a la coma
+    // título
     // Subject
-    $subject = 'Te has registrado con éxito en xrargentina';
+    $asunto = 'Te has registrado con éxito en xrargentina';
 
     // Message
-    $message = '
+    $mensaje = '
     <html>
     <head>
       <title>Birthday Reminders for August</title>
@@ -41,19 +40,16 @@
     </html>
     ';
 
-    // To send HTML mail, the Content-type header must be set
-    $headers[] = 'MIME-Version: 1.0';
-    $headers[] = 'Content-type: text/html; charset=iso-8859-1';
+    // Para enviar un correo HTML, debe establecerse la cabecera Content-type
+    $cabeceras  = 'MIME-Version: 1.0' . "\r\n";
+    $cabeceras .= 'Content-type: text/html; charset=utf-8' . "\r\n";
 
-    // Additional headers
-    // $headers[] = 'To: Mary <mary@example.com>, Kelly <kelly@example.com>';
-    $headers[] = 'From: XRARGENTINA <xrargentina@gmail.com>';
-    // $headers[] = 'Cc: birthdayarchive@example.com';
-    // $headers[] = 'Bcc: birthdaycheck@example.com';
+    // Cabeceras adicionales
+    // $cabeceras .= 'To: Mary <mary@example.com>, Kelly <kelly@example.com>' . "\r\n";
+    $cabeceras .= 'From: xrargentina <xrargentina@gmail.com>' . "\r\n";
 
-    // Mail it
-    mail($to, $subject, $message, implode("\r\n", $headers));
-
+    // Enviarlo
+    mail($para, $título, $mensaje, $cabeceras);
 
     header('location:old.html?suscribido');
   }
