@@ -69,7 +69,7 @@
         <div class="numbered-list-jumbo__body">
           <h2>Sumate a un grupo en tu ciudad </h2>
           <p><a href="https://drive.google.com/open?id=1P9_hUnrcOSOyrp6JXN3NxumjDQznF7gm&usp=sharing" target="new" >Encontrá un grupo en donde vivís.</a></p>
-          <p><a href="https://cloud.xrargentina.org/index.php/s/addyc9azw6SgBP4" target="new" >Guía para armar un grupo local</a></p>
+          <p><a href="https://cloud.xrargentina.org/index.php/s/d88yyBc5esCCxy3" target="new" >Guía para armar un grupo local</a></p>
           <p><a href="https://cloud.xrargentina.org/index.php/s/addyc9azw6SgBP4" target="new" >Guia para armar un grupo de afinidad</a></p>
           
 
