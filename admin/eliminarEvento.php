@@ -3,8 +3,8 @@
     $objRebelion = new Rebelion();
     $bool = $objRebelion->eliminarEvento();
     if ($bool){
-        header('location: index.php?delete=1');
+        header('location: admin.php?delete=1');
     }else{
-        header('location: index.php?delete=2');
+        header('location: admin.php?delete=2');
     }
 ?>

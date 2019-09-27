@@ -5,6 +5,9 @@
    */
   class Rebelion
   {
+
+    //################# inscriptos #################
+
     public function agregarInscripto()
     {
       $link = Conexion::conectar();
@@ -62,6 +65,35 @@
       }
       return false;
     }
+
+    public function modificarInscripto()
+    {
+      $id = $_POST['id'];
+      $integracionOK = $_POST['integracionOK'];
+      $ADNVOK = $_POST['ADNVOK'];
+      $organizacion = $_POST['organizacion'];
+      $notas = $_POST['notas'];
+      $link = Conexion::conectar();
+      $sql = "UPDATE inscriptos SET integracionOK = :integracionOK,
+                                    ADNVOK = :ADNVOK,
+                                    organizacion = :organizacion,
+                                    notas = :notas
+              WHERE id = :id";
+      $stmt = $link->prepare($sql);
+      $stmt->bindParam(':integracionOK', $integracionOK, PDO::PARAM_INT);
+      $stmt->bindParam(':ADNVOK', $ADNVOK, PDO::PARAM_INT);
+      $stmt->bindParam(':organizacion', $organizacion, PDO::PARAM_STR);
+      $stmt->bindParam(':notas', $notas, PDO::PARAM_STR);
+      $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+      if ($stmt->execute()) {
+        return true;
+      }
+      return false;
+    }
+
+
+
+    //################# EVENTOS #################
 
     public function subirImagen(){
       $ruta = "../img/eventos/";

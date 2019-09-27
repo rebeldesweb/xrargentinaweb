@@ -34,15 +34,20 @@
   </nav>
   <div class="contenedor-admin my-3">
     <div class="col-12">
+    <div id="reporting"></div>
       <table class="table table-bordered table-sm">
         <thead>
           <tr>
             <td class="text-center">ID</td>
             <td class="text-center">NOMBRE</td>
             <td class="text-center">APELLIDO</td>
-            <td class="text-center">TELEFONO</td>
-            <td class="text-center">CÓDIGO POSTAL</td>
+            <!-- <td class="text-center">TELEFONO</td>
+            <td class="text-center">CÓDIGO POSTAL</td> -->
             <td class="text-center">EMAIL</td>
+            <td class="text-center">INTEGRACIONOK</td>
+            <td class="text-center">ADNVOK</td>
+            <td class="text-center">ORGANIZACIÓN</td>
+            <td class="text-center">NOTAS</td>
           </tr>
         </thead>
         <tbody id="tasks">
@@ -51,11 +56,16 @@
               <td class="text-center"><?php echo $res['id'] ?></td>
               <td class="text-center"><?php echo $res['nombre'] ?></td>
               <td class="text-center"><?php echo $res['apellido'] ?></td>
-              <td class="text-center"><?php echo $res['telefono'] ?></td>
-              <td class="text-center"><?php echo $res['codigoPostal'] ?></td>
+              <!-- <td class="text-center"><?php echo $res['telefono'] ?></td>
+              <td class="text-center"><?php echo $res['codigoPostal'] ?></td> -->
               <td class="text-center"><?php echo $res['email'] ?></td>
+              <td class="text-center"><?php echo $res['integracionOK'] ?></td>
+              <td class="text-center"><?php echo $res['ADNVOK'] ?></td>
+              <td class="text-center"><?php echo $res['organizacion'] ?></td>
+              <td class="text-center"><?php echo $res['notas'] ?></td>
               <td class="text-center">
                 <a target="blank" id="btn-eliminar" href="form-delete.php?id=<?php echo $res['id'];?>" class="btn btn-danger">Eliminar</a>
+                <a target="blank" id="btn-eliminar" href="formModificarInscripto.php?id=<?php echo $res['id'];?>" class="btn btn-warning">Modificar</a>
               </td>
             </tr>
           <?php } ?>
@@ -68,5 +78,21 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="../comon/sweetalert2.js" charset="utf-8"></script>
+  <script>
+    let url = window.location.href;
+    let divReporting = document.getElementById('reporting');
+    if (url.includes('update=1')) {
+      divReporting.innerHTML = `
+      <div class="alert alert-warning">Se ha modificado correctamente el inscripto</div>
+      `
+    };
+
+    if (url.includes('delete=1')) {
+      divReporting.innerHTML = `
+      <div class="alert alert-danger">Se ha eliminado correctamente el inscripto</div>
+      `;
+    }
+
+  </script>
 </body>
 </html>
