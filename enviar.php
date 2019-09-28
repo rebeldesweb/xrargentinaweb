@@ -49,7 +49,7 @@
     $cabeceras .= 'From: xrargentina <xrargentina@gmail.com>' . "\r\n";
 
     // Enviarlo
-    mail($para, $título, $mensaje, $cabeceras);
+    mail($para, 'Gracias por sumarte a XR argentina', $mensaje, $cabeceras);
 
     header('location:old.html?suscribido');
   }

@@ -18,7 +18,7 @@
 </head>
 <body>
   <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand">Lista de eventos</a>
+    <a href="index.php" class="navbar-brand">Lista de eventos</a>
     <form class="form-inline">
       <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

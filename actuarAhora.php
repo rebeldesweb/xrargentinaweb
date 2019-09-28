@@ -33,7 +33,7 @@
 <div class="body-text container">
     <div class="featured-text">
         <div class="featured-text__content">
-            <p> 
+            <p>
             Hacemos un llamado a la desobediencia civil pacífica. Las estrategias pasivas de incidencia política que el movimiento ecologista viene implementando desde hace décadas (lobby, peticiones y marchas) no han sido suficientes y fallaron porque el sistema de representación tal cual está planteado hoy, está cooptado por los intereses corporativos de crecimiento económico ilimitado.
             </p>
         </div>
@@ -50,14 +50,39 @@
 				En Argentina nacimos hace pocos meses y el crecimiento está siendo imparable. Mirá algunas de las acciones que lxs rebeldes de XR Argentina estuvieron realizando.<br><br>
 				.<br>
 			    </p>
-							
+
             </div>
-        </div>        <div class="numbered-list-jumbo__content">
+        </div>
+        <div class="numbered-list-jumbo__content">
+            <div class="numbered-list-jumbo__body type" >
+                <h2 id="tell-the-truth" class="demands-section-heading"><a href="https://youtu.be/XeJGH_Rgg2g" target="new">24 De septiembre 2019 - Sustainable Brands </a> </h2>
+                <p>Desfilamos en la puerta del MALBA ante el  evento que promueve la sustentabilidad y que irónicamente tiene de sponsors a Coca-Cola y Unilever, las empresas más contaminantes del mundo.<br><br>
+			    </p>
+
+            </div>
+        </div>
+        <div class="numbered-list-jumbo__content">
+            <div class="numbered-list-jumbo__body type" >
+                <h2 id="tell-the-truth" class="demands-section-heading"><a href="https://youtu.be/w7DXONAeACI" target="new">5 De septiembre 2019 - Dia de Acción Mundial por el Amazonas </a> </h2>
+                <p>El fuego no para nosotrxs tampoco. Nos convocamos en la puerta de las oficinas de Cargill para entregarles una carta demandando acciones responsables frente a la deforestación indiscriminada.<br><br>
+			    </p>
+
+            </div>
+        </div>
+        <div class="numbered-list-jumbo__content">
+            <div class="numbered-list-jumbo__body type" >
+                <h2 id="tell-the-truth" class="demands-section-heading"><a href="https://youtu.be/PpE0Igrxgz4" target="new">25 de Agosto 2019 - #ActForAmazonia </a> </h2>
+                <p>Nos manifestamos ante la embajada de Brasil a causa de la inacción sobre los incendios del Amazonas.<br><br>
+			    </p>
+
+            </div>
+        </div>
+        <div class="numbered-list-jumbo__content">
             <div class="numbered-list-jumbo__body type" >
                 <h2 id="tell-the-truth" class="demands-section-heading"><a href="https://youtu.be/9C4AANTxnv4" target="new">24 de Julio 2019 - Exposición de La Rural </a> </h2>
                 <p>Activamos con voluntarixs de diversas agrupaciones para protestar en contra de la ganadería y el modelo agroindustrial que genera deforestación y emisiones.<br><br>
 			    </p>
-							
+
             </div>
         </div>
         <div class="numbered-list-jumbo__content">
@@ -65,7 +90,7 @@
                 <h2 id="tell-the-truth" class="demands-section-heading"><a href="https://www.instagram.com/p/BzeMDq3FO_o/?utm_source=ig_web_copy_link" target="new">1 de Julio 2019 - Semana de acción climática </a> </h2>
                 <p>Irrumpimos en el acto de innauguración de la semana de acción climática de la Secretaría de Ambiente y Desarrollo Sustentable. Los objetivos que plantea el gobierno implican un crecimiento de cerca del 35% en las emisiones de GEI , no podemos tolerar ni un gramo más de CO2 en la atmosfera.<br><br>
 				</p>
-							
+
             </div>
         </div>
         <div class="numbered-list-jumbo__content">
@@ -73,7 +98,7 @@
                 <h2 id="semana-clima" class="demands-section-heading"><a href="https://www.instagram.com/p/BzO_KM_laUo/?utm_source=ig_web_copy_link" target="new">27 de Junio 2019 - Intervención - Ningunx </a> </h2>
                 <p>Ningun candidato habla de esto: Intervenimos Afiches de todos los partidos políticos. Enfrentamos un colapso civilizatorio y NINGUNX se ocupa del tema.<br><br>
 				</p>
-							
+
             </div>
         </div>
         <div class="numbered-list-jumbo__content">
@@ -87,7 +112,7 @@
     </div><!-- .numbered-list-jumbo -->
 </div><!-- .container -->
 
-    
+
 
     </article>
 <!-- footer -->

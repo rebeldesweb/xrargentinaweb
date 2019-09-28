@@ -1,10 +1,10 @@
 
 <?php
 // Varios destinatarios
-$para  = $_POST['email'];; // atención a la coma
+$para  = 'francobenitez980@gmail.com'; // atención a la coma
 // título
 // Subject
-$asunto = 'Te has registrado con éxito en xrargentina';
+$título = 'Te has registrado con éxito en xrargentina';
 
 // Message
 $mensaje = '
@@ -45,7 +45,7 @@ $cabeceras .= 'Content-type: text/html; charset=utf-8' . "\r\n";
 $cabeceras .= 'From: xrargentina <xrargentina@gmail.com>' . "\r\n";
 
 // Enviarlo
-mail($para, $título, $mensaje, $cabeceras);
+mail($para, 'Gracias por sumarte a XR argentina', $mensaje, $cabeceras);
 ?>
 
  
