@@ -253,7 +253,7 @@ img.emoji {
     <div class="page-mask" id="js-page-mask"></div>
       <header class="page-header js-page-header" id="header">
         <div class="page-header__wrap">
-          <a class="logo" href="old.html" rel="home"><img src="img/LOGO.png" alt="Extinction Rebellion"></a>
+          <a class="logo" href="index.html" rel="home"><img src="img/LOGO.png" alt="Extinction Rebellion"></a>
           <nav class="nav-main js-main-nav">
               <ul>
                 <li id="btnVerdad" class="bg-pink menu-item menu-item-type-post_type menu-item-object-page menu-item-90 menu-item-has-children">
@@ -314,6 +314,7 @@ img.emoji {
         </div>
 
         <form class="form" onsubmit="return validar();" action="enviar.php" method="post">
+          <input type="hidden" id="input" name="fecha"> <!--input oculto de fecha-->
           <div class="sign-up-form__wrap">
             <div class="form__group">
               <label for="an-first-name" class="is-hidden-visually">Nombre</label>
@@ -485,7 +486,7 @@ img.emoji {
 
   <script type="text/javascript" src="comon/frontend.js"></script>
   <script type="text/javascript" src="comon/app.js"></script>
-
+  
 
 
   </body></html>
@@ -511,4 +512,11 @@ img.emoji {
         timer: 2500
       })
     }
+
+    //para saber la fecha en la que se inscribio el usuario
+
+    let input = document.getElementById('input');
+    let f = new Date();
+    input.value = f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear();
+
   </script>

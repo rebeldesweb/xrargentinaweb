@@ -51,6 +51,6 @@
     // Enviarlo
     mail($para, 'Gracias por sumarte a XR argentina', $mensaje, $cabeceras);
 
-    header('location:old.html?suscribido');
+    header('location:index.html?suscribido');
   }
 ?>

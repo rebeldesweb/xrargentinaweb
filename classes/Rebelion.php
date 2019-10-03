@@ -13,14 +13,16 @@
       $telefono = $_POST['phone'];
       $cdgPostal = $_POST['postcode'];
       $email = $_POST['email'];
-      $sql = "INSERT INTO inscriptos (nombre,apellido,telefono,codigoPostal,email)
-                VALUES (:firstname, :lastname, :phone, :postcode, :email)";
+      $fecha = $_POST['fecha'];
+      $sql = "INSERT INTO inscriptos (nombre,apellido,telefono,codigoPostal,email,fecha)
+                VALUES (:firstname, :lastname, :phone, :postcode, :email, :fecha)";
       $stmt = $link->prepare($sql);
       $stmt->bindParam(':firstname', $nombre, PDO::PARAM_STR);
       $stmt->bindParam(':lastname', $apellido, PDO::PARAM_STR);
       $stmt->bindParam(':phone', $telefono, PDO::PARAM_INT);
       $stmt->bindParam(':postcode', $cdgPostal, PDO::PARAM_INT);
       $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+      $stmt->bindParam(':fecha', $email, PDO::PARAM_STR);
       if ($stmt->execute()) {
         return true;
       }
