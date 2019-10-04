@@ -48,6 +48,7 @@
             <td class="text-center">ADNVOK</td>
             <td class="text-center">ORGANIZACIÓN</td>
             <td class="text-center">NOTAS</td>
+            <td class="text-center">FECHA</td>
           </tr>
         </thead>
         <tbody id="tasks">
@@ -63,6 +64,7 @@
               <td class="text-center"><?php echo $res['ADNVOK'] ?></td>
               <td class="text-center"><?php echo $res['organizacion'] ?></td>
               <td class="text-center"><?php echo $res['notas'] ?></td>
+              <td class="text-center"><?php echo $res['fecha'] ?></td>
               <td class="text-center">
                 <a target="blank" id="btn-eliminar" href="form-delete.php?id=<?php echo $res['id'];?>" class="btn btn-danger">Eliminar</a>
                 <a target="blank" id="btn-eliminar" href="formModificarInscripto.php?id=<?php echo $res['id'];?>" class="btn btn-warning">Modificar</a>

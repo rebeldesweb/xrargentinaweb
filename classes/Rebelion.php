@@ -22,7 +22,7 @@
       $stmt->bindParam(':phone', $telefono, PDO::PARAM_INT);
       $stmt->bindParam(':postcode', $cdgPostal, PDO::PARAM_INT);
       $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-      $stmt->bindParam(':fecha', $email, PDO::PARAM_STR);
+      $stmt->bindParam(':fecha', $fecha, PDO::PARAM_STR);
       if ($stmt->execute()) {
         return true;
       }
