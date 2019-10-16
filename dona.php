@@ -55,7 +55,7 @@
                             Un generador eléctrico (si es de los que se pueden hacer andar con bicis genial)
                             Un espacio disponible full time para poder usarlo de oficina, depósito y para dar charlas. Un espacio para todxs lxs rebeldes.
 
-                            Si crees que podés apoyarnos de otra manera escribinos a <a href="mailto:finanzas@xrargentina.org">finanzas@xrargentina.org</a> 
+                            Si crees que podés apoyarnos de otra manera escribinos a <a href="mailto:coordinacion@xrargentina.org">coordinacion@xrargentina.org</a> 
                             </p>
                     </div>
         
