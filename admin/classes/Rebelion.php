@@ -91,6 +91,25 @@
       return false;
     }
 
+    public function searchInscripto()
+    {
+      $search = $_GET['inputSearch'];
+      $link = Conexion::conectar();
+      $sql = "SELECT * FROM inscriptos
+              WHERE id LIKE '%$search%'
+					    OR nombre LIKE '%$search%'
+              OR apellido LIKE '%$search%'
+              OR email LIKE '%$search%'
+              OR fecha LIKE '%$search%'
+              OR telefono LIKE '%$search%'
+              OR integracionOK LIKE '%$search%'
+              OR ADNVOK LIKE '%$search%'";
+      $stmt = $link->prepare($sql);
+      $stmt->execute();
+      $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      return $resultado;
+    }
+
 
 
     //################# EVENTOS #################

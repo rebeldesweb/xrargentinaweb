@@ -1,7 +1,7 @@
 <?php
   require 'config/config.php';
   $objRebelion = new Rebelion();
-  $reg = $objRebelion->listarInscripto();
+  $reg = $objRebelion->searchInscripto();
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +37,7 @@
   <div class="row">
     <div class="col-12">
       <div class="contenedorForm text-left d-flex justify-content-end mr-3">
-        <form action="inscriptoSearch.php" method="GET" id="formSearch" class="form-inline">
+        <form action="inscriptoSearch.php" id="formSearch" method="GET" class="form-inline">
           <input type="text" name="inputSearch" class="form-control" placeholder="Filtre inscripto por acá">
           <input type="submit" class="btn btn-info" value="Buscar">
         </form>
