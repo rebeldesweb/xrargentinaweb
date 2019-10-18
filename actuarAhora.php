@@ -55,10 +55,57 @@
         </div>
         <div class="numbered-list-jumbo__content">
             <div class="numbered-list-jumbo__body type" >
+                <h2 id="tell-the-truth" class="demands-section-heading"><a href="" target="new">11 de Octubre 2019 -  </a> </h2>
+                <p>Acompañamos en la vigilia realizada en Plaza Congreso, en conmemoración al Último día de Libertad de los Pueblos Originarios.<br><br>
+			          </p>
+            </div>
+        </div>        <div class="numbered-list-jumbo__content">
+            <div class="numbered-list-jumbo__body type" >
+                <h2 id="tell-the-truth" class="demands-section-heading"><a href="https://youtu.be/VuCUGfwPvtQ" target="new">9 de Octubre 2019 - Acción global por lxs ambientalistxs asesinadxs </a> </h2>
+                <p>Acción global por lxs más de 164 defensorxs de la tierra y activistas ambientales asesinadxs  durante 2018. Marchamos con sus nombres y dejamos testimonio frente a la sede de la ONU en Buenos Aires.<br><br>
+			          </p>
+            </div>
+        </div>
+        <div class="numbered-list-jumbo__content">
+            <div class="numbered-list-jumbo__body type" >
+                <h2 id="tell-the-truth" class="demands-section-heading"><a href="https://youtu.be/XeJGH_Rgg2g" target="new">7 de Octubre 2019 - Acción Pan American Energy </a> </h2>
+                <p>Realizamos un bloqueo artístico en las puertas del edificio corporativo de PAE (Pan American Energy), principal empresa privada de combustibles fósiles de Argentina y una de las principales inversoras de Vaca Muerta.<br><br>
+			          </p>
+            </div>
+        </div>
+        <div class="numbered-list-jumbo__content">
+            <div class="numbered-list-jumbo__body type" >
+                <h2 id="tell-the-truth" class="demands-section-heading"><a href="https://youtu.be/4b4eLGQM3pw" target="new">7 de Octubre 2019 - Acción Monsanto-Bayer</a> </h2>
+                <p>Evidenciamos los daños de los agrotóxicos mostrando imágenes de los pueblos fumigados en las instalaciones de las oficinas de Bayer-Monsanto, principal explotador del modelo agroindustrial en la argentina.<br><br>
+			          </p>
+            </div>
+        </div>
+        <div class="numbered-list-jumbo__content">
+            <div class="numbered-list-jumbo__body type" >
+                <h2 id="tell-the-truth" class="demands-section-heading"><a href="https://youtu.be/uYg7743CQfA" target="new">7 de Octubre - Picnic Regenerativo </a> </h2>
+                <p>Iniciamos la Rebelión en Plaza San Martín, compartiendo un picnic regenerativo con música, arboles de deseos, meditación y yoga. Un espacio de encuentro para recargar energías. <br><br>
+			          </p>
+            </div>
+        </div>
+        <div class="numbered-list-jumbo__content">
+            <div class="numbered-list-jumbo__body type" >
+                <h2 id="tell-the-truth" class="demands-section-heading"><a href="https://youtu.be/uYg7743CQfA" target="new">7 al 11 de Octubre - Semana de Rebelión Internacional </a> </h2>
+                <p>Del 7 al 11 de Octubre nos sumamos a la primera rebelión internacional. Activistas de más de 60 países se sumaron con acciones directas no violentas. Nos declaramos en rebelión  contra la inacción  de los gobiernos mundiales, en relación a la crisis sin precedentes que está experimentando la humanidad.<br><br>
+			          </p>
+            </div>
+        </div>
+        <div class="numbered-list-jumbo__content">
+            <div class="numbered-list-jumbo__body type" >
+                <h2 id="tell-the-truth" class="demands-section-heading"><a href="https://youtu.be/4q5Ohq-sZKE" target="new">27 de septiembre 2019 - Huelga Mundial por el Clima </a> </h2>
+                <p>El 27 de Septiembre nos adherimos a la Huelga Mundial por el Clima, marchando en las calles junto con lxs jóvenes,  porque  estamos en crisis climática y ecológica y los gobiernos del mundo deben actuar en consecuencia.<br><br>
+			          </p>
+            </div>
+        </div>
+        <div class="numbered-list-jumbo__content">
+            <div class="numbered-list-jumbo__body type" >
                 <h2 id="tell-the-truth" class="demands-section-heading"><a href="https://youtu.be/XeJGH_Rgg2g" target="new">24 De septiembre 2019 - Sustainable Brands </a> </h2>
                 <p>Desfilamos en la puerta del MALBA ante el  evento que promueve la sustentabilidad y que irónicamente tiene de sponsors a Coca-Cola y Unilever, las empresas más contaminantes del mundo.<br><br>
-			    </p>
-
+			          </p>
             </div>
         </div>
         <div class="numbered-list-jumbo__content">
