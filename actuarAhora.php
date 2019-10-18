@@ -55,7 +55,7 @@
         </div>
         <div class="numbered-list-jumbo__content">
             <div class="numbered-list-jumbo__body type" >
-                <h2 id="tell-the-truth" class="demands-section-heading"><a href="" target="new">11 de Octubre 2019 -  </a> </h2>
+                <h2 id="tell-the-truth" class="demands-section-heading"><a href="" target="new">11 de Octubre 2019 - Último Día de Libertad de los Pueblos Originarios </a> </h2>
                 <p>Acompañamos en la vigilia realizada en Plaza Congreso, en conmemoración al Último día de Libertad de los Pueblos Originarios.<br><br>
 			          </p>
             </div>
