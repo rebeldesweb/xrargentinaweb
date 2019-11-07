@@ -4,6 +4,7 @@ var btnSumate = document.getElementById('btnSumate');
 var btnEmergencia = document.getElementById('btnEmergencia');
 var btnDemandas = document.getElementById('btnDemandas');
 var btnNosotros = document.getElementById('btnNosotros');
+var btnPress = document.getElementById('btnPress');
 
 var url = window.location.href;
 
@@ -13,7 +14,10 @@ if (url.includes('laverdad.php') || url.includes('laemergencia.php') || url.incl
   btnActuar.className = 'current-menu-item';
 }else if (url.includes('sumate.php')) {
   btnSumate.className = 'current-menu-item';
+}else if (url.includes('press.php')) {
+  btnPress.className = 'current-menu-item';
 }
+
 
 if (url.includes('laemergencia.php')) {
   btnEmergencia.classList.add("resaltarSubmenu");
@@ -36,6 +40,8 @@ if(url.includes('laverdad.php')){
   header.classList.add('bg-pink');
 }else if(url.includes('nosotros.php')){
   header.classList.add('bg-pink');
+}else if (url.includes('press.php')) {
+  header.classList.add('bg-purple')
 }
 
 if(url.includes('actuarAhora.php')){
