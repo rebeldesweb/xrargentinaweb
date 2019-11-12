@@ -14,9 +14,9 @@ if (url.includes('laverdad.php') || url.includes('laemergencia.php') || url.incl
   btnActuar.className = 'current-menu-item';
 }else if (url.includes('sumate.php')) {
   btnSumate.className = 'current-menu-item';
-}else if (url.includes('press.php')) {
+}else if (url.includes('prensa.php')) {
   btnPress.className = 'current-menu-item';
-}
+};
 
 
 if (url.includes('laemergencia.php')) {
@@ -40,7 +40,7 @@ if(url.includes('laverdad.php')){
   header.classList.add('bg-pink');
 }else if(url.includes('nosotros.php')){
   header.classList.add('bg-pink');
-}else if (url.includes('press.php')) {
+}else if (url.includes('prensa.php')) {
   header.classList.add('bg-purple')
 }
 
