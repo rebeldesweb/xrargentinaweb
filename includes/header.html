@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html class="xr js no-focus-outline" lang="es-AR"><!--<![endif]-->
   <head>
@@ -208,95 +209,97 @@ img.emoji {
 
 	</head>
 
-  <body class="body home page-template-default page page-id-37 wp-embed-responsive" data-template="base.twig">
-    <div class="nav-mobile js-nav-mobile">
-      <button class="nav-mobile__close close-button" id="close-button" aria-label="close menu"><img src="comon/close.svg" alt="close icon"></button>
-      <nav data-nav="" data-nav-btn-class="nav-mobile__expand">
-        <ul>
-          <li class="bg-pink menu-item menu-item-type-post_type menu-item-object-page menu-item-90 menu-item-has-children js-nav-main__item--hover is-closed">
-            <a target="" href="laverdad.php" data-menuanchor="laverdad.php">LA VERDAD</a><button class="nav-mobile__expand"></button>
-            <ul class="nav-main-dropdown" style="display: none;">
-              <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-55">
-                <a target="" href="laemergencia.php" data-menuanchor="laEmergencia.php">LA EMERGENCIA</a>
-              </li>
-              <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-56">
-                <a target="" href="demandas.php" data-menuanchor="demandas.php">NUESTRAS DEMANDAS</a>
-              </li>
-              <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-65">
-                <a target="" href="nosotros.php" data-menuanchor="nosotros.php">NOSOTROS</a>
-              </li>
-            </ul>
-          </li>
-          <li class="bg-blue menu-item menu-item-type-post_type menu-item-object-page menu-item-41 menu-item-has-children js-nav-main__item--hover is-closed">
-            <a target="" href="actuarAhora.php" data-menuanchor="actuarAhora.php">ACTUAR AHORA</a><button class="nav-mobile__expand"></button>
-          </li>
-          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5066	js-nav-main__item--hover">
-            <a target="" href="sumate.php" data-menuanchor="sumate.php">SUMATE</a>
-          </li>
-          <li id="btnPress" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5066">
-            <a target="" href="prensa.php" data-menuanchor="press.php">PRENSA</a>
-          </li>
+    <body class="body home page-template-default page page-id-37 wp-embed-responsive" data-template="base.twig">
+		  <div class="nav-mobile js-nav-mobile">
+			  <button class="nav-mobile__close close-button" id="close-button" aria-label="close menu">
+				  <img src="https://rebellion.earth/wp/wp-content/themes/xr/images/icons/close.svg" alt="close icon" />
+			  </button>
+			  <nav data-nav="" data-nav-btn-class="nav-mobile__expand">
+          <ul>
+            <li class="bg-pink menu-item menu-item-type-post_type menu-item-object-page menu-item-90 menu-item-has-children js-nav-main__item--hover is-closed">
+              <a target="" href="laverdad.php" data-menuanchor="laverdad.php">LA VERDAD</a><button class="nav-mobile__expand"></button>
+                <ul class="nav-main-dropdown" style="display: none;">
+                  <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-55">
+                    <a target="" href="laemergencia.php" data-menuanchor="laEmergencia.php">LA EMERGENCIA</a>
+                  </li>
+                  <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-56">
+                    <a target="" href="demandas.php" data-menuanchor="demandas.php">NUESTRAS DEMANDAS</a>
+                  </li>
+                  <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-65">
+                    <a target="" href="nosotros.php" data-menuanchor="nosotros.php">NOSOTROS</a>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li class="bg-blue menu-item menu-item-type-post_type menu-item-object-page menu-item-41 menu-item-has-children js-nav-main__item--hover is-closed">
+              <a target="" href="actuarAhora.php" data-menuanchor="actuarAhora.php">ACTUAR AHORA</a>
+              <button class="nav-mobile__expand"></button>
+            </li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5066	js-nav-main__item--hover">
+              <a target="" href="sumate.php" data-menuanchor="sumate.php">SUMATE</a>
+            </li>
+            <li id="btnPress" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5066">
+              <a target="" href="prensa.php" data-menuanchor="press.php">PRENSA</a>
+            </li>
+          </ul>
+        </nav><!--BARRA DE NAVEGACION MOBILE PENDIENTE URLs y trabado-->
+			
+        <div class="social-nav social-nav--mobile">
+          <ul aria-label="Social media links">
+            <li><a href="https://www.facebook.com/xrargentina/" class="facebook" aria-label="facebook"></a></li>
+            <li><a href="https://twitter.com/xrargentina" class="twitter" aria-label="twitter"></a></li>
+            <li><a href="https://www.instagram.com/xrargentina/" class="insta" aria-label="instagram"></a></li>
+            <li><a href="https://www.youtube.com/channel/UChGLU19SpG0UKOBLuNJBYfA" class="yt" aria-label="youtube"></a></li>
+          </ul>
+        </div><!--SOCIAL LISTO-->
 
-        </ul>
-      </nav><!--BARRA DE NAVEGACION MOBILE PENDIENTE URLs y trabado-->
+        <div class="donate donate--mobile">
+          <a href="dona.php" class="btn btn--primary-dark">DONÁ</a>
+        </div>
+      </div>	
+        
+		  <div class="page-mask" id="js-page-mask"></div>
+			  <header class="page-header js-page-header" id="header">
+		      <div class="page-header__wrap">
+            <a class="logo" href="index.html" rel="home"><img src="img/LOGO.png" alt="Extinction Rebellion" /></a>
+            <div class="page-header__content">
+						  <nav class="nav-main js-main-nav">
+							  <ul>
+			            <li id="btnVerdad" class="bg-pink menu-item menu-item-type-post_type menu-item-object-page menu-item-90 menu-item-has-children">
+			              <a target="" href="laverdad.php" data-menuanchor="laverdad.php">La verdad</a>
+		              </li>
+			            <li id="btnActuar" class="bg-blue menu-item menu-item-type-post_type menu-item-object-page menu-item-41 menu-item-has-children">
+			              <a target="" href="actuarAhora.php" data-menuanchor="actuarAhora.php">Actuar ahora</a>
+		              </li>
+			            <li id="btnSumate" class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-5066">
+			              <a target="" href="sumate.php" data-menuanchor="sumate.php">Sumate</a>
+		              </li>
+		              <li id="btnPrensa" class="bg-purple menu-item menu-item-type-post_type menu-item-object-page menu-item-66">
+			              <a target="" href="prensa.php" data-menuanchor="prensa.php">Prensa</a>
+		              </li>
+		            </ul>
+						  </nav>
+									
+				
+              <div class="social-nav social-nav--head">
+                <ul aria-label="Social media links">
+                  <li><a href="https://www.facebook.com/xrargentina/" class="facebook" aria-label="facebook"></a></li>
+                  <li><a href="https://twitter.com/xrargentina" class="twitter" aria-label="twitter"></a></li>
+                  <li><a href="https://www.instagram.com/xrargentina/" class="insta" aria-label="instagram"></a></li>
+                  <li><a href="https://www.youtube.com/channel/UChGLU19SpG0UKOBLuNJBYfA" class="yt" aria-label="youtube"></a></li>
+                </ul>
+              </div><!--SOCIAL LISTO-->
 
-      <div class="social-nav social-nav--mobile">
-        <ul aria-label="Social media links">
-          <li><a href="https://www.facebook.com/xrargentina/" class="facebook" aria-label="facebook"></a></li>
-          <li><a href="https://twitter.com/xrargentina" class="twitter" aria-label="twitter"></a></li>
-          <li><a href="https://www.instagram.com/xrargentina/" class="insta" aria-label="instagram"></a></li>
-          <li><a href="https://www.youtube.com/channel/UChGLU19SpG0UKOBLuNJBYfA" class="yt" aria-label="youtube"></a></li>
-        </ul>
-      </div><!--SOCIAL LISTO-->
+				      <div class="donate donate--head">
+                <a href="dona.php" class="btn btn--primary-dark">Doná</a>
+              </div>
+				
 
-      <div class="donate donate--mobile">
-        <a href="dona.php" class="btn btn--primary-dark">DONÁ</a>
-      </div>
-
-
-    </div>
-    <div class="page-mask" id="js-page-mask"></div>
-      <header class="page-header js-page-header" id="header">
-        <div class="page-header__wrap">
-          <a class="logo" href="index.html" rel="home"><img src="img/LOGO.png" alt="Extinction Rebellion"></a>
-          <nav class="nav-main js-main-nav">
-              <ul>
-                <li id="btnVerdad" class="bg-pink menu-item menu-item-type-post_type menu-item-object-page menu-item-90 menu-item-has-children">
-                  <a target="" href="laverdad.php" data-menuanchor="laverdad.php">LA VERDAD</a>
-                </li>
-                <li id="btnActuar" class="bg-blue menu-item menu-item-type-post_type menu-item-object-page menu-item-41 menu-item-has-children">
-                  <a target="" href="actuarAhora.php" data-menuanchor="actuarAhora.php">ACTUAR AHORA</a>
-                </li>
-                <li id="btnSumate" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5066">
-                  <a target="" href="sumate.php" data-menuanchor="sumate.php">SUMATE</a>
-                </li>
-                <li id="btnPress" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5066">
-                  <a target="" href="prensa.php" data-menuanchor="press.php">PRENSA</a>
-                </li>
-              </ul>
-            </nav><!--BARRA DE NAVEGACION DESKTOP PENDIENTE URLs-->
-          <div class="page-header__content ">
-
-            <div class="social-nav social-nav--head">
-              <ul aria-label="Social media links">
-                <li><a href="https://www.facebook.com/xrargentina/" class="facebook" aria-label="facebook"></a></li>
-                <li><a href="https://twitter.com/xrargentina" class="twitter" aria-label="twitter"></a></li>
-                <li><a href="https://www.instagram.com/xrargentina/" class="insta" aria-label="instagram"></a></li>
-                <li><a href="https://www.youtube.com/channel/UChGLU19SpG0UKOBLuNJBYfA" class="yt" aria-label="youtube"></a></li>
-              </ul>
-            </div><!--SOCIAL LISTO-->
-
-            <div class="donate donate--head">
-              <a href="dona.php" class="btn btn--primary-dark">Doná</a>
-            </div>
-
-
-
-            <button class="burger" id="js-burger" aria-label="Open Menu">
-              <svg height="32" width="32" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#FFFFFF" d="M4 10h24a2 2 0 0 0 0-4H4a2 2 0 0 0 0 4zm24 4H4a2 2 0 0 0 0 4h24a2 2 0 0 0 0-4zm0 8H4a2 2 0 0 0 0 4h24a2 2 0 0 0 0-4z"></path>
-              </svg>
-            </button>
-          </div>
-        </div><!-- .page-header__wrap -->
-      </header>
+						  <button class="burger" id="js-burger" aria-label="Open Menu">
+						    <svg height="32" width="32" xmlns="http://www.w3.org/2000/svg">
+						        <path fill="#FFFFFF" d="M4 10h24a2 2 0 0 0 0-4H4a2 2 0 0 0 0 4zm24 4H4a2 2 0 0 0 0 4h24a2 2 0 0 0 0-4zm0 8H4a2 2 0 0 0 0 4h24a2 2 0 0 0 0-4z"/>
+						    </svg>
+					    </button>
+					  </div>
+		      </div><!-- .page-header__wrap -->
+        </header>

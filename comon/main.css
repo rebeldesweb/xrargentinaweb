@@ -3387,7 +3387,7 @@ figure.wp-block-image a.pdf-image:after {
 .nav-main {
     font-family: "FucXed", sans-serif;
     display: none;
-    margin-left: 18%;
+    
 }
 
 .search-open .nav-main {
@@ -3746,7 +3746,8 @@ figure.wp-block-image a.pdf-image:after {
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
-    flex-grow: 1
+    flex-grow: 1;
+    width: 20px;
 }
 
 .logo {
