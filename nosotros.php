@@ -76,12 +76,12 @@
 								Crear un mundo en buena forma para las generaciones futuras.
 							</li>
 							<li>
-								<div class="numbered-list_heading">Nuestra misión es hacer lo que sea necesario</div>
-								Movilizar al 3.5% de la problación para lograr un cambio sistémico.
+								<div class="numbered-list_heading">Nuestra misión es hacer lo que sea necesariO</div>
+								Movilizar al 3.5% de la población para lograr un cambio sistémico.
 							</li>
 
 							<li>
-								<div class="numbered-list_heading">Necesitamos una cultura regenerativae</div>
+								<div class="numbered-list_heading">Necesitamos una cultura regenerativa</div>
 								Para crear una sociedad saludable, resiliente y adaptable.
 							</li>
 							<li>
@@ -93,25 +93,25 @@
 								Trabajamos activamente para crear un ambiente inclusivo y seguro para todxs.
 							</li>
 							<li>
-								<div class="numbered-list_heading">Valoramos la reflección y aprendizaje</div>
-								Siguiendo un ciclo de acción, reflección, aprendizaje y planificación par la siguiente acción. Aprendemos de otros movimientos y contextos ademas de nuestras propias experiencias y errores.
+								<div class="numbered-list_heading">Valoramos la reflexión y el aprendizaje</div>
+								Siguiendo un ciclo de acción, reflexión, aprendizaje y planificación para la siguiente acción. Aprendemos de otros movimientos y contextos además de nuestras propias experiencias y errores.
 							</li>
 							<li>
 								<div class="numbered-list_heading">Mitigamos activamente la concentración de poder</div>
-								Deconstruimos las jerarquias de poder para una participación más equitativa
+								Deconstruimos las jerarquías de poder para una participación más equitativa.
 							</li>
 							<li>
-								<div class="numbered-list_heading">Evitamos culpar o humillar a las personas</div>
-								Vivimos en un sistema tóxico pero ningun individuo es culpable de esto.
+								<div class="numbered-list_heading">Evitamos culpar o humillar a las personas.</div>
+								Vivimos en un sistema tóxico pero ningún individuo es culpable de esto.
 							</li>
 							<li>
 								<div class="numbered-list_heading">Somos una red NO VIOLENTA</div>
 								Usamos tácticas de NO VIOLENCIA como la herramienta más efectiva de cambio.
 							</li>
 							<li>
-								<div class="numbered-list_heading">Nos basamos en la autonomía y descentralización</div>
+								<div class="numbered-list_heading">Nos basamos en la autonomía y descentralización.</div>
 								Creamos colectivamente las estructuras necesarias para desafiar al poder. <br><br>
-								Si adherís a estos 10 princiios ya podes ser parte de la rebelión.
+								Si adherís a estos 10 princiios ya podés ser parte de la rebelión.
 							</li>
 
 						</ol>
