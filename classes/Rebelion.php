@@ -14,15 +14,50 @@
       $cdgPostal = $_POST['postcode'];
       $email = $_POST['email'];
       $fecha = $_POST['fecha'];
-      $sql = "INSERT INTO inscriptos (nombre,apellido,telefono,codigoPostal,email,fecha)
-                VALUES (:firstname, :lastname, :phone, :postcode, :email, :fecha)";
-      $stmt = $link->prepare($sql);
-      $stmt->bindParam(':firstname', $nombre, PDO::PARAM_STR);
-      $stmt->bindParam(':lastname', $apellido, PDO::PARAM_STR);
-      $stmt->bindParam(':phone', $telefono, PDO::PARAM_INT);
-      $stmt->bindParam(':postcode', $cdgPostal, PDO::PARAM_INT);
+      //previamente obtenemos los email que coincidad con el email que ingreso el usuario, para que no se inscriban muchos con el mismo email
+      $queryPrevious = "SELECT email FROM inscriptos WHERE email = :email";
+      $stmt = $link->prepare($queryPrevious);
       $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-      $stmt->bindParam(':fecha', $fecha, PDO::PARAM_STR);
+      $stmt->execute();
+      $cantidad = $stmt->rowCount();
+      if ($cantidad>=1) {
+        header('location: index.html?duplicate');
+      }else {
+        $sql = "INSERT INTO inscriptos (nombre,apellido,telefono,codigoPostal,email,fecha)
+                VALUES (:firstname, :lastname, :phone, :postcode, :email, :fecha)";
+        $stmt = $link->prepare($sql);
+        $stmt->bindParam(':firstname', $nombre, PDO::PARAM_STR);
+        $stmt->bindParam(':lastname', $apellido, PDO::PARAM_STR);
+        $stmt->bindParam(':phone', $telefono, PDO::PARAM_INT);
+        $stmt->bindParam(':postcode', $cdgPostal, PDO::PARAM_INT);
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->bindParam(':fecha', $fecha, PDO::PARAM_STR);
+        if ($stmt->execute()) {
+          return true;
+        } 
+      }
+    }
+
+    //esta funcion lo que hace es obtener el id del nuevo suscriptor para luego dejar el log de si recibió el email o no.
+    public function getIdEmail()
+    {
+      $link = Conexion::conectar();
+      $email = $_POST['email'];
+      $sql = "SELECT id FROM inscriptos WHERE email = '". $email ."'";
+      $stmt = $link->prepare($sql);
+      $stmt->execute();
+      $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
+      return $resultado['id'];
+    }
+
+    //esta funcion recibe el id que lo obtiene la funcion getIdEmail, y gracias a el modifico el valor de la columna sendEmail de la tabla inscriptos.
+    public function logEmail($callback)
+    {
+      $link = Conexion::conectar();
+      $id = $callback;
+      $sql = "UPDATE inscriptos SET sendEmail = 1 WHERE id = :id";
+      $stmt = $link->prepare($sql);
+      $stmt->bindParam(':id', $id, PDO::PARAM_INT);
       if ($stmt->execute()) {
         return true;
       }

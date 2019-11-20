@@ -5,7 +5,7 @@
   $bool = $objRebelion->agregarInscripto();
   if ($bool) {
 
-    $para  = $_POST['email'];; // atención a la coma
+    $para  = $_POST['email']; // atención a la coma
     // título
     // Subject
     $asunto = 'Te has registrado con éxito en xrargentina';
@@ -47,9 +47,15 @@
     // Cabeceras adicionales
     // $cabeceras .= 'To: Mary <mary@example.com>, Kelly <kelly@example.com>' . "\r\n";
     $cabeceras .= 'From: xrargentina <xrargentina@gmail.com>' . "\r\n";
+    $cabeceras .= 'Cc: rebeldes@xrargentina.org' . "\r\n";
 
     // Enviarlo
-    mail($para, 'Gracias por sumarte a XR argentina', $mensaje, $cabeceras);
+    $sendMail = mail($para, 'Gracias por sumarte a XR argentina', $mensaje, $cabeceras);
+
+    if ($sendMail) {
+      $ultId = $objRebelion->getIdEmail();
+      $logEmail = $objRebelion->logEmail($ultId);
+    }
 
     header('location:index.html?suscribido');
   }

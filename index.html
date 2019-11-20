@@ -506,11 +506,11 @@ img.emoji {
 
   <script type="text/javascript">
     var url = window.location.href;
-    if (url.includes('error') && url.includes('error') == 1) {
+    if (url.includes('duplicate')) {
       Swal.fire({
         type: 'error',
         title: 'Oops...',
-        text: 'Por favor completa todos los campos!',
+        text: 'El email que ingresaste ya existe!',
       })
     };
 
