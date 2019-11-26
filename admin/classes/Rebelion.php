@@ -34,7 +34,7 @@
     public function listarInscripto()
     {
       $link = Conexion::conectar();
-      $sql = "SELECT * FROM inscriptos";
+      $sql = "SELECT * FROM inscriptos ORDER BY id DESC";
       $stmt = $link->prepare($sql);
       $stmt->execute();
       $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
