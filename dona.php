@@ -14,24 +14,24 @@
     <div class="featured-text">
         <div class="featured-text__content">
             <p>Necesitamos tu ayuda para que el 3,5% de la población argentina se sume a la rebelión contra la extinción. Solo así podremos lograr un cambio sistémico.&nbsp;</p>
-            
-            
-            
-            <p>La Rebelión necesita financiarse y necesitamos tu ayuda.&nbsp;</p>
-            
-            
-            
-            <p>Podés apoyarnos de 3 maneras.</p>
-            
 
-        
-        
+
+
+            <p>La Rebelión necesita financiarse y necesitamos tu ayuda.&nbsp;</p>
+
+
+
+            <p>Podés apoyarnos de 3 maneras.</p>
+
+
+
+
         </div>
     </div>
 </div>
-                
+
             <div class="donate-columns">
-                <div class="donate-column"> 
+                <div class="donate-column">
                     <div class="donate-column-text type">
                         <p>Aportando a nuestra campaña de crowdfunding para financiar rebeldes que puedan dedicarle tiempo completo a la rebelión, alquilar una oficina y otros gastos de estructura.</p>
                     </div>
@@ -47,7 +47,7 @@
                         <a class="btn btn--primary-dark" href="http://mpago.la/274ZgL">Doná acá</a>
                     </p>
                 </div>
-                <div class="donate-column type">
+                <!--<div class="donate-column type">
                     <div class="donate-column-text type">
                         <p>Aportando algún equipamiento que necesitamos. Ahora estamos necesitando:
                             Un proyecto bien potente
@@ -55,10 +55,10 @@
                             Un generador eléctrico (si es de los que se pueden hacer andar con bicis genial)
                             Un espacio disponible full time para poder usarlo de oficina, depósito y para dar charlas. Un espacio para todxs lxs rebeldes.
 
-                            Si crees que podés apoyarnos de otra manera escribinos a <a href="mailto:coordinacion@xrargentina.org">coordinacion@xrargentina.org</a> 
+                            Si crees que podés apoyarnos de otra manera escribinos a <a href="mailto:coordinacion@xrargentina.org">coordinacion@xrargentina.org</a>
                             </p>
                     </div>
-        
-                </div>               
+
+                </div>-->               
            </div><!-- .container -->
 <?php include 'includes/footer2.html' ?>
