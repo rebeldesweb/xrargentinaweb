@@ -55,14 +55,14 @@
         </div>
         <div class="numbered-list-jumbo__content">
             <div class="numbered-list-jumbo__body type" >
-                <h2 id="tell-the-truth" class="demands-section-heading"><a href="" target="new">5 de diciembre- Acampe Casa de Santa Cruz </a> </h2>
+                <h2 id="tell-the-truth" class="demands-section-heading"><a href="https://youtu.be/LIa5rXHgORQ" target="new">5 de diciembre- Acampe Casa de Santa Cruz </a> </h2>
                 <p>Declaramos la Casa de Santa Cruz como parque nacional y exigimos que se dé marcha atrás con el proyecto de ley que buscar prohibir los parques nacionales en esta provincia.<br><br>
 			          </p>
             </div>
         </div>
         <div class="numbered-list-jumbo__content">
             <div class="numbered-list-jumbo__body type" >
-                <h2 id="tell-the-truth" class="demands-section-heading"><a href="" target="new">11 de Octubre 2019 - Último Día de Libertad de los Pueblos Originarios </a> </h2>
+                <h2 id="tell-the-truth" class="demands-section-heading"><a href="https://youtu.be/iXyZ-8hxI4Q" target="new">11 de Octubre 2019 - Último Día de Libertad de los Pueblos Originarios </a> </h2>
                 <p>Acompañamos en la vigilia realizada en Plaza Congreso, en conmemoración al Último día de Libertad de los Pueblos Originarios.<br><br>
 			          </p>
             </div>
