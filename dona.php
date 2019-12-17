@@ -36,7 +36,7 @@
                         <p>Aportando a nuestra campaña de crowdfunding para financiar rebeldes que puedan dedicarle tiempo completo a la rebelión, alquilar una oficina y otros gastos de estructura.</p>
                     </div>
                     <p>
-                        <a class="btn btn--primary-dark" href="http://bit.ly/2LLKTIz">Doná acá</a>
+                        <a class="btn btn--primary-dark" href="https://ide.la/2Y4euTb">Doná acá</a>
                     </p>
                 </div>
                 <div class="donate-column type">
@@ -59,6 +59,6 @@
                             </p>
                     </div>
 
-                </div>-->               
+                </div>-->
            </div><!-- .container -->
 <?php include 'includes/footer2.html' ?>
