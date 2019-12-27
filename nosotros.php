@@ -26,7 +26,7 @@
   <div class="featured-text">
     <div class="featured-text__content">
       <p>Somos ciudadanxs que decidimos resistir masivamente frente a un sistema que atenta contra la existencia. Somos rebeldes contra la extinción.
-	 <g class="gr_ gr_40 gr-alert gr_spell gr_inline_cards gr_disable_anim_appear ContextualSpelling ins-del multiReplace" id="40" data-gr-id="40"></g> .</p>
+	 <g class="gr_ gr_40 gr-alert gr_spell gr_inline_cards gr_disable_anim_appear ContextualSpelling ins-del multiReplace" id="40" data-gr-id="40"></g> </p>
     </div>
   </div>
   <h2><a href="https://youtu.be/3VMexZYVSIM">VIdeo: Camino a la extinción </a></h2>
