@@ -14,7 +14,7 @@
       } 
 
       if (!url.includes('?error=1')) { //si incluye es porque viene redireccionado desde backend, entonces no tiene que salir un alert sino un sweetalert.
-        if (nombre.value == "" || apellido.value == "" || email.value == "") {
+        if (nombre.value == "" || apellido.value == "" || email.value == "" || telefono.value == "") {
           alert('por favor completa todos los campos');
           return false;
         };

@@ -5,6 +5,7 @@
     src: url("fucxedcaps-v2-webfont.woff2") format("woff2");
     font-display: swap;
 } */
+
 @font-face {
     font-family: 'FucXed';
     /* Upload fonts on your own server and replace urls with your own. */
@@ -2258,7 +2259,7 @@ template {
 .tease-post {
     display: block;
     margin: 0 auto 1.875em;
-    max-width: 32.5em;
+    max-width: 80%;
     background: white
 }
 

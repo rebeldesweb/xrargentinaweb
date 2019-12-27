@@ -42,6 +42,8 @@ if(url.includes('laverdad.php')){
   header.classList.add('bg-pink');
 }else if (url.includes('prensa.php')) {
   header.classList.add('bg-purple')
+}else if (url.includes('noticias.php')) {
+  header.classList.add('bg-yellow')
 }
 
 if(url.includes('actuarAhora.php')){

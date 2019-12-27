@@ -124,6 +124,29 @@
       return $resultado;
     }
 
+    public function listarNoticia()
+    {
+      $link = Conexion::conectar();
+      $sql = "SELECT * FROM noticias";
+      $stmt = $link->prepare($sql);
+      $stmt->execute();
+      $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      $json = array();
+      foreach ($resultado as $reg) {
+        $json[] = array(
+          'id' => $reg['id'],
+          'titulo' => $reg['titulo'],
+          'fecha' => $reg['fecha'],
+          'autor' => $reg['autor'],
+          'noticiaImagen' => $reg['noticiaImagen'],
+          'noticia' => $reg['noticia']
+        );
+      }
+      $jsonString = json_encode($json);
+      return $jsonString;
+    }
+
+
   }
 
 ?>

@@ -13,7 +13,7 @@
   <title>Admin Suscriptores</title>
   <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="https://bootswatch.com/4/united/bootstrap.min.css"> -->
-  <link rel="stylesheet" href="../css/style.css">
+  <!-- <link rel="stylesheet" href="../css/style.css"> -->
   <link rel="stylesheet" href="../comon/sweetalert2.css">
 </head>
 <body>
@@ -35,9 +35,9 @@
 
   <div class="container mt-3">
     <div class="list-group">
-        <a href="admin.php" class="list-group-item list-group-item-action">Lista de inscriptos</a>
-        <a href="adminEventos.php" class="list-group-item list-group-item-action">Agregar Eventos</a>
-        <a href="listaEventos.php" class="list-group-item list-group-item-action">Lista de Eventos</a>
+        <a href="adminInscriptos.php" class="list-group-item list-group-item-action">Lista de inscriptos</a>
+        <a href="adminEventos.php" class="list-group-item list-group-item-action">Lista de Eventos</a>
+        <a href="adminNoticias.php" class="list-group-item list-group-item-action">Lista de noticias</a>
     </div>
   </div>
   
