@@ -24,3 +24,10 @@
         };
       };
     };
+
+    let divSegundoPaso = document.getElementById('divSegundoPaso');
+    divSegundoPaso.classList.add('ocultar');
+
+    function mostrarSegundoPaso(){
+      divSegundoPaso.classList.remove('ocultar');
+    }

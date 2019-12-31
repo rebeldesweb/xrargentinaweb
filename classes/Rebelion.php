@@ -14,6 +14,7 @@
       $cdgPostal = $_POST['postcode'];
       $email = $_POST['email'];
       $fecha = $_POST['fecha'];
+      $colaboracion = $_POST['colaboracion'];
       //previamente obtenemos los email que coincidad con el email que ingreso el usuario, para que no se inscriban muchos con el mismo email
       $queryPrevious = "SELECT email FROM inscriptos WHERE email = :email";
       $stmt = $link->prepare($queryPrevious);
@@ -23,8 +24,8 @@
       if ($cantidad>=1) {
         header('location: index.html?duplicate');
       }else {
-        $sql = "INSERT INTO inscriptos (nombre,apellido,telefono,codigoPostal,email,fecha)
-                VALUES (:firstname, :lastname, :phone, :postcode, :email, :fecha)";
+        $sql = "INSERT INTO inscriptos (nombre,apellido,telefono,codigoPostal,email,fecha,colaboracion)
+                VALUES (:firstname, :lastname, :phone, :postcode, :email, :fecha, :colaboracion)";
         $stmt = $link->prepare($sql);
         $stmt->bindParam(':firstname', $nombre, PDO::PARAM_STR);
         $stmt->bindParam(':lastname', $apellido, PDO::PARAM_STR);
@@ -32,6 +33,7 @@
         $stmt->bindParam(':postcode', $cdgPostal, PDO::PARAM_INT);
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->bindParam(':fecha', $fecha, PDO::PARAM_STR);
+        $stmt->bindParam(':colaboracion', $colaboracion, PDO::PARAM_STR);
         if ($stmt->execute()) {
           return true;
         } 
@@ -144,6 +146,30 @@
       }
       $jsonString = json_encode($json);
       return $jsonString;
+    }
+
+    public function verNoticiaPorId()
+    {
+      $id = $_GET['id'];
+      $link = Conexion::conectar();
+      $sql = "SELECT * FROM noticias WHERE id = :id";
+      $stmt = $link->prepare($sql);
+      $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+      $stmt->execute();
+      $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
+      // $json = array();
+      // foreach ($resultado as $reg) {
+      //   $json[] = array(
+      //     'id' => $reg['id'],
+      //     'titulo' => $reg['titulo'],
+      //     'fecha' => $reg['fecha'],
+      //     'autor' => $reg['autor'],
+      //     'noticiaImagen' => $reg['noticiaImagen'],
+      //     'noticia' => $reg['noticia']
+      //   );
+      // }
+      // $jsonString = json_encode($json);
+      return $resultado;
     }
 
 

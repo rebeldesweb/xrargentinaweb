@@ -13,3 +13,6 @@
 .cajaTexto p{text-align: center;}
 
 .resaltarSubmenu{text-decoration: underline;}
+
+.ocultar{display: none;}
+.mostrar{display: block;}

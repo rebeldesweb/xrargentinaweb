@@ -48,10 +48,25 @@
           </div>
 
           <div class="form__actions">
-            <input type="submit"  value="Sumarte" class="btn btn--primary-dark" aria-label="Submit form">
+            <input type="button" name="" onclick="mostrarSegundoPaso()" value="Continuar" class="btn btn--primary-dark">
           </div>
         </div>
-        <center><br><div class="g-recaptcha" data-sitekey="6Lf0ZbIUAAAAAP4kG1gmnRhLH6CgN2vI-2zz60zw"></div></center>
+
+        <div class="segundoPaso" id="divSegundoPaso">
+          <div class="form__group" style="text-align: center;">
+            <select name="colaboracion" id="" class="form__group">
+              <option value="">En que puedo ayudar</option>
+              <option value="Colaborar en equipos de trabajo">Colaborar en equipos de trabajo</option>
+              <option value="Colaborar en acciones no violentas">Colaborar en acciones no violentas</option>
+              <option value="Sumarme a grupo local">Sumarme a grupo local</option>
+              <option value="Compartiendo en redes sociales">Compartiendo en redes sociales</option>
+            </select>
+          </div>
+          <center><br><div class="g-recaptcha" data-sitekey="6Lf0ZbIUAAAAAP4kG1gmnRhLH6CgN2vI-2zz60zw"></div></center>
+          <div class="form__actions">
+            <input type="submit" name="" value="Sumarte" class="btn btn--primary-dark" aria-label="Submit form">
+          </div>
+        </div>
       </form>
     </div><!--FORMULARIO DE CONTACTO PENDIENTE redireccion nueva-->
 </main>
@@ -125,10 +140,9 @@
 <script src="comon/menuDinamico.js" charset="utf-8"></script> <!--logica de activacion de items de menu -->
 <script src="bootstrap/js/popper.min.js" charset="utf-8"></script>
 <script src="bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
-<script type="text/javascript">
-
 <script src="comon/sweetalert2.js" charset="utf-8"></script>
 <script src="comon/validacion.js" charset="utf-8"></script>
+<script type="text/javascript">
 <!-- /* <![CDATA[ */
 var xrParams = {"theme_url":"https:\/\/rebellion.earth\/wp\/wp-content\/themes\/xr","theme_images_url":"https:\/\/rebellion.earth\/wp\/wp-content\/themes\/xr\/images","ajax_url":"https:\/\/rebellion.earth\/wp\/wp-admin\/admin-ajax.php"};
 var xrLiveBlogParams = {"nonce":"7cbf85d262"};

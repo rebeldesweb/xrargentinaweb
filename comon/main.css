@@ -2226,46 +2226,50 @@ template {
     background-color: #e6e6e6
 }
 
-.news__wrap {
-    margin-left: -1.25em;
-    margin-right: -1.25em
-}
-
 .news__title {
     text-align: center;
-    margin-bottom: .625em
+    margin-bottom: .9375rem;
+    font-size: 1.5rem;
+    letter-spacing: 1px
 }
 
-.posts {
-    max-width: 70em;
-    margin: 0 auto;
-    padding: 0 1.25em
+@media only screen and (min-width: 31.25em) {
+    .news__title {
+        margin-bottom:1.875rem;
+        font-size: 1.875rem
+    }
 }
 
 @media only screen and (min-width: 50em) {
-    .posts {
-        display: grid;
+    .news__title {
+        text-align:left
+    }
+}
+
+.posts {
+    max-width: 65rem;
+    margin: 0 auto;
+    margin: 0 auto
+}
+
+@media only screen and (min-width: 50em) {
+    .posts__grid {
+        display:grid;
         grid-gap: 20px;
         grid-template-columns: 1fr 1fr
     }
 }
 
-@media only screen and (min-width: 62.5em) {
-    .posts {
-        padding: 0 2.5em
-    }
-}
-
 .tease-post {
     display: block;
-    margin: 0 auto 1.875em;
-    max-width: 80%;
+    margin: 0 auto 1.875rem;
+    max-width: 32.5rem;
     background: white
 }
 
 @media only screen and (min-width: 50em) {
     .tease-post {
-        margin: 0
+        margin:0
     }
 }
 
@@ -2276,13 +2280,13 @@ template {
 
 .tease-post .btn {
     margin-top: 1.25rem;
-    font-size: 1.25em;
-    padding: .6em 1em .4em
+    font-size: 1.25rem;
+    padding: .75rem 1.25rem .5rem
 }
 
-.tease-post h2 {
-    font-size: 1.25em;
-    font-family: "Crimson Text", Georgia, serif;
+.tease-post h2,.tease-post .schema-faq-question {
+    font-size: 1.25rem;
+    font-family: "Crimson Text",Georgia,serif;
     font-weight: bold;
     border-bottom: 1px solid black;
     line-height: 1.2;
@@ -2291,33 +2295,51 @@ template {
 }
 
 @media only screen and (min-width: 31.25em) {
-    .tease-post h2 {
-        font-size: 2.1875em
+    .tease-post h2,.tease-post .schema-faq-question {
+        font-size:2.1875rem
     }
 }
 
-.tease-post h2 a {
+.tease-post h2 a,.tease-post .schema-faq-question a {
     text-decoration: none
 }
 
+.tease-post__img {
+    display: block;
+    position: relative
+}
+
+.tease-post__img .video-length {
+    background: rgba(0,0,0,0.8);
+    color: white;
+    position: absolute;
+    right: .625rem;
+    bottom: .625rem;
+    padding: .1875rem .3125rem;
+    font-size: 1rem;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    line-height: 1;
+    letter-spacing: 0.5px
+}
+
 .tease-post__body {
-    padding: 1.25em
+    padding: 1.25rem
 }
 
 .tease-post__meta {
-    font-size: 1em;
-    margin-bottom: .3125em;
+    font-size: 1rem;
+    margin-bottom: .3125rem;
     font-weight: bold
 }
 
 .tease-post__preview {
     line-height: 1.2;
-    font-size: 1.0625em
+    font-size: 1.0625rem
 }
 
 @media only screen and (min-width: 31.25em) {
     .tease-post__preview {
-        font-size: 1.125em
+        font-size:1.125rem
     }
 }
 
@@ -2329,9 +2351,9 @@ template {
 
 .posts-widget-sidbar li {
     border-top: 1px solid black;
-    margin-bottom: .3125em;
-    padding: .5em 0 .125em;
-    font-size: 1.25em;
+    margin-bottom: .3125rem;
+    padding: .5rem 0 .125rem;
+    font-size: 1.25rem;
     line-height: 1.2
 }
 
@@ -2340,39 +2362,103 @@ template {
 }
 
 .posts-widget-sidbar__title {
-    font-size: 1.5625em;
-    margin-bottom: .2em
+    font-size: 1.5625rem;
+    margin-bottom: .3125rem
 }
 
 .posts-widget-sidbar__date {
     font-weight: bold;
     line-height: 1;
     display: block;
-    margin-bottom: -.15em
+    margin-bottom: -.1875rem
 }
 
 .post .page-title {
-    font-family: "Crimson Text", Georgia, serif;
-    font-size: 1.875em;
+    font-family: "Crimson Text",Georgia,serif;
+    font-size: 1.875rem;
     margin-bottom: .3125rem
 }
 
 @media only screen and (min-width: 31.25em) {
     .post .page-title {
-        font-size: 2.8125em
+        font-size:2.8125rem
     }
 }
 
 .post_header {
     border-bottom: 1px solid #1D1D1B;
-    margin-bottom: .3125em;
-    padding-bottom: .625em
+    margin-bottom: .3125rem;
+    padding-bottom: .625rem
 }
 
 .post_date {
     font-weight: bold;
-    font-size: 1.25em;
-    margin-bottom: 1.5em
+    font-size: 1.25rem;
+    margin-bottom: 1.875rem
+}
+
+.category-filter {
+    background: black
+}
+
+@media only screen and (min-width: 31.25em) {
+    .category-filter .form__group {
+        margin-bottom:0
+    }
+}
+
+@media only screen and (min-width: 31.25em) {
+    .category-filter .form__row {
+        display:-webkit-box;
+        display: flex;
+        -webkit-box-align: end;
+        align-items: flex-end;
+        margin-right: 1.875rem
+    }
+}
+
+@media only screen and (min-width: 31.25em) {
+    .category-filter .actions {
+        margin-left:.9375rem
+    }
+}
+
+.js .category-filter [type="submit"] {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px)
+}
+
+.category-filter button:disabled,.category-filter button[disabled] {
+    opacity: 0.4
+}
+
+.no-js .category-filter [data-remote-form-reset] {
+    display: none
+}
+
+@media only screen and (min-width: 31.25em) {
+    .category-filter__fields {
+        display:-webkit-box;
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between
+    }
+}
+
+.category-filter__count {
+    font-size: 1.25rem;
+    line-height: 1;
+    align-self: center;
+    font-family: "FucXed",sans-serif;
+    color: white;
+    line-height: 1.2;
+    align-self: flex-end;
+    min-width: 5rem
 }
 
 .featured-text {

@@ -42,7 +42,7 @@ if(url.includes('laverdad.php')){
   header.classList.add('bg-pink');
 }else if (url.includes('prensa.php')) {
   header.classList.add('bg-purple')
-}else if (url.includes('noticias.php')) {
+}else if (url.includes('noticia.php') || url.includes('noticias.php')) {
   header.classList.add('bg-yellow')
 }
 
