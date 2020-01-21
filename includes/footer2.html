@@ -34,7 +34,12 @@
 
           <div class="form__group">
             <label for="an-postcode" class="is-hidden-visually">Codigo postal</label>
-            <input type="text" id="an-postcode" name="postcode" value="" placeholder="Codigo postal (opcional)">
+            <select name="provincia" id="provincia" class="form__group" required>
+              <option value="">Provincia</option>
+            </select>
+            <select name="ciudad" id="ciudad" class="form__group" required>
+              <option value="">Ciudad</option>
+            </select>
           </div>
 
           <div class="form__group js-email ">
@@ -54,13 +59,11 @@
 
         <div class="segundoPaso" id="divSegundoPaso">
           <div class="form__group" style="text-align: center;">
-            <select name="colaboracion" id="" class="form__group">
-              <option value="">En que puedo ayudar</option>
-              <option value="Colaborar en equipos de trabajo">Colaborar en equipos de trabajo</option>
-              <option value="Colaborar en acciones no violentas">Colaborar en acciones no violentas</option>
-              <option value="Sumarme a grupo local">Sumarme a grupo local</option>
-              <option value="Compartiendo en redes sociales">Compartiendo en redes sociales</option>
-            </select>
+            <h3>Elije la forma en la que querés colaborar</h3>
+            <input type="checkbox" name="colaboracion[]" value="Colaborar en equipos de trabajo" id="" style="margin: 5px 25px;">Colaborar en equipos de trabajo
+            <input type="checkbox" name="colaboracion[]" value="Colaborar en acciones no violentas" id="" style="margin: 5px 25px;">Colaborar en acciones no violentas
+            <input type="checkbox" name="colaboracion[]" value="Sumarme a grupo local" id="" style="margin: 5px 25px;">Sumarme a grupo local
+            <input type="checkbox" name="colaboracion[]" value="Compartiendo en redes sociales" id="" style="margin: 5px 25px;">Compartiendo en redes sociales
           </div>
           <center><br><div class="g-recaptcha" data-sitekey="6Lf0ZbIUAAAAAP4kG1gmnRhLH6CgN2vI-2zz60zw"></div></center>
           <div class="form__actions">
@@ -142,12 +145,47 @@
 <script src="bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
 <script src="comon/sweetalert2.js" charset="utf-8"></script>
 <script src="comon/validacion.js" charset="utf-8"></script>
+<script>
+  let selectProvincia = document.getElementById('provincia');
+  fetch('get_provincia.php')
+  .then(res=>res.json())
+  .then(newRes=>{
+    templateProvincia = '';
+    newRes.forEach(reg => {
+      if (reg.provinciaNombre === undefined) {
+        reg.provinciaNombre = 'Provincia';
+        reg.idProvincia = 0;
+      }
+      templateProvincia += `
+      <option value="${reg.idProvincia}">${reg.provinciaNombre}</option>
+      `;
+    });
+    selectProvincia.innerHTML = templateProvincia;
+  })
+  
+  selectProvincia.addEventListener('change', event=>{
+    idProvincia = selectProvincia.value;
+    fetch('get_cities.php?idProvincia=' + idProvincia)
+    .then(res=>res.json())
+    .then(newRes=>{
+      // console.log(newRes);
+      selectCiudad = document.getElementById('ciudad');
+      template = '';
+      newRes.forEach(reg => {
+        template += `
+        <option value="${reg.idCiudad}">${reg.ciudadNombre}</option>
+        `;
+      });
+      selectCiudad.innerHTML = template;
+    })
+  })
+  </script>
 <script type="text/javascript">
 <!-- /* <![CDATA[ */
-var xrParams = {"theme_url":"https:\/\/rebellion.earth\/wp\/wp-content\/themes\/xr","theme_images_url":"https:\/\/rebellion.earth\/wp\/wp-content\/themes\/xr\/images","ajax_url":"https:\/\/rebellion.earth\/wp\/wp-admin\/admin-ajax.php"};
-var xrLiveBlogParams = {"nonce":"7cbf85d262"};
-var xrLiveBlogParams = {"nonce":"7cbf85d262"};
-var xrSignupParams = {"nonce":"478a8350d3"};
+// let xrParams = {"theme_url":"https:\/\/rebellion.earth\/wp\/wp-content\/themes\/xr","theme_images_url":"https:\/\/rebellion.earth\/wp\/wp-content\/themes\/xr\/images","ajax_url":"https:\/\/rebellion.earth\/wp\/wp-admin\/admin-ajax.php"};
+let xrLiveBlogParams = {"nonce":"7cbf85d262"};
+let xrLiveBlogParams = {"nonce":"7cbf85d262"};
+let xrSignupParams = {"nonce":"478a8350d3"};
 /* ]]> */
 </script> -->
 <script type="text/javascript" src="comon/main.min.js"></script>
@@ -158,7 +196,5 @@ var aepc_pixel_events = {"custom_events":{"AdvancedEvents":[{"params":{"login_st
 /* ]]> */
 </script> -->
 <script type="text/javascript" src="comon/frontend.js"></script>
-
-
 
 </body></html>

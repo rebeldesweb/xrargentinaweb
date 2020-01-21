@@ -344,7 +344,12 @@ img.emoji {
 
             <div class="form__group">
               <label for="an-postcode" class="is-hidden-visually">Codigo postal</label>
-              <input type="text" id="an-postcode" name="postcode" value="" placeholder="Codigo postal (opcional)">
+              <select name="provincia" id="provincia" class="form__group">
+                <option value="">Provincia</option>
+              </select>
+              <select name="ciudad" id="ciudad" class="form__group">
+                <option value="">Ciudad</option>
+              </select>
             </div>
 
             <div class="form__group js-email ">
@@ -364,13 +369,11 @@ img.emoji {
 
           <div class="segundoPaso" id="divSegundoPaso">
             <div class="form__group" style="text-align: center;">
-              <select name="colaboracion" id="" class="form__group">
-                <option value="">En que puedo ayudar</option>
-                <option value="Colaborar en equipos de trabajo">Colaborar en equipos de trabajo</option>
-                <option value="Colaborar en acciones no violentas">Colaborar en acciones no violentas</option>
-                <option value="Sumarme a grupo local">Sumarme a grupo local</option>
-                <option value="Compartiendo en redes sociales">Compartiendo en redes sociales</option>
-              </select>
+              <h3>Elije la forma en la que querés colaborar</h3>
+              <input type="checkbox" name="colaboracion[]" value="Colaborar en equipos de trabajo" id="" style="margin: 5px 25px;">Colaborar en equipos de trabajo
+              <input type="checkbox" name="colaboracion[]" value="Colaborar en acciones no violentas" id="" style="margin: 5px 25px;">Colaborar en acciones no violentas
+              <input type="checkbox" name="colaboracion[]" value="Sumarme a grupo local" id="" style="margin: 5px 25px;">Sumarme a grupo local
+              <input type="checkbox" name="colaboracion[]" value="Compartiendo en redes sociales" id="" style="margin: 5px 25px;">Compartiendo en redes sociales
             </div>
             <center><br><div class="g-recaptcha" data-sitekey="6Lf0ZbIUAAAAAP4kG1gmnRhLH6CgN2vI-2zz60zw"></div></center>
             <div class="form__actions">
@@ -429,6 +432,22 @@ img.emoji {
               </div>
             </div><!-- .flex-embed -->
           </div><!-- .callout -->
+          <div class="callout yellow">
+            <div class="flex-embed">
+              <div class="flex-embed__ratio"></div>
+                <div class="callout__wrap flex-embed__content">
+                  <div class="callout__icon">
+                    <img src="comon/news.svg">
+                  </div>
+                  <div class="callout__text">
+                    <h2 class="callout__heading">NOTICIAS</h2>
+                  <div>
+                    <a class="btn btn--primary-dark" href="noticias.php">MÁS INFO</a>
+                  </div>
+                </div><!-- .callout__wrap -->
+              </div>
+            </div><!-- .flex-embed -->
+          </div><!-- .callout -->
           
           
 
@@ -472,7 +491,7 @@ img.emoji {
           </nav>
       </div><!-- .page-footer__column -->
 
-      <!--<div class="page-footer__column">
+      <!-- <div class="page-footer__column">
         <h3>Mas</h3>
         <nav>
           <ul class="nav-main-dropdown">
@@ -549,6 +568,7 @@ img.emoji {
 
     let input = document.getElementById('input');
     let f = new Date();
-    input.value = f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear();
+    input.value = f.getFullYear() + "/" + (f.getMonth() +1) + "/" + f.getDate();
+
 
   </script>

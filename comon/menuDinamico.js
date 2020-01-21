@@ -66,4 +66,4 @@ if(url.includes('sumate.php')){
 
 let input = document.getElementById('input');
 let f = new Date();
-input.value = f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear();
+input.value = f.getFullYear() + "/" + (f.getMonth() +1) + "/" + f.getDate();

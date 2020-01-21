@@ -5,13 +5,54 @@
    */
   class Rebelion
   {
+
+    public function listarProvincias()
+    {
+      $link = Conexion::conectar();
+      $sql = "SELECT * FROM provincia";
+      $stmt = $link->prepare($sql);
+      $stmt->execute();
+      $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      $json[] = array();
+      foreach ($resultado as $reg) {
+        $json[] = array(
+          'idProvincia' => $reg['idProvincia'],
+          'provinciaNombre' => $reg['provinciaNombre']
+        );
+      }
+      $jsonString = json_encode($json);
+      return $jsonString;
+    }
+
+    public function listarCiudades()
+    {
+      $link = Conexion::conectar();
+      $idProvincia = $_GET['idProvincia'];
+      $sql = "SELECT * FROM ciudades WHERE idProvincia = :idProvincia";
+      $stmt = $link->prepare($sql);
+      $stmt->bindParam(':idProvincia',$idProvincia,PDO::PARAM_INT);
+      $stmt->execute();
+      $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      $json = array();
+      foreach ($resultado as $reg) {
+        $json[] = array(
+          'idCiudad' => $reg['idCiudad'],
+          'idProvincia' => $reg['idProvincia'],
+          'ciudadNombre' => $reg['ciudadNombre']
+        );
+      }
+      $jsonString = json_encode($json);
+      return $jsonString;
+    }
+
     public function agregarInscripto()
     {
       $link = Conexion::conectar();
       $nombre = $_POST['first-name'];
       $apellido = $_POST['last-name'];
       $telefono = $_POST['phone'];
-      $cdgPostal = $_POST['postcode'];
+      $provincia = $_POST['provincia'];
+      $ciudad = $_POST['ciudad'];
       $email = $_POST['email'];
       $fecha = $_POST['fecha'];
       $colaboracion = $_POST['colaboracion'];
@@ -24,19 +65,40 @@
       if ($cantidad>=1) {
         header('location: index.html?duplicate');
       }else {
-        $sql = "INSERT INTO inscriptos (nombre,apellido,telefono,codigoPostal,email,fecha,colaboracion)
-                VALUES (:firstname, :lastname, :phone, :postcode, :email, :fecha, :colaboracion)";
+        $sql = "INSERT INTO inscriptos (nombre,apellido,telefono,provincia,ciudad,email,fecha)
+                VALUES (:firstname, :lastname, :phone, :provincia, :ciudad, :email, :fecha)";
         $stmt = $link->prepare($sql);
         $stmt->bindParam(':firstname', $nombre, PDO::PARAM_STR);
         $stmt->bindParam(':lastname', $apellido, PDO::PARAM_STR);
         $stmt->bindParam(':phone', $telefono, PDO::PARAM_INT);
-        $stmt->bindParam(':postcode', $cdgPostal, PDO::PARAM_INT);
+        $stmt->bindParam(':provincia', $provincia, PDO::PARAM_INT);
+        $stmt->bindParam(':ciudad', $ciudad, PDO::PARAM_INT);
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->bindParam(':fecha', $fecha, PDO::PARAM_STR);
-        $stmt->bindParam(':colaboracion', $colaboracion, PDO::PARAM_STR);
+        // $stmt->bindParam(':colaboracion', $colaboracion, PDO::PARAM_STR);
         if ($stmt->execute()) {
-          return true;
-        } 
+          if ($colaboracion != "") {
+            if (is_array($colaboracion)) {
+              $querySecond = "SELECT id FROM inscriptos WHERE email = '".$email."'";
+              $stmt = $link->prepare($querySecond);
+              $stmt->execute();
+              $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+              foreach ($data as $reg) {
+                $id = $reg['id'];
+              }
+              for ($i=0; $i < count($colaboracion); $i++) { 
+                $tipoColaboracion = $colaboracion[$i];
+                $sql = "INSERT INTO colaboracion (idInscripto,colaboracion) VALUES (".$id.",'".$tipoColaboracion."')";
+                $stmt = $link->prepare($sql);
+                $bool = $stmt->execute();
+              }
+              if ($bool) {
+                return true;
+              }
+            }
+          }
+        }
+        return false; 
       }
     }
 

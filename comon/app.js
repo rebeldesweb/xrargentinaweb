@@ -57,3 +57,39 @@ window.onload = () =>{
     })
 }
 
+
+
+let selectProvincia = document.getElementById('provincia');
+fetch('get_provincia.php')
+.then(res=>res.json())
+.then(newRes=>{
+  templateProvincia = '';
+  newRes.forEach(reg => {
+    if (reg.provinciaNombre === undefined) {
+      reg.provinciaNombre = 'Provincia';
+      reg.idProvincia = 0;
+    }
+    templateProvincia += `
+    <option value="${reg.idProvincia}">${reg.provinciaNombre}</option>
+    `;
+  });
+  selectProvincia.innerHTML = templateProvincia;
+})
+
+selectProvincia.addEventListener('change', event=>{
+  idProvincia = selectProvincia.value;
+  fetch('get_cities.php?idProvincia=' + idProvincia)
+  .then(res=>res.json())
+  .then(newRes=>{
+    // console.log(newRes);
+    selectCiudad = document.getElementById('ciudad');
+    template = '';
+    newRes.forEach(reg => {
+      template += `
+      <option value="${reg.idCiudad}">${reg.ciudadNombre}</option>
+      `;
+    });
+    selectCiudad.innerHTML = template;
+  })
+})
+
