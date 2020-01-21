@@ -21,10 +21,10 @@
     <body>
       <p class="p1">Hola Bienvenidx a Extinction Rebellion (XR)</p>
       <p class="p1">Nuestra misión(XR)</p>
-      <p class="p1">Frente al inminente colapso ecológico y climático, XR une, bajo un mismo mensaje, a millones de personas que no se sienten representadas por los sistemas políticos actuales y se oponen a la inacción de los gobiernos y las corporaciones del mundo. 
-      La extinción humana es una posibilidad real si no se toman medidas urgentes para transformar el sistema global de producción y consumo empezando ahora. Debemos además sentar las bases de una nueva cultura regenerativa. 
+      <p class="p1">Frente al inminente colapso ecológico y climático, XR une, bajo un mismo mensaje, a millones de personas que no se sienten representadas por los sistemas políticos actuales y se oponen a la inacción de los gobiernos y las corporaciones del mundo.
+      La extinción humana es una posibilidad real si no se toman medidas urgentes para transformar el sistema global de producción y consumo empezando ahora. Debemos además sentar las bases de una nueva cultura regenerativa.
       Frente a la criminal inacción gubernamental, les ciudadanes del mundo tienen el derecho y el deber de rebelarse pacíficamente.</p>
-      
+
       <p class="p1">Tu participación</p>
       <p class="p1">→ Cualquier persona que promueva las <a href="xrargentina.org/demandas.php">tres demandas</a> y cumpla con los <a href="xrargentina.org/nosotros.php">diez principios</a> y valores del movimiento, puede actuar en nombre de XR.</p>
       <p class="p1">→ Podés formar parte de los equipos de trabajo de XR Argentina, participar de las acciones directas no violentas (ADNV) o armar un grupo local.</p>
@@ -38,7 +38,7 @@
       <p class="p1">Usamos Telegram. Es un sistema de mensajería más seguro que Whatsapp, donde conversamos y colaboramos entre les voluntaries.
       Te podés bajar Telegram desde el appStore o PlayStore y después usarlo desde la web https://web.telegram.org o versión desktop.</p>
 
-      <p class="p1">Te invitamos a subirte a nuestro grupo de bienvenida en Telegram XR Argentina clickeando acá: <a href="https://t.me/joinchat/HyamYVKXEpEYkYFgMET1Ug">XR Argentina.</a> Cuando llegues al grupo, une de nuestres coordinadores se va a contactar con vos para acompañarte en los primeros pasos y ayudarte a elegir cómo podés ayudar.</p>
+      <p class="p1">Te invitamos a subirte a nuestro grupo de bienvenida en Telegram XR Argentina clickeando acá: <a href="https://t.me/joinchat/LOrzQVKXEpGVCpjLhSQ52Q">XR Argentina.</a> Cuando llegues al grupo, une de nuestres coordinadores se va a contactar con vos para acompañarte en los primeros pasos y ayudarte a elegir cómo podés ayudar.</p>
 
       <p class="p1">Además, seguinos en nuestras redes sociales para participar en las próximas charlas y acciones.</p>
       <p class="p1">Instagram: <a href="https://www.instagram.com/xrargentina/" target="_blank" rel="noopener">@xrargentina</a></p>
