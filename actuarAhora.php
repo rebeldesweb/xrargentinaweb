@@ -55,7 +55,20 @@
         </div>
         <div class="numbered-list-jumbo__content">
             <div class="numbered-list-jumbo__body type" >
-                <h2 id="tell-the-truth" class="demands-section-heading"><a href="https://youtu.be/LIa5rXHgORQ" target="new">5 de diciembre- Acampe Casa de Santa Cruz </a> </h2>
+                <h2 id="tell-the-truth" class="demands-section-heading"><a href="https://youtu.be/XT5R5dwuiZU" target="new">10 de Enero- Acción frente a la Embajada de Australia en Buenos aires. </a> </h2>
+                <p>Nos unimos frente a la embajada para exigir acción inmediata al gobierno de Australia.  Hicimos un minuto de silencio en solidaridad   por los incendios ocurridos en este país y una acción de artivismo junto a los rebeldes. <br>
+			          </p>
+            </div>
+        </div>
+        <div class="numbered-list-jumbo__content">
+            <div class="numbered-list-jumbo__body type" >
+                <h2 id="tell-the-truth" class="demands-section-heading"><a href="https://youtu.be/V6IEUq5Cu7I" target="new">27 de diciembre- Concentración en la Secretaría de Minería. </a> </h2>
+                <p>Nos manifestamos junto a más de 10 organizaciones para exigir la derogación inmediata de la ley 9209 de Mendoza (ex 7722) y que se dé marcha atrás con la modificación de la ley 5001 de Chubut. <br>
+			          </p>
+            </div>
+        </div>        <div class="numbered-list-jumbo__content">
+            <div class="numbered-list-jumbo__body type" >
+                <h2 id="tell-the-truth" class="demands-section-heading"><a href="https://youtu.be/LIa5rXHgORQ" target="new">5 de Diciembre- Acampe Casa de Santa Cruz </a> </h2>
                 <p>Declaramos la Casa de Santa Cruz como parque nacional y exigimos que se dé marcha atrás con el proyecto de ley que buscar prohibir los parques nacionales en esta provincia.<br><br>
 			          </p>
             </div>
