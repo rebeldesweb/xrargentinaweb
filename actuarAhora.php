@@ -48,7 +48,7 @@
 				La evidencia histórica de rebeliones en los últimos 100 años demuestra que la desobediencia civil pacífica es la estrategia más efectiva para lograr un cambio sistémico. Y que cuando un 3,5% de la población fue movilizado y sostenido en el tiempo, las demandas se cumplieron.<br><br>
 				Por todo esto, se acabó el tiempo de la desesperación y es momento de empezar a actuar.<br><br>
 				En Argentina nacimos hace pocos meses y el crecimiento está siendo imparable. Mirá algunas de las acciones que lxs rebeldes de XR Argentina estuvieron realizando.<br><br>
-				.<br>
+				
 			    </p>
 
             </div>
