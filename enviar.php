@@ -57,7 +57,7 @@
 
     // Cabeceras adicionales
     // $cabeceras .= 'To: Mary <mary@example.com>, Kelly <kelly@example.com>' . "\r\n";
-    $cabeceras .= 'From: xrargentina <xrargentina@gmail.com>' . "\r\n";
+    $cabeceras .= 'From: xrargentina <contacto@xrargentina.org>' . "\r\n";
     $cabeceras .= 'Cc: rebeldes@xrargentina.org' . "\r\n";
 
     // Enviarlo
