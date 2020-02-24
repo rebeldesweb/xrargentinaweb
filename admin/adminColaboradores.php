@@ -97,6 +97,7 @@
             <td class="text-center">APELLIDO</td>
             <td class="text-center">EMAIL</td>
             <td class="text-center">COLABORACIÓN</td>
+            <td class="text-center">TELEGRAM</td>
           </tr>
         </thead>
         <tbody id="inscriptos">
