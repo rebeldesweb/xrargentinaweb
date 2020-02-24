@@ -34,7 +34,9 @@
     public function listarInscripto()
     {
       $link = Conexion::conectar();
-      $sql = "SELECT * FROM inscriptos ORDER BY id DESC";
+      $sql = "SELECT id,nombre,apellido,telefono,email,provinciaNombre,ciudadNombre,integracionOK,ADNVOK,organizacion,notas,sendEmail,fecha
+                from inscriptos i, provincia p, ciudades c 
+                  where i.provincia = p.idProvincia  and i.ciudad = c.idCiudad order by id DESC";
       $stmt = $link->prepare($sql);
       $stmt->execute();
       $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -45,8 +47,9 @@
           'nombre' => $reg['nombre'],
           'apellido' => $reg['apellido'],
           'telefono' => $reg['telefono'],
-          'codigoPostal' => $reg['codigoPostal'],
           'email' => $reg['email'],
+          'provinciaNombre' => $reg['provinciaNombre'],
+          'ciudadNombre' => $reg['ciudadNombre'],
           'integracionOK' => $reg['integracionOK'],
           'ADNVOK' => $reg['ADNVOK'],
           'organizacion' => $reg['organizacion'],
@@ -61,9 +64,11 @@
 
     public function verInscriptoPorId()
     {
-      $id = $_POST['id'];
+      $id = $_GET['id'];
       $link = Conexion::conectar();
-      $sql = "SELECT * FROM inscriptos WHERE id = :id";
+      $sql = "SELECT id,nombre,apellido,telefono,email,provinciaNombre,ciudadNombre,integracionOK,ADNVOK,organizacion,notas,sendEmail,fecha
+              from inscriptos i, provincia p, ciudades c 
+              where i.provincia = p.idProvincia  and i.ciudad = c.idCiudad and id = :id";
       $stmt = $link->prepare($sql);
       $stmt->bindParam(':id', $id, PDO::PARAM_STR);
       $stmt->execute();
@@ -113,19 +118,11 @@
     {
       $search = $_POST['inputSearch'];
       $link = Conexion::conectar();
-      $sql = "SELECT * FROM inscriptos
-              WHERE id LIKE '%$search%'
-					    OR nombre LIKE '%$search%'
-              OR apellido LIKE '%$search%'
-              OR telefono LIKE '%$search%'
-              OR codigoPostal LIKE '%$search%'
-              OR email LIKE '%$search%'
-              OR integracionOK LIKE '%$search%'
-              OR ADNVOK LIKE '%$search%'
-              OR organizacion LIKE '%$search%'
-              OR notas LIKE '%$search%'
-              OR fecha LIKE '%$search%'
-              OR sendEmail LIKE '%$search%'";
+      $sql = "SELECT id,nombre,apellido,telefono,email,provinciaNombre,ciudadNombre,integracionOK,ADNVOK,organizacion,notas,sendEmail,fecha
+              from inscriptos i, provincia p, ciudades c 
+              where i.provincia = p.idProvincia  and i.ciudad = c.idCiudad 
+              and nombre LIKE '%$search%'
+              order by id DESC";
       $stmt = $link->prepare($sql);
       $stmt->execute();
       $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -136,8 +133,9 @@
           'nombre' => $reg['nombre'],
           'apellido' => $reg['apellido'],
           'telefono' => $reg['telefono'],
-          'codigoPostal' => $reg['codigoPostal'],
           'email' => $reg['email'],
+          'provinciaNombre' => $reg['provinciaNombre'],
+          'ciudadNombre' => $reg['ciudadNombre'],
           'integracionOK' => $reg['integracionOK'],
           'ADNVOK' => $reg['ADNVOK'],
           'organizacion' => $reg['organizacion'],

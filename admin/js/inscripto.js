@@ -12,12 +12,12 @@ function getData() {
               <td class="text-center">${reg.nombre}</td>
               <td class="text-center">${reg.apellido}></td>
               <td class="text-center">${reg.email}</td>
-              <td class="text-center">${reg.integracionOK}</td>
-              <td class="text-center">${reg.ADNVOK}</td>
-              <td class="text-center">${reg.organizacion}</td>
+              <td class="text-center">${reg.provinciaNombre}</td>
+              <td class="text-center">${reg.ciudadNombre}</td>
               <td class="text-center">${reg.sendEmail}</td>
               <td class="text-center">${reg.fecha}</td>
               <td class="text-center">
+                <a target="blank" id="btn-modificar" href="formModificarInscripto.php?id=${reg.id}" class="btn btn-warning">Modificar</a>
                 <a target="blank" id="btn-eliminar" onclick="deleteInscripto(${reg.id})" class="btn btn-danger">Eliminar</a>
               </td>
             </tr>
@@ -89,14 +89,13 @@ formulario.addEventListener('submit',event=>{
                   <td class="text-center">${reg.nombre}</td>
                   <td class="text-center">${reg.apellido}></td>
                   <td class="text-center">${reg.email}</td>
-                  <td class="text-center">${reg.integracionOK}</td>
-                  <td class="text-center">${reg.ADNVOK}</td>
-                  <td class="text-center">${reg.organizacion}</td>
+                  <td class="text-center">${reg.provinciaNombre}</td>
+                  <td class="text-center">${reg.ciudadNombre}</td>
                   <td class="text-center">${reg.sendEmail}</td>
                   <td class="text-center">${reg.fecha}</td>
                   <td class="text-center">
+                    <a target="blank" id="btn-modificar" href="formModificarInscripto.php" class="btn btn-warning">Modificar</a>
                     <a target="blank" id="btn-eliminar" onclick="deleteInscripto(${reg.id})" class="btn btn-danger">Eliminar</a>
-                    
                   </td>
                 </tr>
                 `

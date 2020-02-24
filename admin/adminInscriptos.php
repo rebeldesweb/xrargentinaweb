@@ -58,9 +58,9 @@
             <!-- <td class="text-center">TELEFONO</td>
             <td class="text-center">CÓDIGO POSTAL</td> -->
             <td class="text-center">EMAIL</td>
-            <td class="text-center">INTEGRACIONOK</td>
-            <td class="text-center">ADNVOK</td>
-            <td class="text-center">ORGANIZACIÓN</td>
+            <td class="text-center">PROVINCIA</td>
+            <td class="text-center">CIUDAD</td>
+            <!-- <td class="text-center">ORGANIZACIÓN</td> -->
             <td class="text-center">LOG EMAIL</td>
             <td class="text-center">FECHA</td>
           </tr>

@@ -13,12 +13,12 @@
   <title>Admin Suscriptores</title>
   <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="https://bootswatch.com/4/united/bootstrap.min.css"> -->
-  <!-- <link rel="stylesheet" href="../css/style.css"> -->
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../comon/sweetalert2.css">
 </head>
 <body>
   <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand">Admin central</a>
+    <a class="navbar-brand">Lista de suscriptores</a>
     <form class="form-inline">
       <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -32,16 +32,37 @@
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
     </form>
   </nav>
-
-  <div class="container mt-3">
-    <div class="list-group">
-        <a href="adminInscriptos.php" class="list-group-item list-group-item-action">Lista de inscriptos</a>
-        <a href="adminEventos.php" class="list-group-item list-group-item-action">Lista de Eventos</a>
-        <a href="adminNoticias.php" class="list-group-item list-group-item-action">Lista de noticias</a>
-        <a href="adminColaboradores.php" class="list-group-item list-group-item-action">Colaboradores</a>
+  <div class="contenedor-admin my-3">
+    <div class="col-12">
+      <table class="table table-bordered table-sm">
+        <thead>
+          <tr>
+            <td class="text-center">ID</td>
+            <td class="text-center">NOMBRE</td>
+            <td class="text-center">APELLIDO</td>
+            <td class="text-center">TELEFONO</td>
+            <td class="text-center">CÓDIGO POSTAL</td>
+            <td class="text-center">EMAIL</td>
+          </tr>
+        </thead>
+        <tbody id="tasks">
+          <?php foreach ($reg as $res){?>
+            <tr>
+              <td class="text-center"><?php echo $res['id'] ?></td>
+              <td class="text-center"><?php echo $res['nombre'] ?></td>
+              <td class="text-center"><?php echo $res['apellido'] ?></td>
+              <td class="text-center"><?php echo $res['telefono'] ?></td>
+              <td class="text-center"><?php echo $res['codigoPostal'] ?></td>
+              <td class="text-center"><?php echo $res['email'] ?></td>
+              <td class="text-center">
+                <a target="blank" id="btn-eliminar" href="form-delete.php?id=<?php echo $res['id'];?>" class="btn btn-danger">Eliminar</a>
+              </td>
+            </tr>
+          <?php } ?>
+        </tbody>
+      </table>
     </div>
   </div>
-  
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
