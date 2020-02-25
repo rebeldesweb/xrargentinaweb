@@ -19,6 +19,22 @@
 
 .tercerPaso input[type=radio]{margin-left: 40px;margin-bottom: 20px;}
 
+
+/* Seccion ACTUAR AHORA */
+.itemActuarAhora{
+  display:flex
+}
+
+.itemActuarAhora .imagenNoticia{
+  width:45%;
+}
+.itemActuarAhora .textoNoticia{
+  width:55%;
+  text-align:justify;
+  padding:0% 2.5%;
+}
+
+
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) { 
   
@@ -28,6 +44,21 @@
 @media (max-width: 768px) { 
   .segundoPaso input{display: block;margin: 0px;}
   .tercerPaso input{display:block;margin: 0px;}
+
+  /* Seccion actuarAhora */
+  .itemActuarAhora{
+    display:block
+  }
+  
+  .itemActuarAhora .imagenNoticia{
+    width:100%;
+    margin-bottom: 10px;
+  }
+  .itemActuarAhora .textoNoticia{
+    width:100%;
+    text-align:justify;
+    padding:0;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
