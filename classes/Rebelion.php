@@ -56,6 +56,7 @@
       $email = $_POST['email'];
       $fecha = $_POST['fecha'];
       $colaboracion = $_POST['colaboracion'];
+      $grupoLocal = $_POST['grupo-local'];
       //previamente obtenemos los email que coincidad con el email que ingreso el usuario, para que no se inscriban muchos con el mismo email
       $queryPrevious = "SELECT email FROM inscriptos WHERE email = :email";
       $stmt = $link->prepare($queryPrevious);
@@ -65,8 +66,8 @@
       if ($cantidad>=1) {
         header('location: index.html?duplicate');
       }else {
-        $sql = "INSERT INTO inscriptos (nombre,apellido,telefono,provincia,ciudad,email,fecha)
-                VALUES (:firstname, :lastname, :phone, :provincia, :ciudad, :email, :fecha)";
+        $sql = "INSERT INTO inscriptos (nombre,apellido,telefono,provincia,ciudad,email,fecha,grupoLocal)
+                VALUES (:firstname, :lastname, :phone, :provincia, :ciudad, :email, :fecha, :grupoLocal)";
         $stmt = $link->prepare($sql);
         $stmt->bindParam(':firstname', $nombre, PDO::PARAM_STR);
         $stmt->bindParam(':lastname', $apellido, PDO::PARAM_STR);
@@ -75,6 +76,7 @@
         $stmt->bindParam(':ciudad', $ciudad, PDO::PARAM_INT);
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->bindParam(':fecha', $fecha, PDO::PARAM_STR);
+        $stmt->bindParam(':grupoLocal', $grupoLocal, PDO::PARAM_STR);
         // $stmt->bindParam(':colaboracion', $colaboracion, PDO::PARAM_STR);
         if ($stmt->execute()) {
           if ($colaboracion != "") {

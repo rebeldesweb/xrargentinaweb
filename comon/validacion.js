@@ -26,8 +26,15 @@
     };
 
     let divSegundoPaso = document.getElementById('divSegundoPaso');
+    let divTercerPaso = document.getElementById('divTercerPaso');
     divSegundoPaso.classList.add('ocultar');
+    divTercerPaso.classList.add('ocultar');
+
 
     function mostrarSegundoPaso(){
       divSegundoPaso.classList.remove('ocultar');
+    }
+
+    function mostrarTercerPaso() {
+      divTercerPaso.classList.remove('ocultar');
     }

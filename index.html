@@ -377,8 +377,25 @@ img.emoji {
             </div>
             <center><br><div class="g-recaptcha" data-sitekey="6Lf0ZbIUAAAAAP4kG1gmnRhLH6CgN2vI-2zz60zw"></div></center>
             <div class="form__actions">
-              <input type="submit" name="" value="Sumarte" class="btn btn--primary-dark" aria-label="Submit form">
+              <input type="button" name="" onclick="mostrarTercerPaso()" value="Continuar" class="btn btn--primary-dark">
             </div>
+          </div>
+          <div class="tercerPaso" id="divTercerPaso" style="text-align: center;">
+            <br>
+            <h3>Sumate a tu grupo local más cercano para comenzar a trabajar</h3>
+            <br>
+            <input type="radio" class="form-control" name="grupo-local" value="Buenos Aires" required> Buenos Aires
+            <input type="radio" class="form-control" name="grupo-local" value="Neuquen" required> Neuquen
+            <input type="radio" class="form-control" name="grupo-local" value="Santiago del estero" required> Santiago del Estero
+            <input type="radio" class="form-control" name="grupo-local" value="Sauce Croto" required> Sauce Croto
+            <input type="radio" class="form-control" name="grupo-local" value="Cordoba" required> Cordoba
+            <input type="radio" class="form-control" name="grupo-local" value="Entre Rios" required> Entre rios
+            <input type="radio" class="form-control" name="grupo-local" value="San Luís" required> San Luis
+            <input type="radio" class="form-control" name="grupo-local" value="Tigre" required> Tigre
+            <input type="radio" class="form-control" name="grupo-local" value="Omitido" required> Omitir
+            
+              <input type="submit" name="" value="Sumarte" class="btn btn--primary-dark" aria-label="Submit form">
+          
           </div>
         </form>
       </div><!--FORMULARIO DE CONTACTO PENDIENTE redireccion nueva-->

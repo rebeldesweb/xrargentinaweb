@@ -34,7 +34,7 @@
     public function listarInscripto()
     {
       $link = Conexion::conectar();
-      $sql = "SELECT id,nombre,apellido,telefono,email,provinciaNombre,ciudadNombre,integracionOK,ADNVOK,organizacion,notas,sendEmail,fecha
+      $sql = "SELECT id,nombre,apellido,telefono,email,provinciaNombre,ciudadNombre,integracionOK,ADNVOK,organizacion,notas,sendEmail,fecha,grupoLocal
                 from inscriptos i, provincia p, ciudades c 
                   where i.provincia = p.idProvincia  and i.ciudad = c.idCiudad order by id DESC";
       $stmt = $link->prepare($sql);
@@ -55,7 +55,8 @@
           'organizacion' => $reg['organizacion'],
           'notas' => $reg['notas'],
           'fecha' => $reg['fecha'],
-          'sendEmail' => $reg['sendEmail']
+          'sendEmail' => $reg['sendEmail'],
+          'grupoLocal'=>$reg['grupoLocal']
         );
       }
       $jsonString = json_encode($json);
@@ -66,7 +67,7 @@
     {
       $id = $_GET['id'];
       $link = Conexion::conectar();
-      $sql = "SELECT id,nombre,apellido,telefono,email,provinciaNombre,ciudadNombre,integracionOK,ADNVOK,organizacion,notas,sendEmail,fecha
+      $sql = "SELECT id,nombre,apellido,telefono,email,provinciaNombre,ciudadNombre,integracionOK,ADNVOK,organizacion,notas,sendEmail,fecha,grupoLocal
               from inscriptos i, provincia p, ciudades c 
               where i.provincia = p.idProvincia  and i.ciudad = c.idCiudad and id = :id";
       $stmt = $link->prepare($sql);

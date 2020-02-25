@@ -63,6 +63,7 @@
             <!-- <td class="text-center">ORGANIZACIÓN</td> -->
             <td class="text-center">LOG EMAIL</td>
             <td class="text-center">FECHA</td>
+            <td class="text-center">GRUPO LOCAL</td>
           </tr>
         </thead>
         <tbody id="inscriptos">
