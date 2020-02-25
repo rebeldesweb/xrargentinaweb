@@ -39,6 +39,7 @@
         <a href="adminEventos.php" class="list-group-item list-group-item-action">Lista de Eventos</a>
         <a href="adminNoticias.php" class="list-group-item list-group-item-action">Lista de noticias</a>
         <a href="adminColaboradores.php" class="list-group-item list-group-item-action">Colaboradores</a>
+        <a href="adminActuarAhora.php" class="list-group-item list-group-item-action">Seccion Actuar Ahora</a>
     </div>
   </div>
   
