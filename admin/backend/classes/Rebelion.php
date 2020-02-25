@@ -36,7 +36,7 @@
       $link = Conexion::conectar();
       $sql = "SELECT id,nombre,apellido,telefono,email,provinciaNombre,ciudadNombre,integracionOK,ADNVOK,organizacion,notas,sendEmail,fecha,grupoLocal
                 from inscriptos i, provincia p, ciudades c 
-                  where i.provincia = p.idProvincia  and i.ciudad = c.idCiudad order by id DESC";
+                  where i.provincia = p.idProvincia  and i.ciudad = c.idCiudad AND estado = 1 order by id DESC";
       $stmt = $link->prepare($sql);
       $stmt->execute();
       $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -69,7 +69,7 @@
       $link = Conexion::conectar();
       $sql = "SELECT id,nombre,apellido,telefono,email,provinciaNombre,ciudadNombre,integracionOK,ADNVOK,organizacion,notas,sendEmail,fecha,grupoLocal
               from inscriptos i, provincia p, ciudades c 
-              where i.provincia = p.idProvincia  and i.ciudad = c.idCiudad and id = :id";
+              where i.provincia = p.idProvincia  and i.ciudad = c.idCiudad and id = :id AND estado = 1";
       $stmt = $link->prepare($sql);
       $stmt->bindParam(':id', $id, PDO::PARAM_STR);
       $stmt->execute();
@@ -81,7 +81,7 @@
     {
       $id = $_GET['id'];
       $link = Conexion::conectar();
-      $sql = "DELETE FROM inscriptos WHERE id = :id";
+      $sql = "UPDATE inscriptos SET estado = 0 WHERE id = :id";
       $stmt = $link->prepare($sql);
       $stmt->bindParam(':id', $id, PDO::PARAM_STR);
       if($stmt->execute()){
