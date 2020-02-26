@@ -66,8 +66,8 @@
       if ($cantidad>=1) {
         header('location: index.html?duplicate');
       }else {
-        $sql = "INSERT INTO inscriptos (nombre,apellido,telefono,provincia,ciudad,email,fecha,grupoLocal)
-                VALUES (:firstname, :lastname, :phone, :provincia, :ciudad, :email, :fecha, :grupoLocal)";
+        $sql = "INSERT INTO inscriptos (nombre,apellido,telefono,provincia,ciudad,email,fecha,grupoLocal,estado)
+                VALUES (:firstname, :lastname, :phone, :provincia, :ciudad, :email, :fecha, :grupoLocal,1)";
         $stmt = $link->prepare($sql);
         $stmt->bindParam(':firstname', $nombre, PDO::PARAM_STR);
         $stmt->bindParam(':lastname', $apellido, PDO::PARAM_STR);

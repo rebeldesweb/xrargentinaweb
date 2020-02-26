@@ -14,7 +14,7 @@
         </div>
       </div>
 
-      <form class="form"  onsubmit="return validar();" action="enviar.php" method="post">
+      <form class="form" onsubmit="return validar();" action="enviar.php" method="post">
         <input type="hidden" id="input" name="fecha"> <!--input oculto de fecha-->
         <div class="sign-up-form__wrap">
           <div class="form__group">
@@ -34,10 +34,10 @@
 
           <div class="form__group">
             <label for="an-postcode" class="is-hidden-visually">Codigo postal</label>
-            <select name="provincia" id="provincia" class="form__group" required>
+            <select name="provincia" id="provincia" class="form__group">
               <option value="">Provincia</option>
             </select>
-            <select name="ciudad" id="ciudad" class="form__group" required>
+            <select name="ciudad" id="ciudad" class="form__group">
               <option value="">Ciudad</option>
             </select>
           </div>
@@ -47,8 +47,8 @@
             <input type="text" id="an-email" name="email" value="" placeholder="Email *">
           </div>
 
-          <div class="form__group form__checkbox ">
-            <label for="an-gdpr-consent">Doy mi consentimiento a Extinction Rebellion para que me contacte por teléfono o correo electrónico utilizando la información que he proporcionado en este formulario, con el fin de recibir noticias, actualizaciones y rebeliones.</label>
+          <div class="form__group form__checkbox">
+            <label for="an-gdpr-consent">Doy mi consentimiento a Extinction Rebellion para que me contacte por teléfono o correo electrónico utilizando la información que he proporcionado en este formulario, con el fin de recibir noticias, actualizaciones.</label>
             <input class="checkbox--default" type="checkbox" name="gdpr_consent" value="Yes" id="an-gdpr-consent">
           </div>
 
@@ -67,8 +67,25 @@
           </div>
           <center><br><div class="g-recaptcha" data-sitekey="6Lf0ZbIUAAAAAP4kG1gmnRhLH6CgN2vI-2zz60zw"></div></center>
           <div class="form__actions">
-            <input type="submit" name="" value="Sumarte" class="btn btn--primary-dark" aria-label="Submit form">
+            <input type="button" name="" onclick="mostrarTercerPaso()" value="Continuar" class="btn btn--primary-dark">
           </div>
+        </div>
+        <div class="tercerPaso" id="divTercerPaso" style="text-align: center;">
+          <br>
+          <h3>Sumate a tu grupo local más cercano para comenzar a trabajar</h3>
+          <br>
+          <input type="radio" class="form-control" name="grupo-local" value="Buenos Aires" required> Buenos Aires
+          <input type="radio" class="form-control" name="grupo-local" value="Neuquen" required> Neuquen
+          <input type="radio" class="form-control" name="grupo-local" value="Santiago del estero" required> Santiago del Estero
+          <input type="radio" class="form-control" name="grupo-local" value="Sauce Croto" required> Sauce Croto
+          <input type="radio" class="form-control" name="grupo-local" value="Cordoba" required> Cordoba
+          <input type="radio" class="form-control" name="grupo-local" value="Entre Rios" required> Entre rios
+          <input type="radio" class="form-control" name="grupo-local" value="San Luís" required> San Luis
+          <input type="radio" class="form-control" name="grupo-local" value="Tigre" required> Tigre
+          <input type="radio" class="form-control" name="grupo-local" value="Omitido" required> Omitir
+          
+            <input type="submit" name="" value="Sumarte" class="btn btn--primary-dark" aria-label="Submit form">
+        
         </div>
       </form>
     </div><!--FORMULARIO DE CONTACTO PENDIENTE redireccion nueva-->
