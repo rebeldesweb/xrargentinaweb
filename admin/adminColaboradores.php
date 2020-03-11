@@ -107,6 +107,20 @@
     </div>
   </div>
 
+
+
+  <!--Tabla para modificar el colaborador-->
+  <div class="container my-3 d-none" id="tablaColaboradoresModificar">
+    <a class="btn btn-warning" href="adminColaboradores.php">Regresar al listado de inscriptos</a>
+    <hr>
+    <br>
+    <h2 class="mt-2">Formulario de modificación de inscripto</h2>
+    <form action="" class="form-group" id="form-modificar-colaborador">
+        <!--El form viene renderizado desde el colaboradores.js-->
+    </form>
+  </div>
+  
+
   
 
 
