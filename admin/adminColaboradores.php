@@ -54,7 +54,7 @@
           <div class="card-body">
             <h5 class="card-title">Acciones no violentas</h5>
             <p class="card-text">Ver los inscriptos que se ofrecieron</p>
-            <a href="#" onclick="getInscriptos('Colaborar en acciones no violentas')" class="btn btn-primary">Ver listado</a>
+            <a href="#" onclick="getInscriptos('Colaborar%20en%20acciones%20no%20violentas')" class="btn btn-primary">Ver listado</a>
           </div>
         </div>
       </div>
@@ -66,7 +66,7 @@
           <div class="card-body">
             <h5 class="card-title">Grupos locales</h5>
             <p class="card-text">Ver los inscriptos que se ofrecieron.</p>
-            <a href="#" onclick="getInscriptos('Sumarme a grupo local')" class="btn btn-primary">Ver listado</a>
+            <a href="#" onclick="getInscriptos('Sumarme%20a%20grupo%20local')" class="btn btn-primary">Ver listado</a>
           </div>
         </div>
       </div>
@@ -78,7 +78,7 @@
           <div class="card-body">
             <h5 class="card-title">Redes sociales</h5>
             <p class="card-text">Ver los inscriptos que se ofrecieron.</p>
-            <a href="#" onclick="getInscriptos('Compartiendo en redes sociales')" class="btn btn-primary">Ver listado</a>
+            <a href="#" onclick="getInscriptos('Compartiendo%20en%20redes%20sociales')" class="btn btn-primary">Ver listado</a>
           </div>
         </div>
       </div>
