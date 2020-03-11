@@ -22,7 +22,7 @@
 
 /* Seccion ACTUAR AHORA */
 .itemActuarAhora{
-  display:flex
+  display:flex;
 }
 
 .itemActuarAhora .imagenNoticia{
@@ -41,6 +41,7 @@
   text-align:justify;
   padding-top:0%;
   padding-bottom: 0%;
+  margin-bottom:80px
 }
 
 .left{
@@ -87,6 +88,7 @@
     max-height: 100%;
     text-align:justify;
     padding:0;
+    margin-bottom:40px
   }
 }
 

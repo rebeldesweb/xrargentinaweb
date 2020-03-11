@@ -11,7 +11,7 @@ function getInscriptos(tipo){
             template += `
             <tr>
               <td class="text-center">${reg.nombre}</td>
-              <td class="text-center">${reg.apellido}></td>
+              <td class="text-center">${reg.apellido}</td>
               <td class="text-center">${reg.email}</td>
               <td class="text-center">${reg.colaboracion}</td>
               <td class="text-center">${reg.telegram}</td>
