@@ -41,21 +41,21 @@
             $stmt->bindParam(':id',$id,PDO::PARAM_INT);
             $stmt->bindParam(':tipo',$tipo,PDO::PARAM_STR);
             $stmt->execute();
-            $result = $stmt->fetch(PDO::FETCH_ASSOC);
-            // $json = array();
-            // foreach ($result as $reg) {
-            //     $json[] = array(
-            //         'idColaboracion' => $reg['idColaboracion'],
-            //         'idInscripto' => $reg['idInscripto'],
-            //         'nombre' => $reg['nombre'],
-            //         'apellido' => $reg['apellido'],
-            //         'email' => $reg['email'],
-            //         'colaboracion' => $reg['colaboracion'],
-            //         'telegram' => $reg['telegram']
-            //     );
-            // }
-            // $jsonString = json_encode($json);
-            return $result;
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $json = array();
+            foreach ($result as $reg) {
+                $json[] = array(
+                    'idColaboracion' => $reg['idColaboracion'],
+                    'idInscripto' => $reg['idInscripto'],
+                    'nombre' => $reg['nombre'],
+                    'apellido' => $reg['apellido'],
+                    'email' => $reg['email'],
+                    'colaboracion' => $reg['colaboracion'],
+                    'telegram' => $reg['telegram']
+                );
+            }
+            $jsonString = json_encode($json);
+            return $jsonString;
         }
 
         public function modificarColaborador()

@@ -23,7 +23,7 @@
 
 	<article class="post-type-page" id="post-37">
 
-		<video src="camino.mp4" poster="camino.png" width="100%" height="auto" controls></video>
+		<video src="camino.mp4" poster="camino.jpg" width="100%" height="auto" controls></video>
 
 <div class="type body-text container container--bottom0">
 <div class="featured-text">

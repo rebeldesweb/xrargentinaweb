@@ -42,8 +42,8 @@ $asunto = 'Te has registrado con éxito en xrargentina';
 
     // Cabeceras adicionales
     // $cabeceras .= 'To: Mary <mary@example.com>, Kelly <kelly@example.com>' . "\r\n";
-    $cabeceras .= 'From: xrargentina <contacto@xrargentina.org>' . "\r\n";
-    $cabeceras .= 'Cc: rebeldes@xrargentina.org' . "\r\n";
+    $cabeceras .= 'From: xrargentina <xrargentina@gmail.com>' . "\r\n";
+    $cabeceras .= 'Cc: franco_casla_benitez@hotmail.com' . "\r\n";
 
     // Enviarlo
     $sendMail = mail($para, 'Gracias por sumarte a XR argentina', $mensaje, $cabeceras);

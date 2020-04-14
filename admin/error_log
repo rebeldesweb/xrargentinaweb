@@ -56,3 +56,81 @@ Stack trace:
 [12-Sep-2019 11:21:44 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
 [12-Sep-2019 12:46:57 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
 [17-Sep-2019 23:58:56 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[25-Feb-2020 21:25:51 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[25-Feb-2020 21:46:15 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[26-Feb-2020 10:15:21 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/adminColaboradores.php on line 25
+[26-Feb-2020 10:18:26 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[26-Feb-2020 10:24:22 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[27-Feb-2020 12:19:24 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[28-Feb-2020 17:16:36 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[29-Feb-2020 10:53:39 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[02-Mar-2020 09:20:14 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[03-Mar-2020 09:24:00 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[04-Mar-2020 09:44:22 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[04-Mar-2020 19:46:45 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[04-Mar-2020 19:46:55 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[05-Mar-2020 09:16:14 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[06-Mar-2020 06:54:51 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[08-Mar-2020 19:36:44 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[09-Mar-2020 09:24:28 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[10-Mar-2020 10:21:42 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[10-Mar-2020 10:41:58 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[11-Mar-2020 11:17:44 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[11-Mar-2020 11:36:49 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/adminColaboradores.php on line 25
+[11-Mar-2020 11:51:14 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[11-Mar-2020 12:46:30 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[11-Mar-2020 13:15:12 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[11-Mar-2020 13:15:30 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[11-Mar-2020 13:15:49 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[11-Mar-2020 13:36:41 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/adminActuarAhora.php on line 23
+[11-Mar-2020 13:52:25 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[11-Mar-2020 14:49:23 America/Argentina/Buenos_Aires] PHP Warning:  require_once(classes/Colaborador.php): failed to open stream: No such file or directory in /home/laciudad/public_html/xrargentina/admin/config/config.php on line 7
+[11-Mar-2020 14:49:23 America/Argentina/Buenos_Aires] PHP Fatal error:  require_once(): Failed opening required 'classes/Colaborador.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/laciudad/public_html/xrargentina/admin/config/config.php on line 7
+[11-Mar-2020 14:50:33 America/Argentina/Buenos_Aires] PHP Warning:  require_once(classes/Colaborador.php): failed to open stream: No such file or directory in /home/laciudad/public_html/xrargentina/admin/config/config.php on line 7
+[11-Mar-2020 14:50:33 America/Argentina/Buenos_Aires] PHP Fatal error:  require_once(): Failed opening required 'classes/Colaborador.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/laciudad/public_html/xrargentina/admin/config/config.php on line 7
+[11-Mar-2020 14:51:46 America/Argentina/Buenos_Aires] PHP Warning:  require_once(classes/Colaborador.php): failed to open stream: No such file or directory in /home/laciudad/public_html/xrargentina/admin/config/config.php on line 7
+[11-Mar-2020 14:51:46 America/Argentina/Buenos_Aires] PHP Fatal error:  require_once(): Failed opening required 'classes/Colaborador.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/laciudad/public_html/xrargentina/admin/config/config.php on line 7
+[11-Mar-2020 14:51:52 America/Argentina/Buenos_Aires] PHP Warning:  require_once(classes/Colaborador.php): failed to open stream: No such file or directory in /home/laciudad/public_html/xrargentina/admin/config/config.php on line 7
+[11-Mar-2020 14:51:52 America/Argentina/Buenos_Aires] PHP Fatal error:  require_once(): Failed opening required 'classes/Colaborador.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/laciudad/public_html/xrargentina/admin/config/config.php on line 7
+[11-Mar-2020 14:58:15 America/Argentina/Buenos_Aires] PHP Warning:  require_once(classes/Colaborador.php): failed to open stream: No such file or directory in /home/laciudad/public_html/xrargentina/admin/config/config.php on line 7
+[11-Mar-2020 14:58:15 America/Argentina/Buenos_Aires] PHP Fatal error:  require_once(): Failed opening required 'classes/Colaborador.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/laciudad/public_html/xrargentina/admin/config/config.php on line 7
+[11-Mar-2020 15:13:39 America/Argentina/Buenos_Aires] PHP Warning:  require_once(classes/Colaborador.php): failed to open stream: No such file or directory in /home/laciudad/public_html/xrargentina/admin/config/config.php on line 7
+[11-Mar-2020 15:13:39 America/Argentina/Buenos_Aires] PHP Fatal error:  require_once(): Failed opening required 'classes/Colaborador.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/laciudad/public_html/xrargentina/admin/config/config.php on line 7
+[11-Mar-2020 15:13:51 America/Argentina/Buenos_Aires] PHP Warning:  require_once(classes/Colaborador.php): failed to open stream: No such file or directory in /home/laciudad/public_html/xrargentina/admin/config/config.php on line 7
+[11-Mar-2020 15:13:51 America/Argentina/Buenos_Aires] PHP Fatal error:  require_once(): Failed opening required 'classes/Colaborador.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/laciudad/public_html/xrargentina/admin/config/config.php on line 7
+[11-Mar-2020 15:30:10 America/Argentina/Buenos_Aires] PHP Warning:  require_once(classes/Colaborador.php): failed to open stream: No such file or directory in /home/laciudad/public_html/xrargentina/admin/config/config.php on line 7
+[11-Mar-2020 15:30:10 America/Argentina/Buenos_Aires] PHP Fatal error:  require_once(): Failed opening required 'classes/Colaborador.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/laciudad/public_html/xrargentina/admin/config/config.php on line 7
+[11-Mar-2020 15:30:19 America/Argentina/Buenos_Aires] PHP Warning:  require_once(classes/Colaborador.php): failed to open stream: No such file or directory in /home/laciudad/public_html/xrargentina/admin/config/config.php on line 7
+[11-Mar-2020 15:30:19 America/Argentina/Buenos_Aires] PHP Fatal error:  require_once(): Failed opening required 'classes/Colaborador.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/laciudad/public_html/xrargentina/admin/config/config.php on line 7
+[11-Mar-2020 15:33:06 America/Argentina/Buenos_Aires] PHP Warning:  require_once(classes/Colaborador.php): failed to open stream: No such file or directory in /home/laciudad/public_html/xrargentina/admin/config/config.php on line 7
+[11-Mar-2020 15:33:06 America/Argentina/Buenos_Aires] PHP Fatal error:  require_once(): Failed opening required 'classes/Colaborador.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/laciudad/public_html/xrargentina/admin/config/config.php on line 7
+[11-Mar-2020 15:33:20 America/Argentina/Buenos_Aires] PHP Warning:  require_once(classes/Colaborador.php): failed to open stream: No such file or directory in /home/laciudad/public_html/xrargentina/admin/config/config.php on line 7
+[11-Mar-2020 15:33:20 America/Argentina/Buenos_Aires] PHP Fatal error:  require_once(): Failed opening required 'classes/Colaborador.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/laciudad/public_html/xrargentina/admin/config/config.php on line 7
+[11-Mar-2020 15:33:24 America/Argentina/Buenos_Aires] PHP Warning:  require_once(classes/Colaborador.php): failed to open stream: No such file or directory in /home/laciudad/public_html/xrargentina/admin/config/config.php on line 7
+[11-Mar-2020 15:33:24 America/Argentina/Buenos_Aires] PHP Fatal error:  require_once(): Failed opening required 'classes/Colaborador.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/laciudad/public_html/xrargentina/admin/config/config.php on line 7
+[11-Mar-2020 16:47:32 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[11-Mar-2020 17:42:18 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[12-Mar-2020 21:53:04 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[13-Mar-2020 09:11:57 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[14-Mar-2020 01:05:44 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[15-Mar-2020 18:32:06 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[16-Mar-2020 11:45:57 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[17-Mar-2020 09:21:57 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[19-Mar-2020 11:16:22 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[20-Mar-2020 09:03:27 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[21-Mar-2020 11:09:45 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[30-Mar-2020 19:10:09 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[30-Mar-2020 22:13:27 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[01-Apr-2020 16:47:12 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[02-Apr-2020 12:10:34 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[02-Apr-2020 12:11:03 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[02-Apr-2020 12:13:37 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[02-Apr-2020 13:25:20 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[03-Apr-2020 17:06:01 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[03-Apr-2020 18:04:42 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[03-Apr-2020 18:05:16 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[03-Apr-2020 18:08:53 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/adminNoticias.php on line 25
+[03-Apr-2020 18:10:28 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/adminNoticias.php on line 25
+[03-Apr-2020 19:38:30 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/adminNoticias.php on line 25
+[11-Apr-2020 00:46:55 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25
+[13-Apr-2020 19:07:04 America/Argentina/Buenos_Aires] PHP Notice:  Undefined index: usuName in /home/laciudad/public_html/xrargentina/admin/index.php on line 25

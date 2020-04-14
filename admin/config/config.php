@@ -4,7 +4,7 @@
 
   function autocarga($clase)
   {
-    require_once 'backend/classes/'.$clase.'.php';
+    require_once 'classes/'.$clase.'.php';
     if (!isset($_SESSION['login'])){
         header('location: formLogin.php?error=2');
     }
