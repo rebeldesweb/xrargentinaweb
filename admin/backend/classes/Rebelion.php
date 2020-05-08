@@ -338,18 +338,20 @@
     {
       $link = Conexion::conectar();
       $titulo = $_POST['titulo'];
+      $idCategoria = $_POST['idCategoria'];
       $fecha = $_POST['fecha'];
       $autor = $_POST['autor'];
       $noticiaImagen = $this->subirImagenNoticia();
       $noticia = $_POST['noticia'];
-      $sql = "INSERT INTO noticias (titulo, fecha, autor, noticiaImagen, noticia)
-              VALUES (:titulo, :fecha, :autor, :noticiaImagen, :noticia)";
+      $sql = "INSERT INTO noticias (titulo, fecha, autor, noticiaImagen, noticia, idCategoria)
+              VALUES (:titulo, :fecha, :autor, :noticiaImagen, :noticia, :idCategoria)";
       $stmt = $link->prepare($sql);
       $stmt->bindParam(':titulo', $titulo, PDO::PARAM_STR);
       $stmt->bindParam(':fecha', $fecha, PDO::PARAM_STR);
       $stmt->bindParam(':autor', $autor, PDO::PARAM_STR);
       $stmt->bindParam(':noticiaImagen', $noticiaImagen, PDO::PARAM_STR);
       $stmt->bindParam(':noticia', $noticia, PDO::PARAM_STR);
+      $stmt->bindParam(':idCategoria', $idCategoria, PDO::PARAM_INT);
       if($stmt->execute()){
         return true;
       }
@@ -361,6 +363,7 @@
       $link = Conexion::conectar();
       $id = $_POST['id'];
       $titulo = $_POST['titulo'];
+      $idCategoria = $_POST['idCategoria'];
       $fecha = $_POST['fecha'];
       $autor = $_POST['autor'];
       $noticiaImagen = $this->subirImagenNoticia();
@@ -369,7 +372,8 @@
                                   fecha = :fecha,
                                   autor = :autor,
                                   noticiaImagen = :noticiaImagen,
-                                  noticia = :noticia
+                                  noticia = :noticia,
+                                  idCategoria = :idCategoria
               WHERE id = :id";
       $stmt = $link->prepare($sql);
       $stmt->bindParam(':id', $id, PDO::PARAM_INT);
@@ -378,6 +382,7 @@
       $stmt->bindParam(':autor', $autor, PDO::PARAM_STR);
       $stmt->bindParam(':noticiaImagen', $noticiaImagen, PDO::PARAM_STR);
       $stmt->bindParam(':noticia', $noticia, PDO::PARAM_STR);
+      $stmt->bindParam(':idCategoria', $idCategoria, PDO::PARAM_INT);
       if($stmt->execute()){
         return true;
       }
@@ -387,7 +392,9 @@
     public function listarNoticia()
     {
       $link = Conexion::conectar();
-      $sql = "SELECT * FROM noticias";
+      $sql = "SELECT id,titulo,fecha,autor,noticiaImagen,noticia,categoria 
+                FROM noticias AS N, categoriasNoticia AS C
+                  WHERE N.idCategoria = C.idCategoria";
       $stmt = $link->prepare($sql);
       $stmt->execute();
       $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -399,7 +406,8 @@
           'fecha' => $reg['fecha'],
           'autor' => $reg['autor'],
           'noticiaImagen' => $reg['noticiaImagen'],
-          'noticia' => $reg['noticia']
+          'noticia' => $reg['noticia'],
+          'categoria' => $reg['categoria']
         );
       }
       $jsonString = json_encode($json);
@@ -410,7 +418,9 @@
     {
       $id = $_GET['id'];
       $link = Conexion::conectar();
-      $sql = "SELECT * FROM noticias WHERE id = :id";
+      $sql = "SELECT id,titulo,fecha,autor,noticiaImagen,noticia,N.idCategoria,categoria 
+                FROM noticias N, categoriasNoticia C
+                  WHERE N.idCategoria = C.idCategoria AND id = :id";
       $stmt = $link->prepare($sql);
       $stmt->bindParam(':id', $id, PDO::PARAM_INT);
       $stmt->execute();
@@ -423,7 +433,9 @@
           'fecha' => $reg['fecha'],
           'autor' => $reg['autor'],
           'noticiaImagen' => $reg['noticiaImagen'],
-          'noticia' => $reg['noticia']
+          'noticia' => $reg['noticia'],
+          'idCategoria' => $reg['idCategoria'],
+          'categoria' => $reg['categoria']
         );
       }
       $jsonString = json_encode($json);

@@ -38,10 +38,12 @@
         <thead>
           <tr>
             <td class="text-center">TITULO</td>
+            <td class="text-center">CATEGORIA</td>
             <td class="text-center">FECHA</td>
             <td class="text-center">AUTOR</td>
             <td class="text-center">
               <a onclick="mostrarFormularioAgregar()" class="btn btn-success">Agregar</a>
+              <a href="adminCategorias.php" class="btn btn-success">Administrar Categorias</a>
             </td>
           </tr>
         </thead>
@@ -71,6 +73,11 @@
         <br>
         Título:
         <input type="text" name="titulo" placeholder="Ingrese fecha el título de la nota" class="form-control mt-3" required>
+        <br>
+        Categoria:
+        <br>
+        <select name="idCategoria" id="categoriaAgregar" class="form-control">
+        </select>
         <br>
         Fecha:
         <input type="text" name="fecha" placeholder="Ingrese fecha de la nota" class="form-control mt-3" required>

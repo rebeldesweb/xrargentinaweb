@@ -2,13 +2,14 @@ function getData() {
     fetch('backend/listarNoticia.php')
     .then(res => res.json())
     .then(data=>{
-        // console.log(data);
+        console.log(data);
         let noticias = document.getElementById('noticias');
         let template = '';
         data.forEach(reg => {
             template += `
             <tr>
               <td class="text-center">${reg.titulo}</td>
+              <td class="text-center">${reg.categoria}</td>
               <td class="text-center">${reg.fecha}</td>
               <td class="text-center">${reg.autor}</td>
               <td class="text-center">
@@ -20,6 +21,31 @@ function getData() {
         });
         noticias.innerHTML = template;
     })  
+}
+
+function getCategorias(select,agregar=false,idCategoria=null) {
+    let template = '';
+    fetch('backend/categoriasNoticia/listarCategoria.php').then(res=>res.json()).then(response=>{
+        console.log(response);
+        if(!agregar){
+            response.forEach(categoria=>{
+                if(categoria.idCategoria != idCategoria){
+                    template += `
+                        <option value="${categoria.idCategoria}">${categoria.categoria}</option>
+                    `;
+                }
+            })
+            select.innerHTML += template;
+            return;
+        }
+        response.forEach(categoria => {
+            template += `
+                <option value="${categoria.idCategoria}">${categoria.categoria}</option>
+            `;
+        });
+        select.innerHTML = template;
+        return;
+    });
 }
 
 function eliminarNoticia(id) {
@@ -58,7 +84,7 @@ function verNoticiaPorId(id) {
     fetch('backend/verNoticiaPorId.php?id=' + id)
     .then(res=>res.json())
     .then(newRes=>{
-        // console.log(newRes);
+        console.log(newRes);
         let form = document.getElementById('formModificarNoticia');
         let template = '';
         newRes.forEach(reg => {
@@ -67,6 +93,11 @@ function verNoticiaPorId(id) {
             <input type="hidden" name="id" value="${reg.id}">
             Título:
             <input type="text" name="titulo" value="${reg.titulo}" class="form-control mt-3" required>
+            <br>
+            Categoria:
+            <select class="form-control" name="idCategoria" id="categoria">
+                <option value="${reg.idCategoria}">${reg.categoria}</option>
+            </select>
             <br>
             Fecha:
             <input type="text" name="fecha" value="${reg.fecha}" class="form-control mt-3" required>
@@ -84,6 +115,8 @@ function verNoticiaPorId(id) {
             `
         });
         form.innerHTML = template;
+        let selectCategoria = document.getElementById('categoria');
+        getCategorias(selectCategoria,false,newRes[0].idCategoria);
     })
 }
 
@@ -115,6 +148,8 @@ function mostrarFormularioAgregar() {
     formulario.classList.remove('d-none');
     divFormulario.classList.remove('d-none');
     tablaNoticias.classList.add('d-none');
+    select = document.getElementById('categoriaAgregar');
+    getCategorias(select,true);
 }
 
 getData();
