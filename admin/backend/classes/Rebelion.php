@@ -433,12 +433,14 @@
       $autor = $_POST['autor'];
       $noticiaImagen = $this->subirImagenNoticia();
       $noticia = $_POST['noticia'];
+      $linkUrl = $_POST['link'];
       $sql = "UPDATE noticias SET titulo = :titulo,
                                   fecha = :fecha,
                                   autor = :autor,
                                   noticiaImagen = :noticiaImagen,
                                   noticia = :noticia,
-                                  idCategoria = :idCategoria
+                                  idCategoria = :idCategoria,
+                                  link = :link
               WHERE id = :id";
       $stmt = $link->prepare($sql);
       $stmt->bindParam(':id', $id, PDO::PARAM_INT);
@@ -448,6 +450,7 @@
       $stmt->bindParam(':noticiaImagen', $noticiaImagen, PDO::PARAM_STR);
       $stmt->bindParam(':noticia', $noticia, PDO::PARAM_STR);
       $stmt->bindParam(':idCategoria', $idCategoria, PDO::PARAM_INT);
+      $stmt->bindParam(':link', $linkUrl, PDO::PARAM_STR);
       if($stmt->execute()){
         return true;
       }
@@ -483,7 +486,7 @@
     {
       $id = $_GET['id'];
       $link = Conexion::conectar();
-      $sql = "SELECT id,titulo,fecha,autor,noticiaImagen,noticia,N.idCategoria,categoria 
+      $sql = "SELECT id,titulo,fecha,autor,noticiaImagen,noticia,N.idCategoria,categoria,link 
                 FROM noticias N, categoriasNoticia C
                   WHERE N.idCategoria = C.idCategoria AND id = :id";
       $stmt = $link->prepare($sql);
@@ -500,7 +503,8 @@
           'noticiaImagen' => $reg['noticiaImagen'],
           'noticia' => $reg['noticia'],
           'idCategoria' => $reg['idCategoria'],
-          'categoria' => $reg['categoria']
+          'categoria' => $reg['categoria'],
+          'link' => $reg['link']
         );
       }
       $jsonString = json_encode($json);

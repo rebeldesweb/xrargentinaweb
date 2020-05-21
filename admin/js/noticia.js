@@ -106,8 +106,13 @@ function verNoticiaPorId(id) {
             <textarea name="noticia" class="form-control mt-3" cols="30" rows="30" required>${reg.noticia}</textarea>
             Imagen:
             <br>
-            <img src="../img/noticias/${reg.noticiaImagen}" alt="">
+            <img class="img-fluid w-100" src="../img/noticias/${reg.noticiaImagen}" alt="">
             <input type="file" name="noticiaImagen" class="mt-1"/>
+            <br>
+            <br>
+            Url Video:
+            <br>
+            <input type="text" value="${reg.link}" class="form-control mt-1" name="link" class="mt-1"/>
             <br>
             <center>
                 <input type="submit" class="btn btn-info mt-3" value="Modificar noticia">
