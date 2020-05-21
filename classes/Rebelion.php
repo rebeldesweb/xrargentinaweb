@@ -193,7 +193,7 @@
     public function listarNoticia()
     {
       $link = Conexion::conectar();
-      $sql = "SELECT * FROM noticias";
+      $sql = "SELECT * FROM noticias ORDER BY id DESC";
       $stmt = $link->prepare($sql);
       $stmt->execute();
       $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -205,7 +205,8 @@
           'fecha' => $reg['fecha'],
           'autor' => $reg['autor'],
           'noticiaImagen' => $reg['noticiaImagen'],
-          'noticia' => $reg['noticia']
+          'noticia' => $reg['noticia'],
+          'link' => $reg['link']
         );
       }
       $jsonString = json_encode($json);
@@ -234,6 +235,34 @@
       // }
       // $jsonString = json_encode($json);
       return $resultado;
+    }
+
+    public function listarNoticiaPorCategoria()
+    {
+      $idCategoria = $_GET['idCategoria'];
+      $link = Conexion::conectar();
+      $sql = "SELECT id,titulo,fecha,autor,noticiaImagen,noticia,categoria 
+                FROM noticias AS N, categoriasNoticia AS C
+                  WHERE N.idCategoria = C.idCategoria AND N.idCategoria = :idCategoria ORDER BY id DESC";
+      $stmt = $link->prepare($sql);
+      $stmt->bindParam(':idCategoria',$idCategoria,PDO::PARAM_INT);
+      $stmt->execute();
+      $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      $json = array();
+      foreach ($resultado as $reg) {
+        $json[] = array(
+          'id' => $reg['id'],
+          'titulo' => $reg['titulo'],
+          'fecha' => $reg['fecha'],
+          'autor' => $reg['autor'],
+          'noticiaImagen' => $reg['noticiaImagen'],
+          'noticia' => $reg['noticia'],
+          'categoria' => $reg['categoria'],
+          'link' => $reg['link']
+        );
+      }
+      $jsonString = json_encode($json);
+      return $jsonString;
     }
 
 

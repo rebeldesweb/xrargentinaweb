@@ -1,6 +1,7 @@
 var btnVerdad = document.getElementById('btnVerdad');
 var btnActuar = document.getElementById('btnActuar');
 var btnSumate = document.getElementById('btnSumate');
+var btnNoticias = document.getElementById('btnNoticias');
 var btnEmergencia = document.getElementById('btnEmergencia');
 var btnDemandas = document.getElementById('btnDemandas');
 var btnNosotros = document.getElementById('btnNosotros');
@@ -16,6 +17,8 @@ if (url.includes('laverdad.php') || url.includes('laemergencia.php') || url.incl
   btnSumate.className = 'current-menu-item';
 }else if (url.includes('prensa.php')) {
   btnPress.className = 'current-menu-item';
+}else if(url.includes('noticias.php') || url.includes('noticia.php')){
+  btnNoticias.className = 'current-menu-item';
 };
 
 

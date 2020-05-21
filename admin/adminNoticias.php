@@ -85,10 +85,15 @@
         <input type="text" name="autor" placeholder="Nombre del autor" class="form-control mt-3" required>
         <textarea name="noticia" class="form-control mt-3" placeholder="Ingrese el cuerpo de la noticia" cols="30" rows="30" required></textarea>
         <label class="mt-3">Cargue la foto de la nota:</label>
-        <input type="file" name="noticiaImagen" class="mt-1"/>
+        <input type="file" name="noticiaImagen" class="mt-1" required/>
         <br>
+        <label class="mt-3">Adjuntar más fotos (opcional)</label>
+        <input type="file" multiple class="mt-1" name="imagenes[]"/>
+        <br>
+        <label class="mt-3">Adjuntar link de video (youtube)</label>
+        <input type="text" class="form-control mt-1" name="link" placeholder="Opcional"/>
         <center>
-            <input type="submit" class="btn btn-info mt-3" value="Agregar Evento">
+          <input type="submit" class="btn btn-info mt-3" value="Agregar">
         </center>
     </form>
   </div>

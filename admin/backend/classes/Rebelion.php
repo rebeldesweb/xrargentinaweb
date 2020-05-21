@@ -334,6 +334,56 @@
       // return $noticiaImagen;
     }
 
+    public function subirImagenes($idNoticia,$imagenes)
+    {
+      $files = array();
+      $responseLogs = array();
+      $file_count = count($imagenes['name']); //cantidad de imagenes que cargue
+      $file_keys = array_keys($imagenes); //las claves del objeto que viene (name,type,error,size,tmp_name)
+
+      for ($i=0; $i < $file_count; $i++) { 
+          foreach ($file_keys as $key) {//esto itera 5 veces porque el objeto tiene 5 claves
+              $files[$i][$key] = $imagenes[$key][$i];
+          }
+      }
+      $ruta = "../../img/noticias/";
+      foreach ($files as $file) {
+        $imagen = $file['name']; //fallback
+        if ($file['error'] == 0) {
+          $imagenTMP = $file['tmp_name'];
+          $bool = move_uploaded_file($imagenTMP,$ruta.$imagen);
+          if ($bool) {
+            if($this->cargarRegistroImagen($idNoticia,$imagen)){
+              array_push($responseLogs,true);
+            }else{
+              array_push($responseLogs,false);
+            };
+          }else{
+            array_push($responseLogs,false);
+          }
+        }else{
+          array_push($responseLogs,false);
+        }
+      };
+      if(in_array(false,$responseLogs)){
+        return false;
+      }
+      return true;
+    }
+
+    public function cargarRegistroImagen($id,$imagen)
+    {
+      $link = Conexion::conectar();
+      $sql = "INSERT INTO imagenesNoticia (idNoticia,imagen) VALUES (:idNoticia,:imagen)";
+      $stmt = $link->prepare($sql);
+      $stmt->bindParam(':idNoticia',$id,PDO::PARAM_INT);
+      $stmt->bindParam(':imagen',$imagen,PDO::PARAM_STR);
+      if($stmt->execute()){
+        return true;
+      }
+      return false;
+    }
+
     public function agregarNoticia()
     {
       $link = Conexion::conectar();
@@ -342,9 +392,15 @@
       $fecha = $_POST['fecha'];
       $autor = $_POST['autor'];
       $noticiaImagen = $this->subirImagenNoticia();
+      $imagenes = $_FILES['imagenes'];
       $noticia = $_POST['noticia'];
       $sql = "INSERT INTO noticias (titulo, fecha, autor, noticiaImagen, noticia, idCategoria)
               VALUES (:titulo, :fecha, :autor, :noticiaImagen, :noticia, :idCategoria)";
+      if(isset($_POST['link']) && $_POST['link']!=''){
+        $sql = "INSERT INTO noticias (titulo, fecha, autor, noticiaImagen, noticia, idCategoria,link)
+                VALUES (:titulo, :fecha, :autor, :noticiaImagen, :noticia, :idCategoria,:link)";
+        $linkUrl = $_POST['link'];
+      }
       $stmt = $link->prepare($sql);
       $stmt->bindParam(':titulo', $titulo, PDO::PARAM_STR);
       $stmt->bindParam(':fecha', $fecha, PDO::PARAM_STR);
@@ -352,7 +408,16 @@
       $stmt->bindParam(':noticiaImagen', $noticiaImagen, PDO::PARAM_STR);
       $stmt->bindParam(':noticia', $noticia, PDO::PARAM_STR);
       $stmt->bindParam(':idCategoria', $idCategoria, PDO::PARAM_INT);
+      if (isset($linkUrl)) {
+        $stmt->bindParam(':link',$linkUrl,PDO::PARAM_STR);
+      }
       if($stmt->execute()){
+        if(isset($_FILES['imagenes']) && !is_null($_FILES['imagenes'])){
+          $loadImages = $this->subirImagenes($link->lastInsertId(),$_FILES['imagenes']);
+          if ($loadImages) {
+            return true;
+          }
+        }
         return true;
       }
       return false;

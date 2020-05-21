@@ -479,6 +479,14 @@ img.emoji {
               <a target="" href="prensa.php" data-menuanchor="press.php">PRENSA</a>
 
             </li>
+            <li id="item-drop-noticias" class="bg-yellow menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-14 current_page_item current_page_parent current-menu-ancestor current-menu-parent current_page_ancestor menu-item-42 menu-item-has-children js-nav-main__item--hover is-closed">
+              <a target="" href="noticias.php">Noticias</a><button class="nav-mobile__expand" onclick="toggle()"></button>
+              <ul class="nav-main-dropdown" id="menu-mobile-categorias">
+                <li class=" menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-14 current_page_item current_page_parent menu-item-7994">
+                  
+                </li>
+              </ul>
+            </li>
 
           </ul>
 
@@ -520,7 +528,7 @@ img.emoji {
 
 		      <div class="page-header__wrap">
 
-            <a class="logo" href="index.html" rel="home"><img src="img/LOGO.png" alt="Extinction Rebellion" /></a>
+            <a class="logo" href="index.html" rel="home"><img src="http://xrargentina.org/img/LOGO.png" alt="Extinction Rebellion" /></a>
 
             <div class="page-header__content">
 
@@ -1162,6 +1170,25 @@ img.emoji {
 
     }
 
+   
+    fetch('backend/listarCategoria.php').then(res=>res.json()).then(data=>{
+      let template = '';
+      data.forEach(categoria => {
+          template += `
+            <li class=" menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-14 current_page_item current_page_parent menu-item-7994">
+              <a target="" href="noticias.php?categoria=${categoria.idCategoria}" data-menuanchor="">${categoria.categoria}</a>
+            </li>
+          `;
+      });
+      document.getElementById('menu-mobile-categorias').innerHTML = template;
+    })
+    
+    function toggle() {
+      document.getElementById('menu-mobile-categorias').classList.toggle('show');
+      document.getElementsByClassName('nav-mobile')[0].classList.toggle('bg-yellow');
+      document.getElementById('item-drop-noticias').classList.toggle('is-closed');
+    }
+  
 
 
     //para saber la fecha en la que se inscribio el usuario
