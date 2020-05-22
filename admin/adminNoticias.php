@@ -13,7 +13,7 @@
   <title>Admin Noticias</title>
   <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="https://bootswatch.com/4/united/bootstrap.min.css"> -->
-  <!-- <link rel="stylesheet" href="../css/style.css"> -->
+  <link rel="stylesheet" href="../comon/modificaciones.css">
   <link rel="stylesheet" href="../comon/sweetalert2.css">
 </head>
 <body>
@@ -96,6 +96,17 @@
           <input type="submit" class="btn btn-info mt-3" value="Agregar">
         </center>
     </form>
+  </div>
+
+  <div id="slider" class="container__slider d-none">
+    <div class="sk-chase">
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+    </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

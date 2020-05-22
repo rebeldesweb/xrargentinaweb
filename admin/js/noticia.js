@@ -164,6 +164,7 @@ getData();
 let formulario = document.getElementById('formModificarNoticia');
 formulario.addEventListener('submit', event=>{
     event.preventDefault();
+    document.getElementById('slider').classList.toggle('d-none');
     let data = new FormData(formulario);
     fetch('backend/modificarNoticia.php',{
         method: 'POST',
@@ -173,6 +174,7 @@ formulario.addEventListener('submit', event=>{
     .then(newRes=>{
         // console.log(newRes)
         if (newRes) {
+            document.getElementById('slider').classList.toggle('d-none');
             template = `<div class="alert alert-info">Se ha modificado la noticia con éxito</div>`;
             formulario.innerHTML = template;
         }
@@ -185,6 +187,7 @@ formulario.addEventListener('submit', event=>{
 let formularioAgregar = document.getElementById('formAgregarNoticia');
 formularioAgregar.addEventListener('submit', event=>{
     event.preventDefault();
+    document.getElementById('slider').classList.toggle('d-none');
     let data = new FormData(formularioAgregar);
     fetch('backend/agregarNoticia.php',{
         method: 'POST',
@@ -193,6 +196,7 @@ formularioAgregar.addEventListener('submit', event=>{
     .then(res=>res.json())
     .then(newRes=>{
         if (newRes) {
+            document.getElementById('slider').classList.toggle('d-none');
             alert = document.getElementById('alert-success');
             alert.classList.remove('d-none');
             formularioAgregar.classList.add('d-none');
