@@ -13,18 +13,16 @@
                 <div class="post_header">
                     <?php if ($noticiaImagen != 'noDisponible.jpg') {?>
                     <div class="post-hero">
-                        <img src="img/noticias/<?php echo $data['noticiaImagen'] ?>" alt="">
+                        <img src="http://xrargentina.org/img/noticias/<?php echo $data['noticiaImagen'] ?>" alt="">
                     </div>
                     <?php }; ?>
                     <h1 class="page-title"><?php echo $data['titulo']; ?></h1>
                     <p class="post_date"><?php echo $data['fecha']; ?> Por <?php echo $data['autor']; ?></p>
                 </div>
                 <p style="width:100vh">
-                    <?php if($data['link']!= null){?>
-                        <iframe width="100%" height="500px"
-                                src="https://www.youtube.com/embed/<?php echo $data['link'] ?>controls=0">
-                        </iframe>   
-                    <?php }else{ echo $data['noticia']; }?>
+                    <?php if($data['link']!= null){
+                        echo $data['link'];
+                    }else{ echo $data['noticia']; }?>
                 </p>
             </div>
             <aside class="two-col-layout__left sidebar sidebar--post">

@@ -31,7 +31,21 @@ function getNoticias(){
             template = '<center><div class="alert alert-info">No hay noticias cargadas en este momento</div></center>'
         }else{
             newRes.forEach(reg => {
-                if (reg.noticiaImagen == 'noDisponible.jpg') {
+                if(reg.link != null && reg.link != ''){
+                    template +=`
+                        <article class="tease tease-post" id="tease-${reg.id}">
+                            <div class="tease-post__wrap js-masonry-grid-content is-video">
+                                ${reg.link}  
+                                <div class="tease-post__body">
+                                    <h2 class="h2"><a href="noticia.php?id=${reg.id}">${reg.titulo}</a></h2>
+                                    <p class="tease-post__meta">${reg.fecha} Por ${reg.autor}</p>
+                                    <p class="tease-post__preview">${reg.noticia.substring(0, 500)}&hellip;</p>
+                                    <a href="noticia.php?id=${reg.id}" class="btn btn--primary-dark">Ver nota completa</a>
+                                </div>
+                            </div>
+                        </article>
+                    `;
+                }else if (reg.noticiaImagen == 'noDisponible.jpg') {
                     template += `
                         <article class="tease tease-post" id="tease-${reg.id}">
                             <div class="tease-post__wrap js-masonry-grid-content is-video">
@@ -45,23 +59,7 @@ function getNoticias(){
                             </div>
                         </article>
                     `;
-                }else if(reg.link != null && reg.link != ''){
-                    template +=`
-                        <article class="tease tease-post" id="tease-${reg.id}">
-                            <div class="tease-post__wrap js-masonry-grid-content is-video">
-                                <iframe width="100%" height="300px"
-                                src="https://www.youtube.com/embed/1xtQPSnmrKI?controls=0">
-                                </iframe>   
-                                <div class="tease-post__body">
-                                    <h2 class="h2"><a href="noticia.php?id=${reg.id}">${reg.titulo}</a></h2>
-                                    <p class="tease-post__meta">${reg.fecha} Por ${reg.autor}</p>
-                                    <p class="tease-post__preview">${reg.noticia.substring(0, 500)}&hellip;</p>
-                                    <a href="noticia.php?id=${reg.id}" class="btn btn--primary-dark">Ver nota completa</a>
-                                </div>
-                            </div>
-                        </article>
-                    `;
-                }else {
+                }else{
                     template += `
                         <article class="tease tease-post" id="tease-${reg.id}">
                             <div class="tease-post__wrap js-masonry-grid-content is-video">
@@ -113,7 +111,21 @@ function verNoticiaPorCategoria(idCategoria) {
             template = '<center><div class="alert alert-info">No hay noticias con esa categoria</div></center>'
         }else{
             data.forEach(reg => {
-                if (reg.noticiaImagen == 'noDisponible.jpg') {
+                if(reg.link != null && reg.link != ''){
+                    template +=`
+                        <article class="tease tease-post" id="tease-${reg.id}">
+                            <div class="tease-post__wrap js-masonry-grid-content is-video">
+                                ${reg.link}   
+                                <div class="tease-post__body">
+                                    <h2 class="h2"><a href="noticia.php?id=${reg.id}">${reg.titulo}</a></h2>
+                                    <p class="tease-post__meta">${reg.fecha} Por ${reg.autor}</p>
+                                    <p class="tease-post__preview">${reg.noticia.substring(0, 500)}&hellip;</p>
+                                    <a href="noticia.php?id=${reg.id}" class="btn btn--primary-dark">Ver nota completa</a>
+                                </div>
+                            </div>
+                        </article>
+                    `;
+                }else if (reg.noticiaImagen == 'noDisponible.jpg') {
                     template += `
                         <article class="tease tease-post" id="tease-${reg.id}">
                             <div class="tease-post__wrap js-masonry-grid-content is-video">
@@ -127,23 +139,7 @@ function verNoticiaPorCategoria(idCategoria) {
                             </div>
                         </article>
                     `;
-                }else if(reg.link != 'null' && reg.link != ''){
-                    template +=`
-                        <article class="tease tease-post" id="tease-${reg.id}">
-                            <div class="tease-post__wrap js-masonry-grid-content is-video">
-                                <iframe width="100%" height="300px"
-                                src="https://www.youtube.com/embed/1xtQPSnmrKI?controls=0">
-                                </iframe>   
-                                <div class="tease-post__body">
-                                    <h2 class="h2"><a href="noticia.php?id=${reg.id}">${reg.titulo}</a></h2>
-                                    <p class="tease-post__meta">${reg.fecha} Por ${reg.autor}</p>
-                                    <p class="tease-post__preview">${reg.noticia.substring(0, 500)}&hellip;</p>
-                                    <a href="noticia.php?id=${reg.id}" class="btn btn--primary-dark">Ver nota completa</a>
-                                </div>
-                            </div>
-                        </article>
-                    `;
-                }else {
+                } else {
                     template += `
                         <article class="tease tease-post" id="tease-${reg.id}">
                             <div class="tease-post__wrap js-masonry-grid-content is-video">
