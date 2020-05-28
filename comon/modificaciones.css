@@ -117,6 +117,15 @@
     font-weight: bold;
     text-decoration: none;
   }
+
+  .foto-lista{
+    height: 55px !important;
+  }
+
+  .foto-lista img{
+    width: 25% !important;
+    padding: 3px;
+  }
 }
 
 
@@ -170,6 +179,32 @@
 .sk-chase-dot:nth-child(4):before { animation-delay: -0.8s; }
 .sk-chase-dot:nth-child(5):before { animation-delay: -0.7s; }
 .sk-chase-dot:nth-child(6):before { animation-delay: -0.6s; }
+
+/*slider*/
+.slider , .imagenGrande , .foto-lista{
+  width: 100%;
+}
+
+.imagenGrande{
+  height: 600px;
+}
+
+.imagenGrande img{
+  width: 100%;
+  max-height: 100%;
+}
+
+.foto-lista{
+  display: flex;
+  overflow-x: scroll;
+}
+
+.foto-lista img{
+  width: 20%;
+  padding: 3px;
+
+}
+
 
 @keyframes sk-chase {
   100% { transform: rotate(360deg); } 

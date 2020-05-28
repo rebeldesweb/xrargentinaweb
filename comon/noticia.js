@@ -20,3 +20,37 @@ fetch('backend/listarNoticias.php')
     }
     noticias.innerHTML = template;
 })
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+    results = regex.exec(location.search);
+    return parseInt(results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " ")));
+}
+
+function ampliarImagen(event) {
+    console.log(event.target.src);
+    let fotoGrande = document.getElementById('fotoGrande');
+    fotoGrande.src = event.target.src
+}
+
+window.onload = async ()=>{
+    let fotoLista = document.getElementById('foto-lista');
+    let slider = document.getElementById('slider');
+    slider.style.display = 'none';
+    let id = await getParameterByName('id');
+    fetch(`backend/listarImagenesPorNoticia.php?id=${id}`).then(res=>res.json()).then(response=>{
+        if (response.length>0) {
+            console.log(response);
+            
+            let template = '';
+            response.forEach(img=>{
+                template+= `
+                    <img onclick="ampliarImagen(event)" src="http://xrargentina.org/img/noticias/${img.imagen}"/>
+                `;
+            })
+            fotoLista.innerHTML += template;
+            slider.style.display = 'block';
+        };
+    });
+}

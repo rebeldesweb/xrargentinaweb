@@ -237,6 +237,28 @@
       return $resultado;
     }
 
+    public function verImagenesPorNoticia()
+    {
+      $id = $_GET['id'];
+      $link = Conexion::conectar();
+      $sql = "SELECT * FROM imagenesNoticia WHERE idNoticia = ".$id;
+      $stmt = $link->prepare($sql);
+      $stmt->execute();
+      if($stmt->execute()){
+        $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $json = array();
+        foreach ($resultado as $reg) {
+          $json[] = array(
+            'idImagen' => $reg['idImagen'],
+            'idNoticia' => $reg['idNoticia'],
+            'imagen' => $reg['imagen']
+          );
+        };
+        $jsonString = json_encode($json);
+        return $jsonString;
+      }
+    }
+
     public function listarNoticiaPorCategoria()
     {
       $idCategoria = $_GET['idCategoria'];
