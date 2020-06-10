@@ -11,19 +11,22 @@
         <div class="two-col-layout container ">
             <div class="two-col-layout__right type type--small" id="noticiaCompleta">
                 <div class="post_header">
+                    <h1 class="page-title"><?php echo $data['titulo']; ?></h1>
+                    <p class="post_date"><?php echo $data['fecha']; ?> Por <?php echo $data['autor']; ?></p>
                     <?php if ($noticiaImagen != 'noDisponible.jpg') {?>
                     <div class="post-hero">
                         <img src="img/noticias/<?php echo $data['noticiaImagen'] ?>" alt="">
                     </div>
                     <?php }; ?>
-                    <h1 class="page-title"><?php echo $data['titulo']; ?></h1>
-                    <p class="post_date"><?php echo $data['fecha']; ?> Por <?php echo $data['autor']; ?></p>
                 </div>
-                <p style="width:100vh">
+                <div>
                     <?php if($data['link']!= null){
                         echo $data['link'];
-                    }else{ echo $data['noticia']; }?>
-                </p>
+                    }?>
+                </div>
+                <div class="contenidoNoticia">
+                    <?php if ($data['noticia']!=null){ echo $data['noticia']; }?>
+                </div>
                 <div class="slider" id="slider">
                     <div class="imagenGrande">
                         <img id="fotoGrande" src="http://xrargentina.org/img/noticias/<?php echo $data['noticiaImagen']?>"/>

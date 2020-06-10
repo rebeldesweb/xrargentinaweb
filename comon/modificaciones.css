@@ -205,6 +205,15 @@
 
 }
 
+/*separador de parrafos para cargar notas en admin*/
+.contenidoNoticia{
+  text-align: justify;
+}
+
+.contenidoNoticia p{
+  margin: 20px 0px;
+}
+
 
 @keyframes sk-chase {
   100% { transform: rotate(360deg); } 

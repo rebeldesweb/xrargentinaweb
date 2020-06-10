@@ -4,7 +4,7 @@
         public function listarCategorias()
         {
             $link = Conexion::conectar();
-            $sql = "SELECT * FROM categoriasNoticia";
+            $sql = "SELECT * FROM categoriasNoticia ORDER BY categoria ASC";
             $stmt = $link->prepare($sql);
             $stmt->execute();
             $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);

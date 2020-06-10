@@ -1,7 +1,0 @@
-# Activar HTTPS
-RewriteEngine On
-RewriteCond %{Server_Port} !=443
-RewriteRule ^(.*)$ http:// www.xrargentina.tld/$1 [R=301, L]
-
-
-AddDefaultCharset utf-8

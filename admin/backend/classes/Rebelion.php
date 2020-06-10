@@ -431,7 +431,6 @@
       $idCategoria = $_POST['idCategoria'];
       $fecha = $_POST['fecha'];
       $autor = $_POST['autor'];
-      $noticiaImagen = $this->subirImagenNoticia();
       $noticia = $_POST['noticia'];
       $linkUrl = $_POST['link'];
       $sql = "UPDATE noticias SET titulo = :titulo,
@@ -442,12 +441,25 @@
                                   idCategoria = :idCategoria,
                                   link = :link
               WHERE id = :id";
+      if($_POST['noticiaImagen']=='' && is_null($_POST['noticiaImagen'])){
+        $sql = "UPDATE noticias SET titulo = :titulo,
+                                    fecha = :fecha,
+                                    autor = :autor,
+                                    noticia = :noticia,
+                                    idCategoria = :idCategoria,
+                                    link = :link
+                WHERE id = :id";
+      }else{
+        $noticiaImagen = $this->subirImagenNoticia();
+      }
       $stmt = $link->prepare($sql);
       $stmt->bindParam(':id', $id, PDO::PARAM_INT);
       $stmt->bindParam(':titulo', $titulo, PDO::PARAM_STR);
       $stmt->bindParam(':fecha', $fecha, PDO::PARAM_STR);
       $stmt->bindParam(':autor', $autor, PDO::PARAM_STR);
-      $stmt->bindParam(':noticiaImagen', $noticiaImagen, PDO::PARAM_STR);
+      if($_POST['noticiaImagen']!=='' && !is_null($_POST['noticiaImagen'])){
+        $stmt->bindParam(':noticiaImagen', $noticiaImagen, PDO::PARAM_STR);
+      }
       $stmt->bindParam(':noticia', $noticia, PDO::PARAM_STR);
       $stmt->bindParam(':idCategoria', $idCategoria, PDO::PARAM_INT);
       $stmt->bindParam(':link', $linkUrl, PDO::PARAM_STR);

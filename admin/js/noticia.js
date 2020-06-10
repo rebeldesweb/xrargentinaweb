@@ -112,7 +112,9 @@ function verNoticiaPorId(id) {
             <br>
             Url Video:
             <br>
-            <input type="text" value="${reg.link}" class="form-control mt-1" name="link" class="mt-1"/>
+            <textarea class="form-control w-100 mt-1" name="link">
+                ${reg.link}
+            </textarea>
             <br>
             <center>
                 <input type="submit" class="btn btn-info mt-3" value="Modificar noticia">

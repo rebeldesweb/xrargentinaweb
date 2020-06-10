@@ -20,7 +20,7 @@ let tituloSeccion = document.getElementById('titulo-seccion');
 
 function getNoticias(){
     let noticias = document.getElementById('noticias');
-    noticias.innerHTML = 'Obteniendo noticias';
+    noticias.innerHTML = `<p class="alert alert-warning">Obteniendo noticias</p>`;
     fetch('backend/listarNoticias.php')
     .then(res=>res.json())
     .then(newRes=>{
@@ -31,7 +31,7 @@ function getNoticias(){
             template = '<center><div class="alert alert-info">No hay noticias cargadas en este momento</div></center>'
         }else{
             newRes.forEach(reg => {
-                if(reg.link != null && reg.link != ''){
+                if(reg.link !== null && reg.link != '' && reg.link !=='null'){
                     template +=`
                         <article class="tease tease-post" id="tease-${reg.id}">
                             <div class="tease-post__wrap js-masonry-grid-content is-video">
@@ -45,21 +45,7 @@ function getNoticias(){
                             </div>
                         </article>
                     `;
-                }else if (reg.noticiaImagen == 'noDisponible.jpg') {
-                    template += `
-                        <article class="tease tease-post" id="tease-${reg.id}">
-                            <div class="tease-post__wrap js-masonry-grid-content is-video">
-                                <div class="tease-post__body">
-                                    <h2 class="h2"><a href="noticia.php?id=${reg.id}">${reg.titulo}</a></h2>
-                                    <p class="tease-post__meta">${reg.fecha} Por ${reg.autor}</p>
-                                    <p class="tease-post__preview">${reg.noticia.substring(0,500)}&hellip;</p>
-        
-                                    <a href="noticia.php?id=${reg.id}" class="btn btn--primary-dark">Ver nota completa</a>
-                                </div>
-                            </div>
-                        </article>
-                    `;
-                }else{
+                }else if (reg.noticiaImagen != 'noDisponible.jpg') {
                     template += `
                         <article class="tease tease-post" id="tease-${reg.id}">
                             <div class="tease-post__wrap js-masonry-grid-content is-video">
@@ -70,6 +56,20 @@ function getNoticias(){
                                     <h2 class="h2"><a href="noticia.php?id=${reg.id}">${reg.titulo}</a></h2>
                                     <p class="tease-post__meta">${reg.fecha} Por ${reg.autor}</p>
                                     <p class="tease-post__preview">${reg.noticia.substring(0, 500)}&hellip;</p>
+                                    <a href="noticia.php?id=${reg.id}" class="btn btn--primary-dark">Ver nota completa</a>
+                                </div>
+                            </div>
+                        </article>
+                    `;
+                }else{
+                    template += `
+                        <article class="tease tease-post" id="tease-${reg.id}">
+                            <div class="tease-post__wrap js-masonry-grid-content is-video">
+                                <div class="tease-post__body">
+                                    <h2 class="h2"><a href="noticia.php?id=${reg.id}">${reg.titulo}</a></h2>
+                                    <p class="tease-post__meta">${reg.fecha} Por ${reg.autor}</p>
+                                    <p class="tease-post__preview">${reg.noticia.substring(0,500)}&hellip;</p>
+
                                     <a href="noticia.php?id=${reg.id}" class="btn btn--primary-dark">Ver nota completa</a>
                                 </div>
                             </div>
@@ -92,7 +92,7 @@ function listarCategorias() {
         data.forEach(categoria=>{
             template += `
                 <li class=" menu-item menu-item-type-taxonomy menu-item-object-category menu-item-129" style="cursor:pointer">
-                    <a onclick="verNoticiaPorCategoria(${categoria.idCategoria})" data-menuanchor="https://rebellion.earth/category/actions/">${categoria.categoria}</a>
+                    <a onclick="verNoticiaPorCategoria(${categoria.idCategoria})">${categoria.categoria}</a>
                 </li>
             `;
         })
