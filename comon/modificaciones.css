@@ -208,6 +208,7 @@
 /*separador de parrafos para cargar notas en admin*/
 .contenidoNoticia{
   text-align: justify;
+  font-size: 20px;
 }
 
 .contenidoNoticia p{

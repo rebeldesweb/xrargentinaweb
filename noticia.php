@@ -25,11 +25,15 @@
                     }?>
                 </div>
                 <div class="contenidoNoticia">
-                    <?php if ($data['noticia']!=null){ echo $data['noticia']; }?>
+                    <?php if ($data['noticia']!=null){
+                        echo str_replace("\r", "<br/>", $data['noticia']);
+                    }?>
                 </div>
                 <div class="slider" id="slider">
                     <div class="imagenGrande">
-                        <img id="fotoGrande" src="http://xrargentina.org/img/noticias/<?php echo $data['noticiaImagen']?>"/>
+                        <?php if($data['noticiaImagen'] != 'noDisponible.jpg' && $data['noticiaImagen']!= null){?>
+                            <img id="fotoGrande" src="http://xrargentina.org/img/noticias/<?php echo $data['noticiaImagen']?>"/>
+                        <?php } ?>
                     </div>
                     <div class="foto-lista" id="foto-lista">
                         <img onclick="ampliarImagen(event)" src="http://xrargentina.org/img/noticias/<?php echo $data['noticiaImagen']?>"/>

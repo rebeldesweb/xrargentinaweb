@@ -36,13 +36,11 @@ function ampliarImagen(event) {
 
 window.onload = async ()=>{
     let fotoLista = document.getElementById('foto-lista');
-    let slider = document.getElementById('slider');
-    slider.style.display = 'none';
+    fotoLista.style.display = 'none';
     let id = await getParameterByName('id');
     fetch(`backend/listarImagenesPorNoticia.php?id=${id}`).then(res=>res.json()).then(response=>{
         if (response.length>0) {
             console.log(response);
-            
             let template = '';
             response.forEach(img=>{
                 template+= `
@@ -50,7 +48,7 @@ window.onload = async ()=>{
                 `;
             })
             fotoLista.innerHTML += template;
-            slider.style.display = 'block';
+            fotoLista.style.display = 'block';
         };
     });
 }
