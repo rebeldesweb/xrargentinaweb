@@ -40,6 +40,7 @@ window.onload = async ()=>{
     let id = await getParameterByName('id');
     fetch(`backend/listarImagenesPorNoticia.php?id=${id}`).then(res=>res.json()).then(response=>{
         if (response.length>0) {
+            document.getElementById('divVariasImagenes').innerHTML = `<img src="http://xrargentina.org/img/noticias/${response[0].imagen}"/>`;
             console.log(response);
             let template = '';
             response.forEach(img=>{

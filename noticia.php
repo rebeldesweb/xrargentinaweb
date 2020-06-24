@@ -17,6 +17,11 @@
                     <div class="post-hero">
                         <img src="img/noticias/<?php echo $data['noticiaImagen'] ?>" alt="">
                     </div>
+                    <?php }?>
+                    <?php if ($noticiaImagen != 'noDisponible.jpg') {?>
+                    <div class="post-hero" id="divVariasImagenes">
+                            
+                    </div>
                     <?php }; ?>
                 </div>
                 <div>
