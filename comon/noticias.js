@@ -79,7 +79,7 @@ function getNoticias(){
             });
         }
         noticias.innerHTML = template;
-        tituloSeccion.innerHTML = 'Todas las notícias';
+        tituloSeccion.innerHTML = 'Todas las noticias';
     })
 }
 

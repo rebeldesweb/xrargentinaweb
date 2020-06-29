@@ -36,10 +36,13 @@ function ampliarImagen(event) {
 
 window.onload = async ()=>{
     let fotoLista = document.getElementById('foto-lista');
+    let imagenGrande = document.getElementsByClassName('imagenGrande')[0];
     fotoLista.style.display = 'none';
+    imagenGrande.style.display = 'none';
     let id = await getParameterByName('id');
     fetch(`backend/listarImagenesPorNoticia.php?id=${id}`).then(res=>res.json()).then(response=>{
         if (response.length>0) {
+            console.log(response.length);
             document.getElementById('divVariasImagenes').innerHTML = `<img src="http://xrargentina.org/img/noticias/${response[0].imagen}"/>`;
             console.log(response);
             let template = '';
@@ -50,6 +53,7 @@ window.onload = async ()=>{
             })
             fotoLista.innerHTML += template;
             fotoLista.style.display = 'block';
+            imagenGrande.style.display = 'block'
         };
     });
 }
