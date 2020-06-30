@@ -7,7 +7,7 @@
   if ($bool) {
 
     $para  = $_POST['email']; // atención a la coma
-   
+
     // título
     // Subject
     $asunto = 'Te has registrado con éxito en xrargentina';
@@ -17,10 +17,10 @@
     <html>
     <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <title>Birthday Reminders for August</title>
-      
+
     </head>
     <body>
-      <p class="p1">Hola Bienvenidx a Extinction Rebellion (XR)</p>
+      <p class="p1">Hola Bienvenidx a Rebelión o Extinción (XR)</p>
       <p class="p1">Nuestra misión(XR)</p>
       <p>Frente al inminente colapso ecológico y climático, XR une, bajo un mismo mensaje, a millones de personas que no se sienten representadas por los sistemas políticos actuales y se oponen a la inacción de los gobiernos y las corporaciones del mundo.
       La extinción humana es una posibilidad real si no se toman medidas urgentes para transformar el sistema global de producción y consumo empezando ahora. Debemos además sentar las bases de una nueva cultura regenerativa.
@@ -39,7 +39,7 @@
       <p>Usamos Telegram. Es un sistema de mensajería más seguro que Whatsapp, donde conversamos y colaboramos entre les voluntaries.
       Te podés bajar Telegram desde el appStore o PlayStore y después usarlo desde la web https://web.telegram.org o versión desktop.</p>
 
-      <p>Te invitamos a subirte a nuestro grupo de bienvenida en Telegram XR Argentina clickeando acá: <a href="https://t.me/joinchat/LOrzQVKXEpGVCpjLhSQ52Q">XR Argentina.</a> Cuando llegues al grupo, une de nuestres coordinadores se va a contactar con vos para acompañarte en los primeros pasos y ayudarte a elegir cómo podés ayudar.</p>
+      <p>Te invitamos a subirte a nuestro grupo de bienvenida en Telegram XR Argentina clickeando acá: <a href="https://t.me/joinchat/LOrzQVKXEpGVCpjLhSQ52Q">XR Argentina.</a> Cuando llegues al grupo, alguien del equipo de Rebeldes Guías va a estar esperándote para acompañarte en los primeros pasos y ayudarte a elegir cómo podés ayudar.</p>
 
       <p>Además, seguinos en nuestras redes sociales para participar en las próximas charlas y acciones.</p>
       <p>Instagram: <a href="https://www.instagram.com/xrargentina/" target="_blank" rel="noopener">@xrargentina</a></p>
@@ -73,12 +73,12 @@
 	//$from = "xrargentina@gmail.com";
 	$from = "info@xrargentina.org";
 	$nameFrom = "xrargentina";
-	
-	
+
+
 
 	$mail = new PHPMailer();
 
-	
+
 	$mail->isSMTP();
 	//Enable SMTP debugging
 	// 0 = off (for production use)
@@ -114,12 +114,12 @@
 	$mail->msgHTML($body);
 	//Replace the plain text body with one created manually
 	$mail->AltBody = $body;
-	
-	
-	
+
+
+
 	$mail->CharSet = 'UTF-8';
-	
-	$mail->HeaderLine("Organization" , SITE); 
+
+	$mail->HeaderLine("Organization" , SITE);
     $mail->HeaderLine("Content-Transfer-encoding" , "8bit");
     $mail->HeaderLine("Message-ID" , "<".md5(uniqid(time()))."@{$_SERVER['SERVER_NAME']}>");
     $mail->HeaderLine("X-MSmail-Priority" , "Normal");
@@ -131,10 +131,10 @@
     $mail->HeaderLine("X-AntiAbuse" , $mail->Sender);
 	$mail->HeaderLine('Return-Path', '<'.trim($mail->ReturnPath).'>');
 
-	
+
 
 	$sendMail=	$mail->Send();
-	
+
     $dt = date('Y-m-d G:i:s');
 
     $_Log = fopen("logs/enviosEmail.log", "a+") or die("Operation Failed!");
@@ -145,7 +145,7 @@
        fputs($_Log, $dt . " --> Enviado: " . $para ."\n");
     }
     else  fputs($_Log, $dt . " --> NO enviado: " . $para ."\n");
-    
+
      fclose($_Log);
 
     header('location:index.html?suscribido');
