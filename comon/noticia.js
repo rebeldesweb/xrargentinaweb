@@ -35,6 +35,11 @@ function ampliarImagen(event) {
 }
 
 window.onload = async ()=>{
+    if(window.location.pathname == '/noticia.php' || window.location.pathname == '/test/noticia.php'){
+        document.title = document.getElementById('titulo_nota').innerText;
+        document.getElementsByTagName('meta')[4].content = document.getElementById('fecha_descripcion').innerText;
+    }
+
     let fotoLista = document.getElementById('foto-lista');
     let imagenGrande = document.getElementsByClassName('imagenGrande')[0];
     fotoLista.style.display = 'none';

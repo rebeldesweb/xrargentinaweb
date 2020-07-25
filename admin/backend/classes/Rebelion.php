@@ -474,7 +474,7 @@
       $link = Conexion::conectar();
       $sql = "SELECT id,titulo,fecha,autor,noticiaImagen,noticia,categoria 
                 FROM noticias AS N, categoriasNoticia AS C
-                  WHERE N.idCategoria = C.idCategoria";
+                  WHERE N.idCategoria = C.idCategoria ORDER BY id DESC";
       $stmt = $link->prepare($sql);
       $stmt->execute();
       $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);

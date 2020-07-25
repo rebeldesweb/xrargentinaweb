@@ -11,8 +11,8 @@
         <div class="two-col-layout container ">
             <div class="two-col-layout__right type type--small" id="noticiaCompleta">
                 <div class="post_header">
-                    <h1 class="page-title"><?php echo $data['titulo']; ?></h1>
-                    <p class="post_date"><?php echo $data['fecha']; ?> Por <?php echo $data['autor']; ?></p>
+                    <h1 id="titulo_nota" class="page-title"><?php echo $data['titulo']; ?></h1>
+                    <p id="fecha_descripcion" class="post_date"><?php echo $data['fecha']; ?> Por <?php echo $data['autor']; ?></p>
                     <?php if ($noticiaImagen != 'noDisponible.jpg') {?>
                     <div class="post-hero">
                         <img src="img/noticias/<?php echo $data['noticiaImagen'] ?>" alt="">
@@ -58,4 +58,4 @@
 </main>             
                                     
 <?php include 'includes/footer2.html';?>
-<script src="comon/noticia.js"></script>
+<script src="comon/noticia.js?v=1.0.1"></script>

@@ -112,8 +112,8 @@ function verNoticiaPorId(id) {
             <br>
             Url Video:
             <br>
-            <textarea class="form-control w-100 mt-1" name="link">
-                ${reg.link}
+            <textarea class="form-control w-100 mt-1" rows="5" name="link">
+                ${(reg.link == 'null' || reg.link == null)?reg.link = '':reg.link = reg.link}
             </textarea>
             <br>
             <center>

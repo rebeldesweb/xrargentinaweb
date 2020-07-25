@@ -56,15 +56,15 @@
 
   <!-- formulario de modificar evento -->
   <div class="container mt-3 d-none" id="form-modificar">
-    <a class="btn btn-warning" onclick="ocultarFormularioModificar()">Regresar al listado de eventos</a>
+    <a class="btn btn-warning" onclick="ocultarFormularioModificar()">Regresar al listado de noticias</a>
     <hr>
-    <h2 class="mt-2">Formulario de modificación de un nuevo evento</h2>
+    <h2 class="mt-2">Formulario de modificación de noticia</h2>
     <form class="form-group" enctype="multipart/form-data" id="formModificarNoticia">
         
     </form>
   </div>
 
-  <!-- formulario de agregar evento -->
+  <!-- formulario de agregar nueva noticia -->
   <div class="container mt-3 d-none" id="form-agregar">
     <div class="alert alert-success d-none" id="alert-success">Se ha agregado la noticia con éxito</div>
     <a class="btn btn-warning" onclick="ocultarFormularioAgregar()">Regresar al panel de control</a>
@@ -116,6 +116,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="../comon/sweetalert2.js" charset="utf-8"></script>
   <script src="js/main.js"></script>
-  <script src="js/noticia.js"></script>
+  <script src="js/noticia.js?v=1.0.2"></script>
 </body>
 </html>
