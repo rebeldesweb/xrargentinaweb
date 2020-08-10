@@ -116,6 +116,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="../comon/sweetalert2.js" charset="utf-8"></script>
   <script src="js/main.js"></script>
-  <script src="js/noticia.js?v=1.0.2"></script>
+  <script src="js/noticia.js?v=1.0.3"></script>
 </body>
 </html>

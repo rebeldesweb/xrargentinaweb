@@ -122,6 +122,7 @@ function verNoticiaPorId(id) {
             `
         });
         form.innerHTML = template;
+        (document.getElementsByName('link')[0].value.trim().length==0)?document.getElementsByName('link')[0].value='':null;
         let selectCategoria = document.getElementById('categoria');
         getCategorias(selectCategoria,false,newRes[0].idCategoria);
     })
