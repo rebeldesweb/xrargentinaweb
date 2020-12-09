@@ -24,6 +24,7 @@ function getData() {
             </tr>
             `
         });
+        document.querySelector('.container__slider').classList.add('d-none');
         inscriptos.innerHTML = template;
     })  
 }
@@ -88,7 +89,7 @@ formulario.addEventListener('submit',event=>{
                 <tr>
                   <td class="text-center">${reg.id}</td>
                   <td class="text-center">${reg.nombre}</td>
-                  <td class="text-center">${reg.apellido}></td>
+                  <td class="text-center">${reg.apellido}</td>
                   <td class="text-center">${reg.email}</td>
                   <td class="text-center">${reg.provinciaNombre}</td>
                   <td class="text-center">${reg.ciudadNombre}</td>

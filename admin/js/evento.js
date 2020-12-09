@@ -21,6 +21,7 @@ function getData() {
             </tr>
             `
         });
+        document.querySelector('.container__slider').classList.add('d-none');
         eventos.innerHTML = template;
     })  
 }
