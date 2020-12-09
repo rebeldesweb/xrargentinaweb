@@ -52,102 +52,116 @@
     </html>
     ';
 
-    // Para enviar un correo HTML, debe establecerse la cabecera Content-type
-    /*$cabeceras  = 'MIME-Version: 1.0' . "\r\n";
+    //Para enviar un correo HTML, debe establecerse la cabecera Content-type
+    $cabeceras  = 'MIME-Version: 1.0' . "\r\n";
     $cabeceras .= 'Content-type: text/html; charset=utf-8' . "\r\n";
 
     // Cabeceras adicionales
     // $cabeceras .= 'To: Mary <mary@example.com>, Kelly <kelly@example.com>' . "\r\n";
-    $cabeceras .= 'From: xrargentina <xrargentina@gmail.com>' . "\r\n";
+    $cabeceras .= 'From: xrargentina <info@xrargentina.org>' . "\r\n";
     $cabeceras .= 'Cc: rebeldes@xrargentina.org' . "\r\n";
 
     // Enviarlo
-    $sendMail = mail($para, 'Gracias por sumarte a XR argentina', $mensaje, $cabeceras);*/
-
-
-
-	require_once("PHPMailer/class.phpmailer.php");
-	require_once("PHPMailer/class.smtp.php");
-
-
-	//$from = "xrargentina@gmail.com";
-	$from = "info@xrargentina.org";
-	$nameFrom = "xrargentina";
-
-
-
-	$mail = new PHPMailer();
-
-
-	$mail->isSMTP();
-	//Enable SMTP debugging
-	// 0 = off (for production use)
-	// 1 = client messages
-	// 2 = client and server messages
-	$mail->SMTPDebug = 0;
-	//Ask for HTML-friendly debug output
-	$mail->Debugoutput = 'html';
-	//Set the hostname of the mail server
-	$mail->Host = "mail.xrargentina.org";
-	//Set the SMTP port number - likely to be 25, 465 or 587
-	$mail->Port = 587;
-	$mail->SMTPSecure = "TLS";
-	//Whether to use SMTP authentication
-	$mail->SMTPAuth = true;
-	//Username to use for SMTP authentication
-	$mail->Username = "info@xrargentina.org";
-	//Password to use for SMTP authentication
-	$mail->Password = "Hoy11Feb20";
-	$mail->Sender =$from;
-    $mail->ReturnPath=$from;
-	//Set who the message is to be sent from
-	$mail->setFrom($from, $nameFrom);
-	//Set an alternative reply-to address
-	$mail->addReplyTo($from, $nameFrom);
-	//Set who the message is to be sent to
-	$mail->addAddress($para);
-	//Set the subject line
-	$mail->Subject = $asunto;
-	$body = $mensaje;
-	//Read an HTML message body from an external file, convert referenced images to embedded,
-	//convert HTML into a basic plain-text alternative body
-	$mail->msgHTML($body);
-	//Replace the plain text body with one created manually
-	$mail->AltBody = $body;
-
-
-
-	$mail->CharSet = 'UTF-8';
-
-	$mail->HeaderLine("Organization" , SITE);
-    $mail->HeaderLine("Content-Transfer-encoding" , "8bit");
-    $mail->HeaderLine("Message-ID" , "<".md5(uniqid(time()))."@{$_SERVER['SERVER_NAME']}>");
-    $mail->HeaderLine("X-MSmail-Priority" , "Normal");
-    $mail->HeaderLine("X-Mailer" , "Microsoft Office Outlook, Build 11.0.5510");
-    $mail->HeaderLine("X-MimeOLE" , "Produced By Microsoft MimeOLE V6.00.2800.1441");
-    $mail->HeaderLine("X-Sender" , $mail->Sender);
-    $mail->HeaderLine("X-AntiAbuse" , "This is a solicited email for - ".SITE." mailing list.");
-    $mail->HeaderLine("X-AntiAbuse" , "Servername - {$_SERVER['SERVER_NAME']}");
-    $mail->HeaderLine("X-AntiAbuse" , $mail->Sender);
-	$mail->HeaderLine('Return-Path', '<'.trim($mail->ReturnPath).'>');
-
-
-
-	$sendMail=	$mail->Send();
-
+    $sendMail = mail($para, 'Gracias por sumarte a XR argentina', $mensaje, $cabeceras);
     $dt = date('Y-m-d G:i:s');
-
     $_Log = fopen("logs/enviosEmail.log", "a+") or die("Operation Failed!");
 
     if ($sendMail) {
       $ultId = $objRebelion->getIdEmail();
       $logEmail = $objRebelion->logEmail($ultId);
-       fputs($_Log, $dt . " --> Enviado: " . $para ."\n");
+      fputs($_Log, $dt . " --> Enviado: " . $para ."\n");
+      header('location:index.html?suscribido');
+    }else{
+      fputs($_Log, $dt . " --> NO enviado: " . $para ."\n");
+      fclose($_Log);
+      header('location:index.html?suscribido');
     }
-    else  fputs($_Log, $dt . " --> NO enviado: " . $para ."\n");
 
-     fclose($_Log);
 
-    header('location:index.html?suscribido');
+
+    /*require_once("PHPMailer/class.phpmailer.php");
+    require_once("PHPMailer/class.smtp.php");
+
+
+    //$from = "xrargentina@gmail.com";
+    $from = "info@xrargentina.org";
+    $nameFrom = "xrargentina";
+
+
+
+    $mail = new PHPMailer();
+
+
+    $mail->isSMTP();
+    //Enable SMTP debugging
+    // 0 = off (for production use)
+    // 1 = client messages
+    // 2 = client and server messages
+    $mail->SMTPDebug = 0;
+    //Ask for HTML-friendly debug output
+    $mail->Debugoutput = 'html';
+    //Set the hostname of the mail server
+    $mail->Host = "mail.xrargentina.org";
+    //Set the SMTP port number - likely to be 25, 465 or 587
+    $mail->Port = 587;
+    $mail->SMTPSecure = "TLS";
+    //Whether to use SMTP authentication
+    $mail->SMTPAuth = true;
+    //Username to use for SMTP authentication
+    $mail->Username = "info@xrargentina.org";
+    //Password to use for SMTP authentication
+    $mail->Password = "Hoy11Feb20";
+    $mail->Sender =$from;
+      $mail->ReturnPath=$from;
+    //Set who the message is to be sent from
+    $mail->setFrom($from, $nameFrom);
+    //Set an alternative reply-to address
+    $mail->addReplyTo($from, $nameFrom);
+    //Set who the message is to be sent to
+    $mail->addAddress($para);
+    //Set the subject line
+    $mail->Subject = $asunto;
+    $body = $mensaje;
+    //Read an HTML message body from an external file, convert referenced images to embedded,
+    //convert HTML into a basic plain-text alternative body
+    $mail->msgHTML($body);
+    //Replace the plain text body with one created manually
+    $mail->AltBody = $body;
+
+
+
+    $mail->CharSet = 'UTF-8';
+
+    $mail->HeaderLine("Organization" , SITE);
+      $mail->HeaderLine("Content-Transfer-encoding" , "8bit");
+      $mail->HeaderLine("Message-ID" , "<".md5(uniqid(time()))."@{$_SERVER['SERVER_NAME']}>");
+      $mail->HeaderLine("X-MSmail-Priority" , "Normal");
+      $mail->HeaderLine("X-Mailer" , "Microsoft Office Outlook, Build 11.0.5510");
+      $mail->HeaderLine("X-MimeOLE" , "Produced By Microsoft MimeOLE V6.00.2800.1441");
+      $mail->HeaderLine("X-Sender" , $mail->Sender);
+      $mail->HeaderLine("X-AntiAbuse" , "This is a solicited email for - ".SITE." mailing list.");
+      $mail->HeaderLine("X-AntiAbuse" , "Servername - {$_SERVER['SERVER_NAME']}");
+      $mail->HeaderLine("X-AntiAbuse" , $mail->Sender);
+    $mail->HeaderLine('Return-Path', '<'.trim($mail->ReturnPath).'>');
+
+
+
+    $sendMail=	$mail->Send();
+
+      $dt = date('Y-m-d G:i:s');
+
+      $_Log = fopen("logs/enviosEmail.log", "a+") or die("Operation Failed!");
+
+      if ($sendMail) {
+        $ultId = $objRebelion->getIdEmail();
+        $logEmail = $objRebelion->logEmail($ultId);
+        fputs($_Log, $dt . " --> Enviado: " . $para ."\n");
+      }
+      else  fputs($_Log, $dt . " --> NO enviado: " . $para ."\n");
+
+      fclose($_Log);
+
+      header('location:index.html?suscribido');
+    }*/
   }
 ?>
